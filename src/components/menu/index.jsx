@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { PageContainer } from "../pageContainer";
+import PhotoDropdown from "./photoDropdown";
 
 
 
@@ -9,7 +10,7 @@ const Background = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
 
   ul {
     list-style-type: none;
@@ -38,10 +39,10 @@ export function Menu(props) {
       <Background>
         <ul>
           <a href="/gabehug"><li><p>Gabe Hug</p></li></a>
-          <a href="/photography"><li><p>Photography</p></li></a>
-          <a href="/webDesign"><li><p>Web Design</p></li></a>
+          <li><PhotoDropdown/></li>
           <a href="/prints"><li><p>Prints</p></li></a>
-          <a href="/contact"><li><p>Contact</p></li></a>
+          <a href="/webDesign"><li><p>Web Design</p></li></a>
+          <a href="/contact"><li><p>Hire me!</p></li></a>
         </ul>
       </Background>
     </PageContainer>

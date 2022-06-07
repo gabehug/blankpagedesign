@@ -1,9 +1,26 @@
 import React from "react";
 import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
-import webBackground from "../../assets/webBackground.mp4";
 import { Menu } from "../../components/menu";
 import Rectangle from "../../assets/Rectangle.png";
+import image1_120mm_24 from "../../photos/image1_120mm_24.jpg";
+import image2_120mm_23 from "../../photos/image2_120mm_23.jpg";
+import image3_120mm_16 from "../../photos/image3_120mm_16.jpg";
+import image4_4x5_1 from "../../photos/image4_4x5_1.jpg";
+import image5_120mm_7 from "../../photos/image5_120mm_7.jpg";
+import image6_4x5_9 from "../../photos/image6_4x5_9.jpg";
+import image7_120mm_6 from "../../photos/image7_120mm_6.jpg";
+import image8_120mm_2 from "../../photos/image8_120mm_2.jpg";
+import image9_120mm_22 from "../../photos/image9_120mm_22.jpg";
+import image10_120mm_17 from "../../photos/image10_120mm_17.jpg";
+import image11_4x5_2 from "../../photos/image11_4x5_2.jpg";
+import image12_4x5_14 from "../../photos/image12_4x5_14.jpg";
+import image13_120mm_18 from "../../photos/image13_120mm_18.jpg";
+import image14_4x5_11 from "../../photos/image14_4x5_11.jpg";
+import image15_4x5_3 from "../../photos/image15_4x5_3.jpg";
+import { Footer } from "../../components/footer";
+import { Logo } from "../../components/logo";
+
 
 const Background = styled.div`
   height: 100vh;
@@ -62,6 +79,11 @@ const ImageContainer = styled.div`
   }
 `;
 
+const FooterContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
 
 export function Photography(props) {
   return (
@@ -69,7 +91,7 @@ export function Photography(props) {
       <Background>
         <MenuContainer>
           <LogoContainer>
-            <img src= {Rectangle} alt="logo"/>
+            <Logo/>
           </LogoContainer>
           <Menu />
         </MenuContainer>
@@ -84,16 +106,26 @@ all of that other shit, what camera I was using, but for now this
 looks good. I just need something here! </p>
           </InformationContainer>
           <ImageContainer>
-            <img src= {Rectangle} alt="logo"/>
-            <img src= {Rectangle} alt="logo"/>
-            <img src= {Rectangle} alt="logo"/>
-            <img src= {Rectangle} alt="logo"/>
-            <img src= {Rectangle} alt="logo"/>
-            <img src= {Rectangle} alt="logo"/>
-            <img src= {Rectangle} alt="logo"/>
-            <img src= {Rectangle} alt="logo"/>
+            <img src= {image1_120mm_24} alt="logo"/>
+            <img src= {image2_120mm_23} alt="logo"/>
+            <img src= {image3_120mm_16} alt="logo"/>
+            <img src= {image5_120mm_7} alt="logo"/>
+            <img src= {image4_4x5_1} alt="logo"/>
+            <img src= {image6_4x5_9} alt="logo"/>
+            <img src= {image7_120mm_6} alt="logo"/>
+            <img src= {image8_120mm_2} alt="logo"/>
+            <img src= {image9_120mm_22} alt="logo"/>
+            <img src= {image10_120mm_17} alt="logo"/>
+            <img src= {image11_4x5_2} alt="logo"/>
+            <img src= {image12_4x5_14} alt="logo"/>
+            <img src= {image13_120mm_18} alt="logo"/>
+            <img src= {image14_4x5_11} alt="logo"/>
+            <img src= {image15_4x5_3} alt="logo"/>
           </ImageContainer>
         </ContentContainer>
+        <FooterContainer>
+          <Footer />
+        </FooterContainer>
       </Background>
     </PageContainer>
   )

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import webBackground from "../../assets/webBackground.mp4";
 import Rectangle from "../../assets/Rectangle.png";
 import { Menu } from "../../components/menu";
+import { Logo } from "../../components/logo";
 
 const Background = styled.div`
   width: 100%;
@@ -47,7 +48,7 @@ export function HomePage(props) {
           <source src= {webBackground} type="video/mp4"/>
         </video>
         <LogoContainer>
-          <img src= {Rectangle} alt="logo"/>
+          <Logo/>
         </LogoContainer>
         <MenuContainer>
           <Menu />
