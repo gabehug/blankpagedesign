@@ -11,7 +11,7 @@ const Background= styled.div`
 
 const TopSection= styled.div`
   width: 100%;
-  height: 25%;
+  height: 38%;
   display: flex;
   flex-direction: row;
 `;
@@ -31,6 +31,7 @@ const TitleContainer= styled.div`
 `;
 
 const ListContainer= styled.div`
+  width: 100%;
   color: #fff;
   font-size: 1.5em;
   line-height: 1.5em;
@@ -49,11 +50,15 @@ const ListContainer= styled.div`
       color: #A39450; 
     }
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const MidSection= styled.div`
   width: 30%;
-  height: 25%;
+  height: 12%;
 `;
 
 const LinkContainer= styled.div`
@@ -118,8 +123,13 @@ export function Footer(props) {
         <TitleContainer><h1>Photography</h1></TitleContainer>
         <ListContainer>
           <ul>
-            <li>Fading Landscape</li>
-            <li>Redline</li>
+            <a href="/photography"><li>Fading Landscape</li></a>
+            <a href="/photography/redline"><li>Redline</li></a>
+            <a href="/photography/redline"><li>Waste</li></a>
+            <a href="/photography/redline"><li>SIGN OF THE TIME</li></a>
+            <a href="/photography/redline"><li>Vietnam</li></a>
+            <a href="/photography/redline"><li>PDL Collection</li></a>
+            <a href="/photography/redline"><li>Pocket Cam</li></a>
           </ul>
         </ListContainer>
       </PhotoMenu>
@@ -127,8 +137,8 @@ export function Footer(props) {
         <TitleContainer><h1>Web Design</h1></TitleContainer>
         <ListContainer>
           <ul>
-            <li>Hug HCG</li>
-            <li>Crypto Dons</li>
+            <a href="/webDesign"><li>Hug HCG</li></a>
+            <a href="/webDesign"><li>Crypto Dons</li></a>
           </ul>
         </ListContainer>
       </WebDesignMenu>
@@ -145,7 +155,7 @@ export function Footer(props) {
     </MidSection>
     <BottomSection>
       <ImageContainer>
-        <img src={footerIMG}></img>
+        <a href="/"><img src={footerIMG} alt="Go Home!"></img></a>
       </ImageContainer>
       <BotTitleContainer><h1>Gabriel Hug</h1> </BotTitleContainer>
       <CopywriteContainer>

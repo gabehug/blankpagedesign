@@ -66,7 +66,10 @@ export default function PhotoDropdown(props) {
         <a href="/photography/redline"><li><p>Red Line</p></li></a>
         </DropdownItem>
         <DropdownItem>
-        <a href="/photography/redline"><li><p>A SIGN OF THE TIMES</p></li></a>
+        <a href="/photography/redline"><li><p>Waste</p></li></a>
+        </DropdownItem>
+        <DropdownItem>
+        <a href="/photography/redline"><li><p>SIGN OF THE TIME</p></li></a>
         </DropdownItem>
         <DropdownItem>
         <a href="/photography/redline"><li><p>Vietnam</p></li></a>

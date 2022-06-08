@@ -2,7 +2,6 @@ import React from "react";
 import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
 import webBackground from "../../assets/webBackground.mp4";
-import Rectangle from "../../assets/Rectangle.png";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
 

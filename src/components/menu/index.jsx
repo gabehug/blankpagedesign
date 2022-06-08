@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { PageContainer } from "../pageContainer";
 import PhotoDropdown from "./photoDropdown";
-
+import WebDesignDropdown from "./webDesignDropdown";
 
 
 const Background = styled.div`
@@ -41,7 +41,7 @@ export function Menu(props) {
           <a href="/gabehug"><li><p>Gabe Hug</p></li></a>
           <li><PhotoDropdown/></li>
           <a href="/prints"><li><p>Prints</p></li></a>
-          <a href="/webDesign"><li><p>Web Design</p></li></a>
+          <li><WebDesignDropdown/></li>
           <a href="/contact"><li><p>Hire me!</p></li></a>
         </ul>
       </Background>

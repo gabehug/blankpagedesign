@@ -3,6 +3,11 @@ import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
+import redlineIMG from "../../photos/redlineIMG.png";
+import RenderSmoothImage from 'render-smooth-image-react';
+import 'render-smooth-image-react/build/style.css';
+import { Footer } from "../../components/footer";
+import scrollIndi from "../../assets/scrollIndi.png";
 
 
 const Background = styled.div`
@@ -49,19 +54,30 @@ const InformationContainer = styled.div`
   margin: 4em;
 `;
 
-const ImageContainer = styled.div`
-  width: auto;
-  height; 100vh;
-  display: flex; 
-  flex-direction: row; 
+const ScrollContainer = styled.div`
+  width: 95%;
+  height: auto;
+  display: flex;
+  justify-content: end;
+  
 
   img {
-    width: 50em;
-    height: 50em;
-    margin 2em;
+    width: 3em;
+    height: 100%;
   }
 `;
 
+const ImageContainer = styled.div`
+  width: 1050em;
+  height: auto;
+  margin: 2em;
+  display: flex;
+`;
+
+const FooterContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 export function Redline(props) {
   return (
@@ -76,13 +92,18 @@ export function Redline(props) {
         <ContentContainer>
           <InformationContainer>
             <h1>Red Line</h1>
-            <p>This is an artist statement....</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <ScrollContainer>
+              <img src={scrollIndi}></img>
+            </ScrollContainer>
           </InformationContainer>
           <ImageContainer>
-            <img src= {""} alt="logo"/>
-            <img src= {""} alt="logo"/>
+            <RenderSmoothImage src= {redlineIMG} alt="logo"/>
           </ImageContainer>
         </ContentContainer>
+        <FooterContainer>
+          <Footer />
+        </FooterContainer>
       </Background>
     </PageContainer>
   )
