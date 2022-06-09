@@ -9,9 +9,6 @@ import { Footer } from "../../components/footer";
 import { Logo } from "../../components/logo";
 import scrollIndi from "../../assets/scrollIndi.png";
 
-import RenderSmoothImage from 'render-smooth-image-react';
-import 'render-smooth-image-react/build/style.css';
-
 const Background = styled.div`
   height: 100vh;
   width: 100%;
@@ -70,8 +67,8 @@ const ScrollContainer = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 600em;
-  height: auto;
+  width: auto;
+  height: 60em;
   margin 2em;
   display: flex; 
   flex-direction: row; 
@@ -107,9 +104,9 @@ looks good. I just need something here! </p>
             </ScrollContainer>
           </InformationContainer>
           <ImageContainer>
-            <RenderSmoothImage src= {fading1} alt="logo"/>
-            <RenderSmoothImage src= {fading2} alt="logo"/>
-            <RenderSmoothImage src= {fading3} alt="logo"/>
+            <img src= {fading1} alt="logo"/>
+            <img src= {fading2} alt="logo"/>
+            <img src= {fading3} alt="logo"/>
           </ImageContainer>
         </ContentContainer>
         <FooterContainer>

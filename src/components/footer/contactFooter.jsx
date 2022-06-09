@@ -10,31 +10,44 @@ import instagramWhite from "../../assets/instagramWhite.png";
 import instagramHover from "../../assets/instagramHover.png";
 
 const Background= styled.div`
-  width: 42em;
-  height: 100%;
-  margin: 0em 0em 0em 2em;
+  width: 100vw;
+  height: 40em;
+  display: flex;
+  flex-direction: column;
   background-color: black;
 `;
 
-const TopSection= styled.div`
-  width: 100%;
-  height: 38%;
+const TopSection = styled.div`
   display: flex;
   flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+`;
+
+const BotSection = styled.div`
+  width: auto;
+  height: auto;
+`;
+
+const LeftSection= styled.div`
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 2em;
 `;
 
 const PhotoMenu= styled.div`
-  margin: 3em 2em 2em 3em;
+  margin: 1em;
 `;
 
 const WebDesignMenu= styled.div`
-  margin: 3em 2em 2em 3em;
+  margin: 1em;
 `;
 
 const TitleContainer= styled.div`
   color: #fff;
   font-size: 1em;
-  margin: 1em;
 `;
 
 const ListContainer= styled.div`
@@ -63,9 +76,10 @@ const ListContainer= styled.div`
   }
 `;
 
-const MidSection= styled.div`
-  width: 30%;
-  height: 12%;
+const RightSection= styled.div`
+  width: auto;
+  height: 100%;
+  margin: 3em 2em;
 `;
 
 const LinkContainer= styled.div`
@@ -92,7 +106,7 @@ const SocialIconContainer = styled.div`
   width: 13em;
   height: 3.2em;
   display: flex;
-  margin: 0em 2.2em;
+  margin: 3em 2em 0em 2em;
 `;
 
 const LinkedInIcon = styled.div`
@@ -174,39 +188,14 @@ const GithubIcon = styled.div`
   `;
 
 const BottomSection= styled.div`
-  width: 100%;
-  height: 50%;
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
 `;
 
-const ImageContainer= styled.div`
-  width: 8.5em;
-  height: 11em;
-
-  background-image: url(${footerIMG});
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-
-  :hover{
-    background-image: url(${footerImgHover});
-    background-size: contain;
-    cursor: pointer;
-  }
-
-  a {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-`;
 
 const BotTitleContainer= styled.div`
   color: #fff;
@@ -219,61 +208,62 @@ const CopywriteContainer = styled.div`
   color: #fff;
   font-size: 0.6em;
   line-height: 0em;
-  margin: 0em 0em 5.5em 0em;
+  margin: 0em 0em 2em 0em;
 `;
 
-export function Footer(props) {
+export function ContactFooter(props) {
 
   return (
   <Background>
     <TopSection>
-      <PhotoMenu>
-        <TitleContainer><h1>Photography</h1></TitleContainer>
-        <ListContainer>
+      <LeftSection>
+        <PhotoMenu>
+          <TitleContainer><h1>Photography</h1></TitleContainer>
+          <ListContainer>
+            <ul>
+              <a href="/photography"><li>Fading Landscape</li></a>
+              <a href="/photography/redline"><li>Redline</li></a>
+              <a href="/photography/redline"><li>Waste</li></a>
+              <a href="/photography/redline"><li>SIGN OF THE TIME</li></a>
+              <a href="/photography/redline"><li>Vietnam</li></a>
+              <a href="/photography/redline"><li>PDL Collection</li></a>
+              <a href="/photography/redline"><li>Pocket Cam</li></a>
+            </ul>
+          </ListContainer>
+        </PhotoMenu>
+        <WebDesignMenu>
+          <TitleContainer><h1>Web Design</h1></TitleContainer>
+          <ListContainer>
+            <ul>
+              <a href="/webDesign"><li>Hug HCG</li></a>
+              <a href="/webDesign"><li>Crypto Dons</li></a>
+            </ul>
+          </ListContainer>
+        </WebDesignMenu>
+      </LeftSection>
+      <RightSection>
+      <LinkContainer>
           <ul>
-            <a href="/photography"><li>Fading Landscape</li></a>
-            <a href="/photography/redline"><li>Redline</li></a>
-            <a href="/photography/redline"><li>Waste</li></a>
-            <a href="/photography/redline"><li>SIGN OF THE TIME</li></a>
-            <a href="/photography/redline"><li>Vietnam</li></a>
-            <a href="/photography/redline"><li>PDL Collection</li></a>
-            <a href="/photography/redline"><li>Pocket Cam</li></a>
+            <a href="/prints"><li><h1>Prints</h1></li></a>
+            <a href="/about"><li><h1>About</h1></li></a>
+            <a href="/contact"><li><h1>Hire me!</h1></li></a>
           </ul>
-        </ListContainer>
-      </PhotoMenu>
-      <WebDesignMenu>
-        <TitleContainer><h1>Web Design</h1></TitleContainer>
-        <ListContainer>
-          <ul>
-            <a href="/webDesign"><li>Hug HCG</li></a>
-            <a href="/webDesign"><li>Crypto Dons</li></a>
-          </ul>
-        </ListContainer>
-      </WebDesignMenu>
+          <SocialIconContainer>
+            <LinkedInIcon><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
+            <GithubIcon><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
+            <InstagramIcon><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
+          </SocialIconContainer>
+        </LinkContainer>
+      </RightSection>
     </TopSection>
-    <MidSection>
-    <LinkContainer>
-        <ul>
-          <a href="/prints"><li><h1>Prints</h1></li></a>
-          <a href="/about"><li><h1>About</h1></li></a>
-          <a href="/contact"><li><h1>Hire me!</h1></li></a>
-        </ul>
-        <SocialIconContainer>
-          <LinkedInIcon><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
-          <GithubIcon><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
-          <InstagramIcon><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
-        </SocialIconContainer>
-      </LinkContainer>
-    </MidSection>
+    <BotSection>
     <BottomSection>
-      <ImageContainer>
-        <a href="/"></a>
-      </ImageContainer>
       <BotTitleContainer><h1>Gabriel Hug</h1> </BotTitleContainer>
       <CopywriteContainer>
         <p>©2022 Blank Page Design</p>
       </CopywriteContainer>
     </BottomSection>
+  </BotSection>
   </Background>
   )
 }

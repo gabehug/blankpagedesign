@@ -4,8 +4,6 @@ import styled from "styled-components";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
 import redlineIMG from "../../photos/redlineIMG.png";
-import RenderSmoothImage from 'render-smooth-image-react';
-import 'render-smooth-image-react/build/style.css';
 import { Footer } from "../../components/footer";
 import scrollIndi from "../../assets/scrollIndi.png";
 
@@ -68,8 +66,8 @@ const ScrollContainer = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 1050em;
-  height: auto;
+  width: auto;
+  height: 45em;
   margin: 2em;
   display: flex;
 `;
@@ -98,7 +96,7 @@ export function Redline(props) {
             </ScrollContainer>
           </InformationContainer>
           <ImageContainer>
-            <RenderSmoothImage src= {redlineIMG} alt="logo"/>
+            <img src= {redlineIMG} alt="logo"/>
           </ImageContainer>
         </ContentContainer>
         <FooterContainer>
