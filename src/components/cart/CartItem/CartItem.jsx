@@ -18,9 +18,8 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart}) => {
           <Button type="button" size="small" onClick={()=> onUpdateCartQty(item.id, item.quantity - 1)}>-</Button>
           <Typography>{item.quantity}</Typography>
           <Button type="button" size="small" onClick={()=> onUpdateCartQty(item.id, item.quantity + 1)}>+</Button>
-
         </div>
-        <Button variant="contained" type="button" color="secondary" onClick={()=> onRemoveFromCart(item.id)}>Remove</Button>
+        <Button variant="contained" type="button" color="error" onClick={()=> onRemoveFromCart(item.id)}>Remove</Button>
       </CardActions>
     </Card>
   )

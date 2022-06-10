@@ -7,6 +7,8 @@ import Navbar from "../../components/menu/Navbar";
 import { commerce } from "../../components/lib/commerce";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import Cart from "../../components/cart";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -32,11 +34,34 @@ const Background = styled.div`
 `;
 
 const ProductsContainer = styled.div`
-  width: auto;
+  width: 85vw;
   height: auto;
-  display: flex;
+  justify-content: center;
   margin: 8em 0em 5em 0em;
+
 `;
+
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      "futura",
+      "sans-serif",
+    ],
+    caption: {
+      lineHeight: '4px',
+      letterSpacing: "0.04em",
+    },
+  },
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#343B33'
+    },
+    secondary: {
+      main: '#A39450'
+    },
+  },
+});
 
 export function Prints(props) {
   const [products, setProducts] = useState([]);
@@ -77,44 +102,41 @@ export function Prints(props) {
     setCart(cart);
   }
 
-  
-
   useEffect(() => {
     fetchProducts();
     FetchCart();
   }, []);
 
-  console.log(cart);
-
   return (
       <PageContainer> 
-        <Background>
-          <video autoPlay muted loop id="backgroundVideo">
-            <source src= {webBackground} type="video/mp4"/>
-          </video>
-          <Navbar totalItems={cart.total_items}/>
-          <ProductsContainer>
-          
-            <Routes>
-              <Route 
-                path="/" 
-                element={
-                  <Products products={products} onAddToCart={handleAddToCart} />
+        <ThemeProvider theme={theme}>
+          <Background>
+            <video autoPlay muted loop id="backgroundVideo">
+              <source src= {webBackground} type="video/mp4"/>
+            </video>
+            <Navbar totalItems={cart.total_items}/>
+            <ProductsContainer>
+              <Routes>
+                <Route 
+                  path="/" 
+                  element={
+                    <Products products={products} onAddToCart={handleAddToCart} />
+                  }/>
+                <Route 
+                  path="cart"
+                  element={
+                  <Cart 
+                    cart= {cart} 
+                    handleUpdateCartQty= {handleUpdateCartQty}
+                    handleRemoveFromCart= {handleRemoveFromCart}
+                    handleEmptyCart= {handleEmptyCart}
+                  />
                 }/>
-              <Route 
-                path="cart"
-                element={
-                <Cart 
-                  cart= {cart} 
-                  handleUpdateCartQty= {handleUpdateCartQty}
-                  handleRemoveFromCart= {handleRemoveFromCart}
-                  handleEmptyCart= {handleEmptyCart}
-                />
-              }/>
-            </Routes>
-          </ProductsContainer>
-          <ContactFooter />
-        </Background>
+              </Routes>
+            </ProductsContainer>
+            <ContactFooter />
+          </Background>
+        </ThemeProvider>
       </PageContainer>
   )
 }

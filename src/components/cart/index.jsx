@@ -3,6 +3,7 @@ import { Container, Typography, Button, Grid } from '@material-ui/core';
 import { classes } from 'istanbul-lib-coverage';
 import CartItem from './CartItem/CartItem';
 import { Link } from 'react-router-dom';
+import { Marginer } from '../marginer';
 
 import useStyles from './styles';
 
@@ -12,7 +13,6 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
   const EmptyCart = () => (
     <Typography variant="subtitle1">
       There are no items in your cart.
-      <Link to="/prints" className={classes.link}>Prints for sale</Link>
       </Typography>
   );
 
@@ -43,6 +43,8 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     <Container>
       <div className={classes.toolbar} />
       <Typography className={classes.title} variant='h3' gutterBottom>Shopping Cart</Typography>
+      <Button href="/prints" className={classes.toPrintsButton} size="medium" type="button" variant="contained" color="primary">Add more prints</Button>    
+      <Marginer direction="vertical" margin={25}/>
       { !cart.line_items.length ? <EmptyCart /> : <FilledCart /> }
     </Container>
   )

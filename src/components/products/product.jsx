@@ -16,10 +16,10 @@ const Product = ({ product, onAddToCart }) => {
           <Typography variant="h5" gutterBottom>
             {product.name}
           </Typography>
-          <Typography variant="h5">
+          <Typography variant="h6">
             {product.price.formatted_with_symbol}
           </Typography>
-          <Typography dangerouslySetInnerHTML={{__html: product.description}}cvariant="body2" color="textSecondary" />
+          <Typography dangerouslySetInnerHTML={{__html: product.description}} variant="caption" color="textSecondary" />
         </div>
       </CardContent>
       <CardActions disableSpacing className={classes.CardActions}>
