@@ -55,7 +55,7 @@ const ContentContainer = styled.div`
 
 const InformationContainer = styled.div`
   width: 40em;
-  height: auto;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -102,7 +102,7 @@ export function WebDesign(props) {
           <Menu />
         </MenuContainer>
         <ContentContainer>
-          <InformationContainer>
+          <InformationContainer id="hcg">
             <h1>Hug Human Capital Group</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <ImgContainer>
@@ -112,14 +112,14 @@ export function WebDesign(props) {
               <img src={scrollIndi}></img>
             </ScrollContainer>
           </InformationContainer>
-          <InformationContainer>
+          <InformationContainer id="dons">
             <h1>Crypto Dons</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <ImgContainer>
               <img src={image1}></img>
             </ImgContainer>
           </InformationContainer>
-          <InformationContainer>
+          <InformationContainer id="chain">
             <h1>Chainlinks</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <ImgContainer>

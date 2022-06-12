@@ -99,27 +99,11 @@ const InformationContainer = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  margin: 0em;
-
-  p {
-    margin: 8em 0em;
-  }
-`;
-
-const InterestsContainer = styled.div`
-  width: 700px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0em;
+  margin: 0em 4em;
 
-  p {
-    margin: 0em 0em;
-  }
+
 `;
 
 const FinalMessageContainer = styled.div`
@@ -127,13 +111,10 @@ const FinalMessageContainer = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  margin: 0em;
+  margin: 0em 4em;
 
-  p {
-    margin: 8em 0em;
-  }
 `;
 
 const ScrollContainer = styled.div`
@@ -181,11 +162,8 @@ export function About(props) {
           <Marginer direction="horizontal" margin={50}/>
           <InformationContainer>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </InformationContainer>
-          <Marginer direction="horizontal" margin={50}/>
-          <InterestsContainer>
             <p>Tellus in metus vulputate eu scelerisque felis imperdiet. Nibh praesent tristique magna sit amet purus gravida. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Sagittis nisl rhoncus mattis rhoncus urna neque viverra. Risus feugiat in ante metus. Orci sagittis eu volutpat odio. Enim blandit volutpat maecenas volutpat blandit aliquam. Viverra ipsum nunc aliquet bibendum enim facilisis. Lacus luctus accumsan tortor posuere ac. Eget aliquet nibh praesent tristique magna sit amet. Erat pellentesque adipiscing commodo elit.</p>
-          </InterestsContainer>
+          </InformationContainer>
           <Marginer direction="horizontal" margin={50}/>
           <FinalMessageContainer>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
