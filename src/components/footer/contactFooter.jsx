@@ -247,6 +247,7 @@ export function ContactFooter(props) {
             <a href="/prints"><li><h1>Prints</h1></li></a>
             <a href="/about"><li><h1>About</h1></li></a>
             <a href="/contact"><li><h1>Hire me!</h1></li></a>
+            <a href="https://ko-fi.com/gabrielhug" target="_blank"><li><h1>Buy me a coffee</h1></li></a>
           </ul>
           <SocialIconContainer>
             <LinkedInIcon><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>

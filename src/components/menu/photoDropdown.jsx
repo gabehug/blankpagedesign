@@ -77,9 +77,6 @@ export default function PhotoDropdown(props) {
         <DropdownItem>
         <a href="/photography/redline"><li><p>PDL Collection</p></li></a>
         </DropdownItem>
-        <DropdownItem>
-        <a href="/photography/redline"><li><p>Pocket Cam</p></li></a>
-        </DropdownItem>
       </DropdownContent>  
       )}
     </Dropdown>

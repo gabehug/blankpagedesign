@@ -5,6 +5,7 @@ import { Menu } from "../../components/menu";
 import fading1 from "../../photos/fading1.png";
 import fading2 from "../../photos/fading2.png";
 import fading3 from "../../photos/fading3.png";
+import fadingLandscapes from "../../photos/fadingLandscapes.jpg";
 import { Footer } from "../../components/footer";
 import { Logo } from "../../components/logo";
 import scrollIndi from "../../assets/scrollIndi.png";
@@ -104,9 +105,7 @@ looks good. I just need something here! </p>
             </ScrollContainer>
           </InformationContainer>
           <ImageContainer>
-            <img src= {fading1} alt="logo"/>
-            <img src= {fading2} alt="logo"/>
-            <img src= {fading3} alt="logo"/>
+            <img src= {fadingLandscapes} alt="logo"/>
           </ImageContainer>
         </ContentContainer>
         <FooterContainer>

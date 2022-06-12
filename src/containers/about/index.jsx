@@ -65,7 +65,7 @@ const ImageContainer = styled.div`
   img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 30%;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   }
 

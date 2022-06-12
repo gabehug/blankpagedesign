@@ -6,13 +6,15 @@ import { Logo } from "../../components/logo";
 import redlineIMG from "../../photos/redlineIMG.png";
 import { Footer } from "../../components/footer";
 import scrollIndi from "../../assets/scrollIndi.png";
+import image1 from "../../photos/image1.jpg";
+
 
 const Background = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   video {
@@ -48,14 +50,15 @@ const ContentContainer = styled.div`
   width: auto;
   display: flex;
   align-items: center;
+
 `;
 
 const InformationContainer = styled.div`
-  width: 600px;
+  width: 40em;
   height: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   text-align: left;
   margin: 4em;
 `;
@@ -68,37 +71,65 @@ const ScrollContainer = styled.div`
   img {
     width: 3em;
     height: 100%;
-    transform: rotate(180deg);
+  }
+`;
+
+const ImgContainer = styled.div`
+  width: 40em;
+  height 20em;
+
+  img {
+    width: 100%;
+    height: 100%;
   }
 `;
 
 const FooterContainer = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 export function WebDesign(props) {
   return (
     <PageContainer>
       <Background>
-        <FooterContainer>
-          <Footer />
-        </FooterContainer>
-        <ContentContainer>
-          <InformationContainer>
-            <h1>Hug Human Capital Group</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <ScrollContainer>
-              <img src={scrollIndi}></img>
-            </ScrollContainer>
-          </InformationContainer>
-        </ContentContainer>
         <MenuContainer>
           <LogoContainer>
             <Logo/>
           </LogoContainer>
           <Menu />
         </MenuContainer>
+        <ContentContainer>
+          <InformationContainer>
+            <h1>Hug Human Capital Group</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <ImgContainer>
+              <img src={image1}></img>
+            </ImgContainer>
+            <ScrollContainer>
+              <img src={scrollIndi}></img>
+            </ScrollContainer>
+          </InformationContainer>
+          <InformationContainer>
+            <h1>Crypto Dons</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <ImgContainer>
+              <img src={image1}></img>
+            </ImgContainer>
+          </InformationContainer>
+          <InformationContainer>
+            <h1>Chainlinks</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <ImgContainer>
+              <img src={image1}></img>
+            </ImgContainer>
+          </InformationContainer>
+        </ContentContainer>
+        <FooterContainer>
+          <Footer />
+        </FooterContainer>
       </Background>
     </PageContainer>
   )

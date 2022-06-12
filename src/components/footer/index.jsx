@@ -14,6 +14,9 @@ const Background= styled.div`
   height: 100%;
   margin: 0em 0em 0em 2em;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 `;
 
 const TopSection= styled.div`
@@ -64,11 +67,16 @@ const ListContainer= styled.div`
 `;
 
 const MidSection= styled.div`
-  width: 30%;
-  height: 12%;
+  width: 100%;
+  height: auto;
+  display: flex; 
+  align-items: flex-end;
+  margin-top: 1em;
 `;
 
 const LinkContainer= styled.div`
+  width: auto;
+  height: auto;
   color: #fff;
   font-size: 1em;
   margin: 0em 0em 0em 2em;
@@ -89,10 +97,11 @@ const LinkContainer= styled.div`
 `;
 
 const SocialIconContainer = styled.div`
-  width: 13em;
-  height: 3.2em;
+  width: 15em;
+  height: 3.5em;
   display: flex;
-  margin: 0em 2.2em;
+  justify-content: flex-end;
+  margin: 0em 0em 2em 4em;
 `;
 
 const LinkedInIcon = styled.div`
@@ -112,7 +121,7 @@ const LinkedInIcon = styled.div`
   }
 
   a {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     top: 0;
@@ -175,11 +184,12 @@ const GithubIcon = styled.div`
 
 const BottomSection= styled.div`
   width: 100%;
-  height: 50%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
+  margin-top: 4em;
 `;
 
 const ImageContainer= styled.div`
@@ -252,18 +262,19 @@ export function Footer(props) {
       </WebDesignMenu>
     </TopSection>
     <MidSection>
-    <LinkContainer>
+      <LinkContainer>
         <ul>
           <a href="/prints"><li><h1>Prints</h1></li></a>
           <a href="/about"><li><h1>About</h1></li></a>
           <a href="/contact"><li><h1>Hire me!</h1></li></a>
+          <a href="https://ko-fi.com/gabrielhug" target="_blank"><li><h1>Buy me a coffee</h1></li></a>
         </ul>
-        <SocialIconContainer>
-          <LinkedInIcon><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
-          <GithubIcon><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
-          <InstagramIcon><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
-        </SocialIconContainer>
       </LinkContainer>
+      <SocialIconContainer>
+        <LinkedInIcon><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
+        <GithubIcon><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
+        <InstagramIcon><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
+      </SocialIconContainer>
     </MidSection>
     <BottomSection>
       <ImageContainer>
