@@ -7,6 +7,7 @@ import redlineIMG from "../../photos/redlineIMG.png";
 import { Footer } from "../../components/footer";
 import scrollIndi from "../../assets/scrollIndi.png";
 import image1 from "../../photos/image1.jpg";
+import HorizontalScroll from "react-scroll-horizontal";
 
 
 const Background = styled.div`
@@ -95,6 +96,7 @@ export function WebDesign(props) {
   return (
     <PageContainer>
       <Background>
+      <HorizontalScroll reverseScroll>
         <MenuContainer>
           <LogoContainer>
             <Logo/>
@@ -130,6 +132,7 @@ export function WebDesign(props) {
         <FooterContainer>
           <Footer />
         </FooterContainer>
+        </HorizontalScroll>
       </Background>
     </PageContainer>
   )

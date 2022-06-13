@@ -9,13 +9,16 @@ import fadingLandscapes from "../../photos/fadingLandscapes.jpg";
 import { Footer } from "../../components/footer";
 import { Logo } from "../../components/logo";
 import scrollIndi from "../../assets/scrollIndi.png";
+import HorizontalScroll from "react-scroll-horizontal";
+import { render } from "@testing-library/react";
+import { BackToTop } from "../../components/backToTop";
 
 const Background = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 `;
 
@@ -69,15 +72,28 @@ const ScrollContainer = styled.div`
 
 const ImageContainer = styled.div`
   width: auto;
-  height: 60em;
-  margin 2em;
+  height: 50em;
+  margin 0em;
   display: flex; 
-  flex-direction: row; 
+  flex-direction: column; 
+  align-items: start;
+
+  img {
+    width: 625em;
+    height: auto;
+  }
 `;
 
 const FooterContainer = styled.div`
-  width: 100%;
+  width: auto;
   height: 100%;
+`;
+
+const BackToTopContainer = styled.div`
+  width: auto;
+  height: auto;
+  border: 1px solid black;
+  
 `;
 
 
@@ -85,6 +101,7 @@ export function Photography(props) {
   return (
     <PageContainer>
       <Background>
+      <HorizontalScroll reverseScroll>
         <MenuContainer>
           <LogoContainer>
             <Logo/>
@@ -106,11 +123,16 @@ looks good. I just need something here! </p>
           </InformationContainer>
           <ImageContainer>
             <img src= {fadingLandscapes} alt="logo"/>
+            <BackToTopContainer>
+              <BackToTop />
+            </BackToTopContainer>
           </ImageContainer>
         </ContentContainer>
+        
         <FooterContainer>
           <Footer />
         </FooterContainer>
+        </HorizontalScroll>
       </Background>
     </PageContainer>
   )

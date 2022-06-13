@@ -22,15 +22,6 @@ const Background = styled.div`
   overflow-y: scroll;
   overflow-y: visible;
   overflow-x: hidden;
-
-  video {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
 `;
 
 const ProductsContainer = styled.div`
@@ -111,9 +102,6 @@ export function Prints(props) {
       <PageContainer> 
         <ThemeProvider theme={theme}>
           <Background>
-            <video autoPlay muted loop id="backgroundVideo">
-              <source src= {webBackground} type="video/mp4"/>
-            </video>
             <Navbar totalItems={cart.total_items}/>
             <ProductsContainer>
               <Routes>

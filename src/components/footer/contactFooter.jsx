@@ -202,6 +202,18 @@ const BotTitleContainer= styled.div`
   font-size: 0.75em;
   margin: 1em 0em 0em 0em;
   line-height: 2em;
+
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  hover{
+    cursor: pointer;
+    color: #A39450;
+  }
+
 `;
 
 const CopywriteContainer = styled.div`
@@ -259,7 +271,7 @@ export function ContactFooter(props) {
     </TopSection>
     <BotSection>
     <BottomSection>
-      <BotTitleContainer><h1>Gabriel Hug</h1> </BotTitleContainer>
+      <BotTitleContainer><a href="/"><h1>Gabriel Hug</h1></a></BotTitleContainer>
       <CopywriteContainer>
         <p>©2022 Blank Page Design</p>
       </CopywriteContainer>

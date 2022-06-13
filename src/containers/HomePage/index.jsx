@@ -26,11 +26,6 @@ const Background = styled.div`
 const LogoContainer = styled.div`
   width: auto;
   height: auto;
-
-  image {
-    height: 100%;
-    width: 100%;
-  }
 `;
 
 const MenuContainer = styled.div`

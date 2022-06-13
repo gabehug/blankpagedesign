@@ -4,17 +4,18 @@ import Rectangle from "../../assets/Rectangle.png";
 
 
 const Background = styled.div`
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
 `;
 
 const LogoContainer = styled.div`
   width: auto;
   height: auto;
 
-  image {
-    height: 100%;
-    width: 100%;
+
+  img {
+    height: 7em;
+    width: auto;
   }
 `;
 

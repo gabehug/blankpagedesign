@@ -6,6 +6,7 @@ import { Logo } from "../../components/logo";
 import redlineIMG from "../../photos/redlineIMG.png";
 import { Footer } from "../../components/footer";
 import scrollIndi from "../../assets/scrollIndi.png";
+import HorizontalScroll from "react-scroll-horizontal";
 
 
 const Background = styled.div`
@@ -81,6 +82,7 @@ export function Redline(props) {
   return (
     <PageContainer>
       <Background>
+      <HorizontalScroll reverseScroll>
         <MenuContainer>
           <LogoContainer>
             <Logo/>
@@ -102,6 +104,7 @@ export function Redline(props) {
         <FooterContainer>
           <Footer />
         </FooterContainer>
+        </HorizontalScroll>
       </Background>
     </PageContainer>
   )

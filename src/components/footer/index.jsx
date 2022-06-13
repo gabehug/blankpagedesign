@@ -193,8 +193,8 @@ const BottomSection= styled.div`
 `;
 
 const ImageContainer= styled.div`
-  width: 8.5em;
-  height: 11em;
+  width: 5em;
+  height: 7em;
 
   background-image: url(${footerIMG});
   background-size: contain;
