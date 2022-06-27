@@ -243,11 +243,10 @@ export function Footer(props) {
           <ul>
             <a href="/photography"><li>Fading Landscape</li></a>
             <a href="/photography/redline"><li>Redline</li></a>
-            <a href="/photography/redline"><li>Waste</li></a>
-            <a href="/photography/redline"><li>SIGN OF THE TIME</li></a>
-            <a href="/photography/redline"><li>Vietnam</li></a>
-            <a href="/photography/redline"><li>PDL Collection</li></a>
-            <a href="/photography/redline"><li>Pocket Cam</li></a>
+            <a href="/photography/waste"><li>Waste</li></a>
+            <a href="/photography/sign"><li>SIGN OF THE TIME</li></a>
+            <a href="/photography/vietnam"><li>Vietnam</li></a>
+            <a href="/photography/pdl"><li>PDL Collection</li></a>
           </ul>
         </ListContainer>
       </PhotoMenu>
@@ -257,6 +256,7 @@ export function Footer(props) {
           <ul>
             <a href="/webDesign"><li>Hug HCG</li></a>
             <a href="/webDesign"><li>Crypto Dons</li></a>
+            <a href="/webDesign"><li>Chainlinks</li></a>
           </ul>
         </ListContainer>
       </WebDesignMenu>
@@ -265,7 +265,7 @@ export function Footer(props) {
       <LinkContainer>
         <ul>
           <a href="/prints"><li><h1>Prints</h1></li></a>
-          <a href="/about"><li><h1>About</h1></li></a>
+          <a href="/gabehug"><li><h1>About</h1></li></a>
           <a href="/contact"><li><h1>Hire me!</h1></li></a>
           <a href="https://ko-fi.com/gabrielhug" target="_blank"><li><h1>Buy me a coffee</h1></li></a>
         </ul>

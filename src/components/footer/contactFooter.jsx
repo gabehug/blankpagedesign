@@ -235,11 +235,10 @@ export function ContactFooter(props) {
             <ul>
               <a href="/photography"><li>Fading Landscape</li></a>
               <a href="/photography/redline"><li>Redline</li></a>
-              <a href="/photography/redline"><li>Waste</li></a>
-              <a href="/photography/redline"><li>SIGN OF THE TIME</li></a>
-              <a href="/photography/redline"><li>Vietnam</li></a>
-              <a href="/photography/redline"><li>PDL Collection</li></a>
-              <a href="/photography/redline"><li>Pocket Cam</li></a>
+              <a href="/photography/waste"><li>Waste</li></a>
+              <a href="/photography/sign"><li>SIGN OF THE TIME</li></a>
+              <a href="/photography/vietnam"><li>Vietnam</li></a>
+              <a href="/photography/pdl"><li>PDL Collection</li></a>
             </ul>
           </ListContainer>
         </PhotoMenu>
@@ -249,6 +248,7 @@ export function ContactFooter(props) {
             <ul>
               <a href="/webDesign"><li>Hug HCG</li></a>
               <a href="/webDesign"><li>Crypto Dons</li></a>
+              <a href="/webDesign"><li>Chainlinks</li></a>
             </ul>
           </ListContainer>
         </WebDesignMenu>

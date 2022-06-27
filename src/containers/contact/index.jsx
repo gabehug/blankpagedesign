@@ -118,7 +118,7 @@ export function Contact(props) {
         </video>
         <ContentContainer>
           <MainContainer>
-            <h1>Lets work together</h1>
+            <h1>Lets work together!</h1>
             <h2>Services</h2>
           </MainContainer>
           <InformationContainer>

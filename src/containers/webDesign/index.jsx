@@ -48,24 +48,26 @@ const LogoContainer = styled.div`
 
 const ContentContainer = styled.div`
   height: 100vh;
-  width: auto;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 
 `;
 
 const InformationContainer = styled.div`
-  width: 40em;
+  width: auto;
   height: 80%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   text-align: left;
   margin: 4em;
 `;
 
 const ScrollContainer = styled.div`
-  width: 95%;
+  width: 98%;
   height: auto;
   display: flex;
   justify-content: end;

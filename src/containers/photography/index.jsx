@@ -2,16 +2,13 @@ import React from "react";
 import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
 import { Menu } from "../../components/menu";
-import fading1 from "../../photos/fading1.png";
-import fading2 from "../../photos/fading2.png";
-import fading3 from "../../photos/fading3.png";
 import fadingLandscapes from "../../photos/fadingLandscapes.jpg";
 import { Footer } from "../../components/footer";
 import { Logo } from "../../components/logo";
 import scrollIndi from "../../assets/scrollIndi.png";
 import HorizontalScroll from "react-scroll-horizontal";
 import { render } from "@testing-library/react";
-import { BackToTop } from "../../components/backToTop";
+import { ScrollToButton } from "../../components/scrollTo";
 
 const Background = styled.div`
   height: 100vh;
@@ -89,13 +86,6 @@ const FooterContainer = styled.div`
   height: 100%;
 `;
 
-const BackToTopContainer = styled.div`
-  width: auto;
-  height: auto;
-  border: 1px solid black;
-  
-`;
-
 
 export function Photography(props) {
   return (
@@ -123,12 +113,8 @@ looks good. I just need something here! </p>
           </InformationContainer>
           <ImageContainer>
             <img src= {fadingLandscapes} alt="logo"/>
-            <BackToTopContainer>
-              <BackToTop />
-            </BackToTopContainer>
           </ImageContainer>
         </ContentContainer>
-        
         <FooterContainer>
           <Footer />
         </FooterContainer>
