@@ -9,6 +9,7 @@ import scrollIndi from "../../assets/scrollIndi.png";
 import HorizontalScroll from "react-scroll-horizontal";
 import { render } from "@testing-library/react";
 import { ScrollToButton } from "../../components/scrollTo";
+import { VisibilityRounded } from "@material-ui/icons";
 
 const Background = styled.div`
   height: 100vh;
@@ -59,7 +60,6 @@ const ScrollContainer = styled.div`
   height: auto;
   display: flex;
   justify-content: end;
-  
 
   img {
     width: 3em;
@@ -69,8 +69,8 @@ const ScrollContainer = styled.div`
 
 const ImageContainer = styled.div`
   width: auto;
-  height: 50em;
-  margin 0em;
+  height: auto;
+  margin 1em;
   display: flex; 
   flex-direction: column; 
   align-items: start;
@@ -88,10 +88,15 @@ const FooterContainer = styled.div`
 
 
 export function Photography(props) {
+
+  const scroll = {
+    overflowX: 'visible',
+    
+  }
   return (
     <PageContainer>
       <Background>
-      <HorizontalScroll reverseScroll>
+      <HorizontalScroll reverseScroll style={scroll} >
         <MenuContainer>
           <LogoContainer>
             <Logo/>
