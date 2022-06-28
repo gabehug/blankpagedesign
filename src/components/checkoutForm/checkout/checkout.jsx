@@ -37,9 +37,9 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
         setShippingData(data);
 
         nextStep();
-    }
+    };
 
-    let Confirmation = () => order.customer ?  (
+    let Confirmation = () => (order.customer ?  (
         <> 
             <div>
                 <Typography variant="h5">Thank you for your purchase, {order.customer.firstname} {order.customer.lastname} </Typography>
@@ -47,25 +47,28 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
                 <Typography variant="subtitle2">Order ref: {order.customer_reference}</Typography>
             </div>
             <br />
-            <Button component={Link} to="/prints" variant="outlined" type="button">Back to Prints</Button>
+            <Button component={Link} to="/prints/cart" variant="outlined" type="button">Back to Cart</Button>
         </>
     ) : (
         <div className={classes.spinner}>
             <CircularProgress />
         </div>
-    );
+    ));
 
     if(error) {
-        <>
-        <Typography variant="h5">Error: {error}</Typography>
-        <br />
-        <Button component={Link} to="/prints" variant="outlined" type="button">Back to Prints</Button>
-        </>
+        Confirmation = () => (
+            <>
+                <Typography variant="h5">Error: {error}</Typography>
+                <br />
+                <Button component={Link} to="/prints/cart" variant="outlined" type="button">Back to Cart</Button>
+            </>
+        );
     }
 
-    const Form = () => activeStep === 0 
+    const Form = () => (activeStep === 0 
         ? <AddressForm checkoutToken={checkoutToken} next={next} />
         : <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} nextStep={nextStep} backStep={backStep} onCaptureCheckout={onCaptureCheckout} />
+    );
 
         
     return (
@@ -76,9 +79,9 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
                 <Paper className={classes.paper}>
                     <Typography variant='h4' align="center">Checkout</Typography>
                     <Stepper activeStep={activeStep} className={classes.stepper}>
-                        {steps.map((step) => (
-                            <Step key={step}>
-                                <StepLabel>{step}</StepLabel>
+                        {steps.map((label) => (
+                            <Step key={label}>
+                                <StepLabel>{label}</StepLabel>
                             </Step>
                         ))}
                     </Stepper>
@@ -86,7 +89,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
                 </Paper>
             </main>
         </>
-    )
-}
+    );
+};
 
-export default Checkout
+export default Checkout;

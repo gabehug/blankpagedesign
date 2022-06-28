@@ -30,8 +30,8 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
             Subtotal: {cart.subtotal.formatted_with_symbol}
           </Typography>
           <div>
-            <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Empty Cart</Button>
-            <Button component={Link} to="checkout" className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary">Checkout</Button>
+            <Button className={classes.emptyButton} size="large" type="button" variant="outlined" color="primary" onClick={handleEmptyCart}>Empty Cart</Button>
+            <Button component={Link} to="checkout" className={classes.checkoutButton} size="large" type="button" variant="contained" color="secondary">Checkout</Button>
           </div>
       </div>
     </>
@@ -43,7 +43,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     <Container>
       <div className={classes.toolbar} />
       <Typography className={classes.title} variant='h3' gutterBottom>Shopping Cart</Typography>
-      <Button href="/prints" className={classes.toPrintsButton} size="medium" type="button" variant="contained" color="primary">Add more prints</Button>    
+      <Button href="/prints" className={classes.toPrintsButton} size="medium" type="button" variant="outlined" color="primary">Add more prints</Button>    
       <Marginer direction="vertical" margin={25}/>
       { !cart.line_items.length ? <EmptyCart /> : <FilledCart /> }
     </Container>
