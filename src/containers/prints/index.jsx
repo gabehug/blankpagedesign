@@ -8,9 +8,10 @@ import { commerce } from "../../components/lib/commerce";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import Cart from "../../components/cart";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-
+import Checkout from "../../components/checkoutForm/checkout/checkout";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 const Background = styled.div`
   width: 100%;
@@ -57,6 +58,8 @@ const theme = createTheme({
 export function Prints(props) {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
+  const [order, setOrder] = useState({});
+  const [errorMessage, setErrorMessage] = useState('');
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
@@ -93,6 +96,23 @@ export function Prints(props) {
     setCart(cart);
   }
 
+  const refreshCart = async () => {
+    const newCart = await commerce.cart.refresh();
+
+    setCart(newCart);
+  }
+
+  const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
+    try {
+      const incomingOrder = await commerce.checkout.capture(checkoutTokenId, newOrder);
+
+      setOrder(incomingOrder);
+      refreshCart();
+    } catch (error) {
+      setErrorMessage(error.data.error.message);
+    }
+  }
+
   useEffect(() => {
     fetchProducts();
     FetchCart();
@@ -120,6 +140,16 @@ export function Prints(props) {
                     handleEmptyCart= {handleEmptyCart}
                   />
                 }/>
+                <Route 
+                  path="/cart/checkout"
+                  element={
+                    <Checkout 
+                      cart={cart}
+                      order={order}
+                      onCaptureCheckout={handleCaptureCheckout}
+                      error={errorMessage}
+                      />
+                  }/>
               </Routes>
             </ProductsContainer>
             <ContactFooter />
