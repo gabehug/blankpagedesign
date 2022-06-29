@@ -53,6 +53,10 @@ const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 4em;
+
+  h4 {
+    font-size: 1.1em;
+  }
 `;
 
 const ScrollContainer = styled.div`
@@ -106,12 +110,8 @@ export function Photography(props) {
         <ContentContainer>
           <InformationContainer>
             <h1>The Fading Landscape</h1>
-            <p>This is an artists statement about how this is all about nature 
-and humans are fucking up the planet and yay thats all that
-I have for you today, that is my statement. I would need to add 
-more actual information here about where it was Show and
-all of that other shit, what camera I was using, but for now this
-looks good. I just need something here! </p>
+            <p>This collection looks at the encroaching presence of humans in nature. There is little of the natural world left untouched by humans. These images aim to capture the natural beauty of the landscape in which we build our world. </p>
+            <h4>Cadet 4x5 Film | Yashica Mat-124G 120mm Film</h4>
             <ScrollContainer>
               <img src={scrollIndi}></img>
             </ScrollContainer>

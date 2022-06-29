@@ -71,6 +71,7 @@ const MainContainer = styled.div`
   h1 {
     line-height: 0em;
     font-size: 4em;
+    margin: 1em 0em 2em 0em;
   }
 
   h2 {
@@ -119,11 +120,17 @@ export function Contact(props) {
         <ContentContainer>
           <MainContainer>
             <h1>Lets work together!</h1>
-            <h2>Services</h2>
+            <InformationContainer>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </InformationContainer>
           </MainContainer>
+          <Marginer direction="vertical" margin={50}/>
           <InformationContainer>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h2>Services</h2>
+            <p>Lorem ipsum dolor sit amet,</p>
+            <p>Lorem ipsum dolor sit amet,</p>    
+            <p>Lorem ipsum dolor sit amet,</p>
+            <p>Lorem ipsum dolor sit amet,</p>       
           </InformationContainer>
           <CalendlyContainer>
             <InlineWidget url="https://calendly.com/gaberhug/meeting?month=2022-06"/>

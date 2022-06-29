@@ -92,7 +92,8 @@ export function SignOfTime(props) {
         <ContentContainer>
           <InformationContainer>
             <h1>A Sign of the Times</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Street signs and graffiti highlighting the political tensions in Decemeber 2020. Shot in black and white around Chicago. </p>
+            <h4>Canon 7D mkii | 50mm</h4>
             <ScrollContainer>
               <img src={scrollIndi}></img>
             </ScrollContainer>

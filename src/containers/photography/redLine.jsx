@@ -92,7 +92,9 @@ export function Redline(props) {
         <ContentContainer>
           <InformationContainer>
             <h1>Red Line</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>These images were taken on the CTA Redline. Starting from the north at Howard to the furthest south at 95th/Dan Ryan, the sequence captures the 33 stops of the beloved Redline. Transporting over 200,000 people everyday, the redline runs 24hrs/day 365 days a year making it a truely interesting way to travel the city.</p>
+            <h5>*this is NOT sponsored by the CTA</h5>
+            <h4>Canon 7D mkii | 50mm</h4>
             <ScrollContainer>
               <img src={scrollIndi}></img>
             </ScrollContainer>

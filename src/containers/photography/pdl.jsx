@@ -51,6 +51,16 @@ const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 4em;
+
+
+  a {
+    color:#A39450;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #909E85;
+  }
 `;
 
 const ScrollContainer = styled.div`
@@ -92,7 +102,10 @@ export function PDL(props) {
         <ContentContainer>
           <InformationContainer>
             <h1>Ponce De Leon</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>These images were taken for <a href="https://www.poncedleon.com/" target="blank">PDL</a> by Seb.</p>
+            <h3>"Unsystematic design breaks from the fruitless demands of clothing factory of meaning, designs are not recycled in a simulacrum of “drops,” but are forged through the radical potential of the embrace of unpredictability." </h3>
+            <p></p>
+            <h4>Canon 7D mkii</h4>
             <ScrollContainer>
               <img src={scrollIndi}></img>
             </ScrollContainer>
