@@ -58,11 +58,11 @@ const ListContainer= styled.div`
 
   ul {
     list-style: none;
-    padding-left: 1.5em;
+    padding-left: 0.5em;
   }
 
   li {
-    margin: 0;
+    margin: 0em;
     color: #777777;
     
     :hover {

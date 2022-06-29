@@ -48,7 +48,7 @@ const ListContainer= styled.div`
 
   ul {
     list-style: none;
-    padding-left: 1.5em;
+    padding-left: 1em;
   }
 
   li {

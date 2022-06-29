@@ -91,6 +91,23 @@ const InformationContainer = styled.div`
   p {
     margin: 0em;
   }
+
+  h4{ 
+    margin: 1em 0em;
+  }
+
+  h3 {
+    margin: 2em;
+  }
+
+  a{
+    color:#A39450;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #909E85;
+  }
 `;
 
 const CalendlyContainer = styled.div`
@@ -121,19 +138,19 @@ export function Contact(props) {
           <MainContainer>
             <h1>Lets work together!</h1>
             <InformationContainer>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>I am currently looking to work for you! Since graduating in May I have moved my efforts toward working freelance. I have been on multiple event shoots, and weddings, and shot many graduation photos. I have also begun designing sites from wireframing to actual code development. I would love to work with you or your company to create something we are both proud of. Whether it's images for your company or brand, a photoshoot with your team, or a full website overhaul, I am here to get the job done! </p>
+              <h3><a href="mailto: gabrielhug@blankpagedesign.org" target="blank">Email me</a></h3>
             </InformationContainer>
           </MainContainer>
-          <Marginer direction="vertical" margin={50}/>
           <InformationContainer>
             <h2>Services</h2>
-            <p>Lorem ipsum dolor sit amet,</p>
-            <p>Lorem ipsum dolor sit amet,</p>    
-            <p>Lorem ipsum dolor sit amet,</p>
-            <p>Lorem ipsum dolor sit amet,</p>       
+            <p>Photo Shoots</p>
+            <h4>Family | Events | Portraits | Weddings</h4>
+            <p>Web Design</p> 
+            <p>Wire Framming</p>       
           </InformationContainer>
           <CalendlyContainer>
-            <InlineWidget url="https://calendly.com/gaberhug/meeting?month=2022-06"/>
+            <InlineWidget url="https://calendly.com/gaberhug/workwithme?month=2022-06"/>
           </CalendlyContainer>
           <Marginer direction="vertical" margin={50}/>
           <FooterContainer>
