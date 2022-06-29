@@ -5,19 +5,17 @@ import webBackground from "../../assets/webBackground.mp4";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
 import headshot3 from "../../assets/headshot3.jpg";
-import { Marginer } from "../../components/marginer";
-import { Footer } from "../../components/footer";
-import scrollIndi from "../../assets/scrollIndi.png";
-import HorizontalScroll from "react-scroll-horizontal";
+import { ContactFooter } from "../../components/footer/contactFooter";
 
 
 const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: start;
   align-items: flex-start;
+  overflow: hidden;
 
   video {
     width: 100vw;
@@ -29,13 +27,17 @@ const Background = styled.div`
   }
 `;
 
+const FirstContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 const MenuContainer = styled.div`
-  width: auto;
+  width: 5.4em;
   height: 100%;
   display: flex;
   flex-direction: column;
   margin: 0em 2em;
-  
 `;
 
 const LogoContainer = styled.div`
@@ -53,10 +55,10 @@ const ContentContainer = styled.div`
   height: 100vh;
   width: auto;
   display: flex;
-  flex-direction: row;
-  margin: 2em;
+  flex-direction: column;
+  margin: 0em 2em;
   align-items: start;
-  justify-content: start;
+  justify-content: center;
 
 `;
 
@@ -78,7 +80,7 @@ const MainContainer = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: start;
   margin: 0em 2em;
 
@@ -110,7 +112,7 @@ const TopContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 1em 0em 3em 0em;
+  margin: 0em 0em 3em 0em;
 `;
 
 
@@ -129,7 +131,7 @@ export function About(props) {
   return (
     <PageContainer> 
       <Background>
-        <HorizontalScroll reverseScroll>
+        <FirstContainer>
         <MenuContainer>
             <LogoContainer>
               <Logo/>
@@ -154,12 +156,11 @@ export function About(props) {
               <p>I started Blank Page Design this spring to help people design and build webpages that they can be proud of. With the prevalence of the internet, a good website sharing your products or ideas is a vital part of any company. Checkout some of my previous <a href="/webdesign">Web Design</a> work on this page!</p>
               <p>I have been capturing the world around me for 6 years now, primarily shooting on the streets of Chicago. I am beyond excited to capture photographs around the U.S. as I travel and would love to shoot for you along the way! The <a href="/photography">Photography pages</a> holds collections from the past 4 years and you can follow my travels by following my <a href="https://www.instagram.com/shutter_hug/" target="blank">Instagram!</a>.</p>
           </MainContainer>
-          <Marginer direction="horizontal" margin={100}/>
         </ContentContainer>
+        </FirstContainer>
         <FooterContainer>
-          <Footer />
+          <ContactFooter />
         </FooterContainer>
-        </HorizontalScroll>
       </Background>
     </PageContainer>
   )
