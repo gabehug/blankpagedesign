@@ -10,6 +10,7 @@ import HorizontalScroll from "react-scroll-horizontal";
 import { render } from "@testing-library/react";
 import { ScrollToButton } from "../../components/scrollTo";
 import { VisibilityRounded } from "@material-ui/icons";
+import { deviceSize } from "../../components/responsive";
 
 const Background = styled.div`
   height: 100vh;
@@ -26,6 +27,11 @@ const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0em 2em;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      margin: 0em 0em 0em 1em;
+    }
 `;
 
 const LogoContainer = styled.div`
@@ -57,6 +63,23 @@ const InformationContainer = styled.div`
   h4 {
     font-size: 1.1em;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      width: 14em; 
+      margin: 2em;
+      h1 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size 1.2em;
+      }
+
+      h4 {
+        font-size: 1em;
+      }
+    }
 `;
 
 const ScrollContainer = styled.div`
@@ -69,6 +92,13 @@ const ScrollContainer = styled.div`
     width: 3em;
     height: 100%;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+     img {
+      width: 2em;
+     }
+    }
 `;
 
 const ImageContainer = styled.div`
@@ -83,6 +113,13 @@ const ImageContainer = styled.div`
     width: 625em;
     height: auto;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      img {
+        width: 300em;
+      }
+    }
 `;
 
 const FooterContainer = styled.div`

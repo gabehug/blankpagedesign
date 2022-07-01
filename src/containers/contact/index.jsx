@@ -6,6 +6,7 @@ import { Logo } from "../../components/logo";
 import { InlineWidget } from "react-calendly";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { Marginer } from "../../components/marginer";
+import { deviceSize } from "../../components/responsive";
 
 const Background = styled.div`
   width: 100vw;
@@ -77,6 +78,20 @@ const MainContainer = styled.div`
   h2 {
     margin: 1em 0em 2em 0em;
   }
+
+  {/*Mobile*/} 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    h1 {
+      font-size: 2em;
+      line-height: 1em;
+      margin: 1em 0em;
+    }
+
+    p {
+      font-size 1.2em;
+    }
+  }
+
 `;
 
 const InformationContainer = styled.div`
@@ -108,12 +123,27 @@ const InformationContainer = styled.div`
   a:hover {
     color: #909E85;
   }
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    h2 {
+      margin: 0em 0em 0.5em 0em;
+    }
+  }
+
 `;
 
 const CalendlyContainer = styled.div`
   width: 80em;
   height: 40em;
   margin: 2em;
+  align-items: center;
+
+  {/*Mobile*/} 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 100%;
+  }
+
 `;
 
 const FooterContainer = styled.div`

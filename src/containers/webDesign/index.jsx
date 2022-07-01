@@ -10,6 +10,7 @@ import hughcgimg from "../../assets/hughcgimg.jpg";
 import chainlinksimg from "../../assets/chainlinksimg.jpg";
 import cryptodonsimg from "../../assets/cryptodonsimg.jpg";
 import HorizontalScroll from "react-scroll-horizontal";
+import { deviceSize } from "../../components/responsive";
 
 
 const Background = styled.div`
@@ -35,6 +36,11 @@ const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0em 2em;
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 0em 0em 0em 1em;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -81,6 +87,22 @@ const InformationContainer = styled.div`
   a:hover {
     color: #909E85;
   }
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 16em;
+    h1 {
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size 1.2em;
+    }
+
+    h4 {
+      font-size: 1em;
+    }
+  }
   `;
 
 const ImgContainer = styled.div`
@@ -92,6 +114,16 @@ const ImgContainer = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 2em 0em;
+    img {
+      width: 14em;
+
+    }
+  }
+
 `;
 
 const FooterContainer = styled.div`

@@ -8,6 +8,8 @@ import githubWhite from "../../assets/githubWhite.png";
 import githubHover from "../../assets/githubHover.png";
 import instagramWhite from "../../assets/instagramWhite.png";
 import instagramHover from "../../assets/instagramHover.png";
+import { deviceSize } from "../../components/responsive";
+import { useMediaQuery } from "react-responsive";
 
 const Background= styled.div`
   width: 100vw;
@@ -15,6 +17,11 @@ const Background= styled.div`
   display: flex;
   flex-direction: column;
   background-color: black;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        height: 100%;
+    }
 `;
 
 const TopSection = styled.div`
@@ -22,12 +29,23 @@ const TopSection = styled.div`
   flex-direction: row;
   width: 100vw;
   justify-content: center;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        flex-direction: column;
+    }
 `;
 
 const BotSection = styled.div`
   width: auto;
   height: auto;
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    height: 100%;
+  }
 `;
+
 
 const LeftSection= styled.div`
   width: auto;
@@ -35,6 +53,14 @@ const LeftSection= styled.div`
   display: flex;
   flex-direction: row;
   margin: 2em;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        h1 {
+          font-size: 1.5em;
+        }
+    }
+
 `;
 
 const PhotoMenu= styled.div`
@@ -80,6 +106,14 @@ const RightSection= styled.div`
   width: auto;
   height: 100%;
   margin: 3em 2em;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      margin: 2em 0em;
+        h1 {
+          font-size: 1.5em;
+        }
+    }
 `;
 
 const LinkContainer= styled.div`
@@ -100,6 +134,11 @@ const LinkContainer= styled.div`
       color: #A39450 ;
     }
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      margin: 0em 1em;
+    }
 `;
 
 const SocialIconContainer = styled.div`
@@ -107,6 +146,12 @@ const SocialIconContainer = styled.div`
   height: 3.2em;
   display: flex;
   margin: 3em 2em 0em 2em;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      width: 12em;
+      margin: 1em 0em 0em 2em;
+    }
 `;
 
 const LinkedInIcon = styled.div`
@@ -133,6 +178,11 @@ const LinkedInIcon = styled.div`
     left: 0;
     z-index: 1;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 2.5em;
+    }
 `;
 
 const InstagramIcon = styled.div`
@@ -159,6 +209,11 @@ const InstagramIcon = styled.div`
     left: 0;
     z-index: 1;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 2.5em;
+    }
 `;
 
 const GithubIcon = styled.div`
@@ -185,6 +240,11 @@ const GithubIcon = styled.div`
     left: 0;
     z-index: 1;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 2.5em;
+    }
   `;
 
 const BottomSection= styled.div`
@@ -203,7 +263,6 @@ const BotTitleContainer= styled.div`
   margin: 1em 0em 0em 0em;
   line-height: 2em;
 
-  
   a {
     text-decoration: none;
     color: #fff;
@@ -214,6 +273,12 @@ const BotTitleContainer= styled.div`
     color: #A39450;
   }
 
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      font-size: 0.5em;
+      margin: 0em;
+    }
+
 `;
 
 const CopywriteContainer = styled.div`
@@ -221,13 +286,22 @@ const CopywriteContainer = styled.div`
   font-size: 0.6em;
   line-height: 0em;
   margin: 0em 0em 2em 0em;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      font-size: 0.4em;
+      margin: 0em 0em 9em 0em;
+    }
+  
 `;
 
 export function ContactFooter(props) {
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
   return (
   <Background>
     <TopSection>
+      {!isMobile && (
       <LeftSection>
         <PhotoMenu>
           <TitleContainer><h1>Photography</h1></TitleContainer>
@@ -253,9 +327,16 @@ export function ContactFooter(props) {
           </ListContainer>
         </WebDesignMenu>
       </LeftSection>
+      )}
       <RightSection>
       <LinkContainer>
           <ul>
+            {isMobile && (
+              <a href="/photography"><li><h1>Photography</h1></li></a>
+            )}
+            {isMobile && (
+              <a href="/webdesign"><li><h1>Web Design</h1></li></a>
+            )}
             <a href="/prints"><li><h1>Prints</h1></li></a>
             <a href="/about"><li><h1>About</h1></li></a>
             <a href="/contact"><li><h1>Hire me!</h1></li></a>

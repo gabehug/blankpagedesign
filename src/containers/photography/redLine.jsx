@@ -7,6 +7,7 @@ import redlineIMG from "../../photos/redlineIMG.png";
 import { Footer } from "../../components/footer";
 import scrollIndi from "../../assets/scrollIndi.png";
 import HorizontalScroll from "react-scroll-horizontal";
+import { deviceSize } from "../../components/responsive";
 
 
 const Background = styled.div`
@@ -24,6 +25,12 @@ const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0em 2em;
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 0em 0em 0em 1em;
+  }
+
 `;
 
 const LogoContainer = styled.div`
@@ -51,6 +58,24 @@ const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 4em;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      width: 14em; 
+      margin: 2em;
+      h1 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size 1.2em;
+      }
+
+      h4 {
+        font-size: 1em;
+      }
+    }
+
 `;
 
 const ScrollContainer = styled.div`
@@ -64,6 +89,13 @@ const ScrollContainer = styled.div`
     width: 3em;
     height: 100%;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+    img {
+      width: 2em;
+    }
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -71,6 +103,14 @@ const ImageContainer = styled.div`
   height: 45em;
   margin: 2em;
   display: flex;
+  align-items: center;
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    img {
+     height: 25em;
+    }
+  }
 `;
 
 const FooterContainer = styled.div`

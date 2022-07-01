@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { PageContainer } from "../pageContainer";
 import PhotoDropdown from "./photoDropdown";
 import WebDesignDropdown from "./webDesignDropdown";
+import { deviceSize } from "../../components/responsive";
 
 
 const Background = styled.div`
@@ -30,6 +31,11 @@ const Background = styled.div`
       color: #909E85;
     }
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        font-size: 0.8em;
+    }
 
 `;
 

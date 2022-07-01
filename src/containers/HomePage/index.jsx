@@ -4,6 +4,8 @@ import styled from "styled-components";
 import webBackground from "../../assets/webBackground.mp4";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
+import { deviceSize } from "../../components/responsive";
+
 
 const Background = styled.div`
   width: 100%;

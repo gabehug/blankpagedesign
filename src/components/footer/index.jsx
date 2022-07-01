@@ -8,6 +8,8 @@ import githubWhite from "../../assets/githubWhite.png";
 import githubHover from "../../assets/githubHover.png";
 import instagramWhite from "../../assets/instagramWhite.png";
 import instagramHover from "../../assets/instagramHover.png";
+import { deviceSize } from "../responsive";
+import { useMediaQuery } from "react-responsive";
 
 const Background= styled.div`
   width: 42em;
@@ -17,6 +19,11 @@ const Background= styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 25em;
+  }
 `;
 
 const TopSection= styled.div`
@@ -72,6 +79,12 @@ const MidSection= styled.div`
   display: flex; 
   align-items: flex-end;
   margin-top: 1em;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `;
 
 const LinkContainer= styled.div`
@@ -102,6 +115,12 @@ const SocialIconContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   margin: 0em 0em 2em 4em;
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 12em;
+    margin: 0em 0em 0em 4em;
+  }
 `;
 
 const LinkedInIcon = styled.div`
@@ -128,6 +147,11 @@ const LinkedInIcon = styled.div`
     left: 0;
     z-index: 1;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 2.5em;
+    }
 `;
 
 const InstagramIcon = styled.div`
@@ -154,6 +178,11 @@ const InstagramIcon = styled.div`
     left: 0;
     z-index: 1;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 2.5em;
+    }
 `;
 
 const GithubIcon = styled.div`
@@ -180,6 +209,11 @@ const GithubIcon = styled.div`
     left: 0;
     z-index: 1;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 2.5em;
+    }
   `;
 
 const BottomSection= styled.div`
@@ -223,6 +257,11 @@ const BotTitleContainer= styled.div`
   font-size: 0.75em;
   margin: 1em 0em 0em 0em;
   line-height: 2em;
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin-top: 12em;
+  }
 `;
 
 const CopywriteContainer = styled.div`
@@ -233,9 +272,10 @@ const CopywriteContainer = styled.div`
 `;
 
 export function Footer(props) {
-
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
   return (
   <Background>
+    {!isMobile && (
     <TopSection>
       <PhotoMenu>
         <TitleContainer><h1>Photography</h1></TitleContainer>
@@ -261,9 +301,16 @@ export function Footer(props) {
         </ListContainer>
       </WebDesignMenu>
     </TopSection>
+    )}
     <MidSection>
       <LinkContainer>
         <ul>
+          {isMobile && (
+            <a href="/photography"><li><h1>Photography</h1></li></a>
+          )}
+          {isMobile && (
+            <a href="/webdesign"><li><h1>Web Design</h1></li></a>
+          )}
           <a href="/prints"><li><h1>Prints</h1></li></a>
           <a href="/gabehug"><li><h1>About</h1></li></a>
           <a href="/contact"><li><h1>Hire me!</h1></li></a>
@@ -277,9 +324,11 @@ export function Footer(props) {
       </SocialIconContainer>
     </MidSection>
     <BottomSection>
+      {!isMobile && (
       <ImageContainer>
         <a href="/"></a>
       </ImageContainer>
+      )}
       <BotTitleContainer><h1>Gabriel Hug</h1> </BotTitleContainer>
       <CopywriteContainer>
         <p>©2022 Blank Page Design</p>
