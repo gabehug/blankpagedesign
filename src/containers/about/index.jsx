@@ -74,7 +74,7 @@ const ContentContainer = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 16em;
+  width: 14em;
   height: 16em;
   
   img {

@@ -7,18 +7,14 @@ import { Footer } from "../../components/footer";
 import { Logo } from "../../components/logo";
 import scrollIndi from "../../assets/scrollIndi.png";
 import HorizontalScroll from "react-scroll-horizontal";
-import { render } from "@testing-library/react";
-import { ScrollToButton } from "../../components/scrollTo";
-import { VisibilityRounded } from "@material-ui/icons";
 import { deviceSize } from "../../components/responsive";
 
 const Background = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
 `;
 
 const MenuContainer = styled.div`
@@ -50,7 +46,6 @@ const ContentContainer = styled.div`
   width: auto;
   display: flex;
   align-items: center;
-
 `;
 
 const InformationContainer = styled.div`
@@ -126,6 +121,7 @@ const FooterContainer = styled.div`
   width: auto;
   height: 100%;
 `;
+
 
 
 export function Photography(props) {
