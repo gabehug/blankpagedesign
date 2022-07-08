@@ -26,4 +26,4 @@ const CustomTextField = ({ name, label }) => {
     )
 }
 
-export default CustomTextField
+export default CustomTextField;
