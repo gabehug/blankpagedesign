@@ -6,7 +6,7 @@ import { classes } from 'istanbul-lib-coverage';
 import useStyles from './styles';
 
 const Product = ({ product, onAddToCart }) => {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Card className={classes.root}>
@@ -31,4 +31,4 @@ const Product = ({ product, onAddToCart }) => {
   )
 }
 
-export default Product
+export default Product;

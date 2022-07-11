@@ -85,7 +85,7 @@ export function Prints(props) {
   }
 
   const handleRemoveFromCart = async (productId) => {
-    const { card } = await commerce.cart.remove(productId);
+    const { cart } = await commerce.cart.remove(productId);
 
     setCart(cart);
   }
