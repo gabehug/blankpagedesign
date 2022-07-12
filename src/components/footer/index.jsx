@@ -224,6 +224,7 @@ const BottomSection= styled.div`
   justify-content: flex-end;
   align-items: center;
   margin-top: 4em;
+
 `;
 
 const ImageContainer= styled.div`
@@ -313,7 +314,7 @@ export function Footer(props) {
           )}
           <a href="/prints"><li><h1>Prints</h1></li></a>
           <a href="/gabehug"><li><h1>About</h1></li></a>
-          <a href="/contact"><li><h1>Hire me!</h1></li></a>
+          <a href="/contact"><li><h1>Connect</h1></li></a>
           <a href="https://ko-fi.com/gabrielhug" target="_blank"><li><h1>Buy me a coffee</h1></li></a>
         </ul>
       </LinkContainer>

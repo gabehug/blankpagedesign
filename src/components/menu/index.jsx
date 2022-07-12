@@ -48,7 +48,7 @@ export function Menu(props) {
           <li><PhotoDropdown/></li>
           <a href="/prints"><li><p>Prints</p></li></a>
           <a href="/webDesign"><li><p>Web Design</p></li></a>
-          <a href="/contact"><li><p>Hire me</p></li></a>
+          <a href="/contact"><li><p>Connect</p></li></a>
         </ul>
       </Background>
     </PageContainer>

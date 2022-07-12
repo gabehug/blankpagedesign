@@ -108,11 +108,16 @@ const InformationContainer = styled.div`
   }
 
   h4{ 
-    margin: 1em 0em;
+    margin: 0.5em 0em 1em 0em;
   }
 
   h3 {
-    margin: 2em;
+    margin: 1em 0em -2em 0em;
+  }
+
+  h2 {
+    margin: 1em 0em 0.5em 0em;
+    text-decoration: underline;
   }
 
   a{
@@ -127,7 +132,10 @@ const InformationContainer = styled.div`
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     h2 {
-      margin: 0em 0em 0.5em 0em;
+      margin: 1em 0em 0.5em 0em;
+    }
+    h3 {
+      margin: 1em 0em;
     }
   }
 
@@ -169,15 +177,15 @@ export function Contact(props) {
             <h1>Lets work together!</h1>
             <InformationContainer>
               <p>I am currently looking to work for you! Since graduating in May I have moved my efforts toward working freelance. I have been on multiple event shoots, and weddings, and shot many graduation photos. I have also begun designing sites from wireframing to actual code development. I would love to work with you or your company to create something we are both proud of. Whether it's images for your company or brand, a photoshoot with your team, or a full website overhaul, I am here to get the job done! </p>
-              <h3><a href="mailto: gabrielhug@blankpagedesign.org" target="blank">Email me</a></h3>
             </InformationContainer>
           </MainContainer>
           <InformationContainer>
             <h2>Services</h2>
-            <p>Photo Shoots</p>
+            <p>Photography</p>
             <h4>Family | Events | Portraits | Weddings</h4>
             <p>Web Design</p> 
-            <p>Wire Framming</p>       
+            <p>Wire Framming</p>    
+            <h3><a href="mailto: gabrielhug@blankpagedesign.org" target="blank">Email me</a></h3>   
           </InformationContainer>
           <CalendlyContainer>
             <InlineWidget url="https://calendly.com/gaberhug/workwithme?month=2022-06"/>

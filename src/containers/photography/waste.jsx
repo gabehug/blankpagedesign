@@ -109,6 +109,36 @@ const FooterContainer = styled.div`
   height: 100%;
 `;
 
+const BackButton = styled.button`
+    width: 10em;
+    height: 3em;
+    position: relative;
+    top: 30em;
+    right: 15em;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid black;
+
+    a {
+      text-decoration: none;
+      font-family: futura;
+      font-size: 1.25em;
+      color: black;
+    }
+
+    :hover {
+      background-color: #A39450;
+      border: 0px;
+    }
+
+    {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        top: 25em;
+        right: 14em;
+    }
+
+`;
+
 export function Waste(props) {
   return (
     <PageContainer>
@@ -133,6 +163,7 @@ export function Waste(props) {
           <ImageContainer>
             <img src= {waste} alt="logo"/>
           </ImageContainer>
+          <BackButton><a href="/photography/waste">Go Back</a></BackButton>
         </ContentContainer>
         <FooterContainer>
           <Footer />

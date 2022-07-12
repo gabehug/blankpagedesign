@@ -122,6 +122,34 @@ const FooterContainer = styled.div`
   height: 100%;
 `;
 
+const BackButton = styled.button`
+    width: 10em;
+    height: 3em;
+    position: relative;
+    top: 30em;
+    right: 20em;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid black;
+
+    a {
+      text-decoration: none;
+      font-family: futura;
+      font-size: 1.25em;
+      color: black;
+    }
+
+    :hover {
+      background-color: #A39450;
+      border: 0px;
+    }
+
+    {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        top: 15em;
+        right: 16em;
+    }
+`;
 
 
 export function Photography(props) {
@@ -152,6 +180,7 @@ export function Photography(props) {
           <ImageContainer>
             <img src= {fadingLandscapes} alt="logo"/>
           </ImageContainer>
+          <BackButton><a href="/photography">Go Back</a></BackButton>
         </ContentContainer>
         <FooterContainer>
           <Footer />

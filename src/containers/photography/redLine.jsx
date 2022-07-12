@@ -8,6 +8,7 @@ import { Footer } from "../../components/footer";
 import scrollIndi from "../../assets/scrollIndi.png";
 import HorizontalScroll from "react-scroll-horizontal";
 import { deviceSize } from "../../components/responsive";
+import { useMediaQuery } from "react-responsive";
 
 
 const Background = styled.div`
@@ -118,6 +119,36 @@ const FooterContainer = styled.div`
   height: 100%;
 `;
 
+const BackButton = styled.button`
+    width: 10em;
+    height: 3em;
+    position: relative;
+    top: 35em;
+    right: 14em;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid black;
+
+    a {
+      text-decoration: none;
+      font-family: futura;
+      font-size: 1.25em;
+      color: black;
+    }
+
+    :hover {
+      background-color: #A39450;
+      border: 0px;
+    }
+
+    {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        top: 18em;
+        right: 13em;
+    }
+
+`;
+
 export function Redline(props) {
   return (
     <PageContainer>
@@ -142,6 +173,7 @@ export function Redline(props) {
           <ImageContainer>
             <img src= {redlineIMG} alt="logo"/>
           </ImageContainer>
+          <BackButton><a href="/photography/redline">Go Back</a></BackButton>
         </ContentContainer>
         <FooterContainer>
           <Footer />

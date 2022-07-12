@@ -97,7 +97,6 @@ const ScrollContainer = styled.div`
   display: flex;
   justify-content: end;
   
-
   img {
     width: 3em;
     height: 100%;
@@ -116,19 +115,49 @@ const ImageContainer = styled.div`
   height: 45em;
   margin: 2em;
   display: flex;
-  align-items: center;
 
- {/*Mobile*/}
- @media screen and (max-width: ${deviceSize.mobile}px) {
-   img {
-     height: 35em;
-   }
- }
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    align-items: center;
+    img {
+      height: 35em;
+    }
+  }
 `;
 
 const FooterContainer = styled.div`
   width: 100%;
   height: 100%;
+`;
+
+const BackButton = styled.button`
+    width: 10em;
+    height: 3em;
+    position: relative;
+    top: 30em;
+    right: 17em;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid black;
+
+    a {
+      text-decoration: none;
+      font-family: futura;
+      font-size: 1.25em;
+      color: black;
+    }
+
+    :hover {
+      background-color: #A39450;
+      border: 0px;
+    }
+
+    {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        top: 24em;
+        right: 16em;
+    }
+
 `;
 
 export function PDL(props) {
@@ -156,6 +185,7 @@ export function PDL(props) {
           <ImageContainer>
             <img src= {pdl} alt="logo"/>
           </ImageContainer>
+          <BackButton><a href="/photography/pdl">Go Back</a></BackButton>
         </ContentContainer>
         <FooterContainer>
           <Footer />
