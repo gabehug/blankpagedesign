@@ -283,7 +283,8 @@ export function Footer(props) {
         <TitleContainer><h1>Photography</h1></TitleContainer>
         <ListContainer>
           <ul>
-            <a href="/photography"><li>Fading Landscape</li></a>
+            <a href="/photography"><li>Client Work</li></a>
+            <a href="/photography/fading"><li>Fading Landscape</li></a>
             <a href="/photography/redline"><li>Redline</li></a>
             <a href="/photography/waste"><li>Waste</li></a>
             <a href="/photography/sign"><li>SIGN OF THE TIME</li></a>

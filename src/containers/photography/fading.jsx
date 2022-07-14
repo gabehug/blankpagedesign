@@ -152,7 +152,7 @@ const BackButton = styled.button`
 `;
 
 
-export function Photography(props) {
+export function Fading(props) {
 
   const scroll = {
     overflowX: 'visible',
@@ -170,9 +170,9 @@ export function Photography(props) {
         </MenuContainer>
         <ContentContainer>
           <InformationContainer>
-            <h1>Client work</h1>
-            <p>client work</p>
-            <h4>butt</h4>
+            <h1>The Fading Landscape</h1>
+            <p>This collection looks at the encroaching presence of humans in nature. There is little of the natural world left untouched by humans. These images aim to capture the natural beauty of the landscape in which we build our world. </p>
+            <h4>Cadet 4x5 Film | Yashica Mat-124G 120mm Film</h4>
             <ScrollContainer>
               <img src={scrollIndi}></img>
             </ScrollContainer>
@@ -180,7 +180,7 @@ export function Photography(props) {
           <ImageContainer>
             <img src= {fadingLandscapes} alt="logo"/>
           </ImageContainer>
-          <BackButton><a href="/photography">Go Back</a></BackButton>
+          <BackButton><a href="/photography/fading">Go Back</a></BackButton>
         </ContentContainer>
         <FooterContainer>
           <Footer />

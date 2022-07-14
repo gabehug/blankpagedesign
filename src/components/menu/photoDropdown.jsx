@@ -58,7 +58,11 @@ export default function PhotoDropdown(props) {
       {isActive && (
       <DropdownContent>
         <DropdownItem>
-        <a href="/photography"><li><p>Fading Landscape</p></li></a>
+        <a href="/photography"><li><p>Client Work</p></li></a>
+        </DropdownItem>
+        <hr/>
+        <DropdownItem>
+        <a href="/photography/fading"><li><p>Fading Landscape</p></li></a>
         </DropdownItem>
         <DropdownItem>
         <a href="/photography/redline"><li><p>Red Line</p></li></a>

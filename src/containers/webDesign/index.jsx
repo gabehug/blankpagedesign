@@ -126,6 +126,34 @@ const ImgContainer = styled.div`
 
 `;
 
+const OuterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ScrollContainer = styled.div`
+  width: 80vw;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0em 0em 4em 0em;
+
+  img {
+    width: 3em;
+    height: 3em;
+  }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      img {
+        width: 2em;
+        height: 2em;
+        margin: 0em 2em;
+      }
+    }
+`;
+
 const FooterContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -144,6 +172,7 @@ export function WebDesign(props) {
           </LogoContainer>
           <Menu />
         </MenuContainer>
+        <OuterContainer>
         <ContentContainer>
           <InformationContainer id="hcg">
             <h1>Hug Human Capital Group</h1>
@@ -174,6 +203,10 @@ export function WebDesign(props) {
             </ImgContainer>
           </InformationContainer>
         </ContentContainer>
+        <ScrollContainer>
+            <img src={scrollIndi}></img>
+          </ScrollContainer>
+        </OuterContainer>
         <FooterContainer>
           <Footer />
         </FooterContainer>

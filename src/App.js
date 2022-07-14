@@ -12,6 +12,7 @@ import { Waste } from './containers/photography/waste';
 import { SignOfTime } from './containers/photography/signOfTime';
 import { Vietnam } from './containers/photography/vietnam';
 import { PDL } from './containers/photography/pdl';
+import { Fading } from './containers/photography/fading';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/" element={<HomePage/>}/>
           <Route path="/gabehug" element={<About/>}/>
           <Route path="/photography" element={<Photography/>}/>
+          <Route path="/photography/fading" element={<Fading/>}/>
           <Route path="/photography/redline" element={<Redline/>}/>
           <Route path ="/photography/waste" element={<Waste />}/>
           <Route path ="/photography/sign" element={<SignOfTime />}/>
