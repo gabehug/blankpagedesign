@@ -1,0 +1,7 @@
+.whiteCursor {
+  cursor: url("../../assets/whiteCursor.png"), default;
+}
+
+#test li, a {
+  cursor: none;
+}

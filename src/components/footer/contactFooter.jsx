@@ -10,6 +10,7 @@ import instagramWhite from "../../assets/instagramWhite.png";
 import instagramHover from "../../assets/instagramHover.png";
 import { deviceSize } from "../../components/responsive";
 import { useMediaQuery } from "react-responsive";
+import cursorStyles from "../footer/cursorStyles.css";
 
 const Background= styled.div`
   width: 100vw;
@@ -92,7 +93,6 @@ const ListContainer= styled.div`
     color: #777777;
     
     :hover {
-      cursor: pointer;
       color: #A39450; 
     }
   }
@@ -239,6 +239,7 @@ const GithubIcon = styled.div`
     top: 0;
     left: 0;
     z-index: 1;
+
   }
 
   {/*Mobile*/}
@@ -297,9 +298,9 @@ const CopywriteContainer = styled.div`
 
 export function ContactFooter(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
-
+  
   return (
-  <Background>
+  <Background className="whiteCursor" id="test">
     <TopSection>
       {!isMobile && (
       <LeftSection>

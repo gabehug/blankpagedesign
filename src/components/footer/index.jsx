@@ -11,6 +11,7 @@ import instagramHover from "../../assets/instagramHover.png";
 import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
 
+
 const Background= styled.div`
   width: 42em;
   height: 100%;
@@ -275,7 +276,7 @@ const CopywriteContainer = styled.div`
 export function Footer(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
   return (
-  <Background>
+  <Background className="whiteCursor" id="test">
     {!isMobile && (
     <TopSection>
       <PhotoMenu>

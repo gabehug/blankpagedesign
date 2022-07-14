@@ -16,7 +16,6 @@ const DropdownButton = styled.div`
     align-items: center;
     text-decoration: underline;
     color: inherit;
-    cursor: pointer;
 
     :hover {
       color: #909E85;
@@ -36,7 +35,6 @@ const DropdownContent = styled.div`
   `;
 
 const DropdownItem = styled.div`
-    cursor: pointer;
     transition: all 0.2s;
     p {
       font-size: 1.25em;

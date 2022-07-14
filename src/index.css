@@ -16,3 +16,12 @@ p {
   font-style: normal;
   font-size: 1.6em;
 }
+
+html,
+body {
+  cursor: url('assets/cursor2.png'), auto;
+}
+
+a, button, li, img {
+  cursor: url('assets/bigCursor.png'), auto;
+}
