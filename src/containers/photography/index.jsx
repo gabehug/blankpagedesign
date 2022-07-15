@@ -2,10 +2,14 @@ import React from "react";
 import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
 import { Menu } from "../../components/menu";
-import temp from "../../assets/temp.webp";
+import seniorPhotos from "../../assets/seniorPhotos.jpg";
+import portraits from "../../assets/portraits.jpg";
+import anemnesisImg from "../../assets/anemnesisImg.jpg";
+import PDL from "../../assets/PDL.jpg";
+import groupShoots from "../../assets/groupShoots.jpg";
+import track from "../../assets/track.jpg";
 import { Footer } from "../../components/footer";
 import { Logo } from "../../components/logo";
-import scrollIndi from "../../assets/scrollIndi.png";
 import HorizontalScroll from "react-scroll-horizontal";
 import { deviceSize } from "../../components/responsive";
 
@@ -52,20 +56,20 @@ const ContentContainer = styled.div`
 const ImageContainer = styled.div`
   width: auto;
   height: auto;
-  margin 4em 0em;
+  margin 0em 1em;
   display: flex; 
   flex-direction: column; 
   align-items: start;
 
   img {
-    width: 50em;
-    height: auto;
+    width: auto;
+    height: 40em;
   }
 
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       img {
-        width: 300em;
+        height: 20em;
       }
     }
 `;
@@ -80,7 +84,7 @@ const BackButton = styled.button`
     height: 3em;
     position: relative;
     top: 30em;
-    right: 20em;
+    right: 12em;
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid black;
@@ -99,8 +103,8 @@ const BackButton = styled.button`
 
     {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        top: 15em;
-        right: 16em;
+        top: 18em;
+        right: 12em;
     }
 `;
 
@@ -123,20 +127,28 @@ export function Photography(props) {
         </MenuContainer>
         <ContentContainer>
           <ImageContainer>
-            <h1>Client work</h1>
-            <img src= {temp} alt="logo"/>
+            <h1>Senior Photos</h1>
+            <img src= {seniorPhotos} alt="logo"/>
           </ImageContainer>
           <ImageContainer>
-            <h1>Client work</h1>
-            <img src= {temp} alt="logo"/>
+            <h1>Portraits</h1>
+            <img src= {portraits} alt="logo"/>
           </ImageContainer>
           <ImageContainer>
-            <h1>Client work</h1>
-            <img src= {temp} alt="logo"/>
+            <h1>PDL by Seb</h1>
+            <img src= {PDL} alt="logo"/>
           </ImageContainer>
           <ImageContainer>
-            <h1>Client work</h1>
-            <img src= {temp} alt="logo"/>
+            <h1>Anemnesis</h1>
+            <img src= {anemnesisImg} alt="logo"/>
+          </ImageContainer>
+          <ImageContainer>
+            <h1>Group Shoots</h1>
+            <img src= {groupShoots} alt="logo"/>
+          </ImageContainer>
+          <ImageContainer>
+            <h1>Track</h1>
+            <img src= {track} alt="logo"/>
           </ImageContainer>
           <BackButton><a href="/photography">Go Back</a></BackButton>
         </ContentContainer>

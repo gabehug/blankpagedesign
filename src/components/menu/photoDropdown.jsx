@@ -75,9 +75,6 @@ export default function PhotoDropdown(props) {
         <DropdownItem>
         <a href="/photography/vietnam"><li><p>Vietnam</p></li></a>
         </DropdownItem>
-        <DropdownItem>
-        <a href="/photography/pdl"><li><p>PDL Collection</p></li></a>
-        </DropdownItem>
       </DropdownContent>  
       )}
     </Dropdown>

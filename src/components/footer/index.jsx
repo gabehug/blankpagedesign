@@ -289,7 +289,6 @@ export function Footer(props) {
             <a href="/photography/waste"><li>Waste</li></a>
             <a href="/photography/sign"><li>A SIGN OF THE TIMES</li></a>
             <a href="/photography/vietnam"><li>Vietnam</li></a>
-            <a href="/photography/pdl"><li>PDL Collection</li></a>
           </ul>
         </ListContainer>
       </PhotoMenu>
