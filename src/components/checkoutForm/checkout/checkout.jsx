@@ -48,7 +48,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
                 <Typography variant="subtitle2">Order ref: {order.customer_reference}</Typography>
             </div>
             <br />
-            <Button component={Link} to="/prints/cart" variant="outlined" type="button">Back to Cart</Button>
+            <Button id="icon" component={Link} to="/prints/cart" variant="outlined" type="button">Back to Cart</Button>
         </>
     ) : (
         <div className={classes.spinner}>

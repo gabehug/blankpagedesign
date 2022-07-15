@@ -66,6 +66,15 @@ const ImageContainer = styled.div`
     height: 40em;
   }
 
+  a {
+    color:#A39450;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #909E85;
+  }
+
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       img {
@@ -135,7 +144,7 @@ export function Photography(props) {
             <img src= {portraits} alt="logo"/>
           </ImageContainer>
           <ImageContainer>
-            <h1>PDL by Seb</h1>
+            <h1><a href="https://www.poncedleon.com/" target="blank">PDL</a> by Seb</h1>
             <img src= {PDL} alt="logo"/>
           </ImageContainer>
           <ImageContainer>

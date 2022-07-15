@@ -1,7 +1,0 @@
-.whiteCursor {
-  cursor: url("../../assets/whiteCursor.png"), default;
-}
-
-#test a, li {
-  cursor: url("../../assets/bigCursor.png"), default;
-}

@@ -22,6 +22,6 @@ body {
   cursor: url('assets/cursor2.png'), auto;
 }
 
-a, button, li {
-  cursor: url('assets/bigCursor.png'), auto;
+a, button, li, ul > li, #icon{
+  cursor: url('assets/bigCursor.png'), none;
 }

@@ -4,8 +4,8 @@ import styled from "styled-components";
 const CustomCursor = styled.div`
   z-index: 10000;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   border: 2px solid black;
   pointer-events: none;
   overflow: hidden;
@@ -21,7 +21,7 @@ export const Cursor = () => {
   React.useEffect(() => {
     document.addEventListener('mousemove', (event) => {
       const {clientX, clientY} = event;
-      const mouseX = (clientX - cursorRef.current.clientWidth / 2) + 15;
+      const mouseX = (clientX - cursorRef.current.clientWidth / 2) + 14;
       const mouseY = (clientY - cursorRef.current.clientHeight / 2) + 14;
       cursorRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
     });

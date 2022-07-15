@@ -28,7 +28,7 @@ const Background = styled.div`
     color: inherit;
 
     :hover {
-      color: #909E85;
+      color: #A39450;
     }
   }
 

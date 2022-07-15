@@ -10,7 +10,6 @@ import instagramWhite from "../../assets/instagramWhite.png";
 import instagramHover from "../../assets/instagramHover.png";
 import { deviceSize } from "../../components/responsive";
 import { useMediaQuery } from "react-responsive";
-import cursorStyles from "../footer/cursorStyles.css";
 
 const Background= styled.div`
   width: 100vw;
@@ -93,7 +92,7 @@ const ListContainer= styled.div`
     color: #777777;
     
     :hover {
-      color: #A39450; 
+      color: #A39450;
     }
   }
 
@@ -130,7 +129,6 @@ const LinkContainer= styled.div`
     color: #fff;
 
     :hover{
-      cursor: pointer;
       color: #A39450 ;
     }
   }
@@ -167,7 +165,6 @@ const LinkedInIcon = styled.div`
   :hover{
     background-image: url(${linkedInHover});
     background-size: contain;
-    cursor: pointer;
   }
 
   a {
@@ -198,7 +195,6 @@ const InstagramIcon = styled.div`
   :hover{
     background-image: url(${instagramHover});
     background-size: contain;
-    cursor: pointer;
   }
 
   a {
@@ -229,7 +225,6 @@ const GithubIcon = styled.div`
   :hover{
     background-image: url(${githubHover});
     background-size: contain;
-    cursor: pointer;
   }
 
   a {
@@ -308,12 +303,12 @@ export function ContactFooter(props) {
           <TitleContainer><h1>Photography</h1></TitleContainer>
           <ListContainer>
             <ul>
-              <a href="/photography"><li>Client Work</li></a>
-              <a href="/photography/fading"><li>Fading Landscape</li></a>
-              <a href="/photography/redline"><li>Redline</li></a>
-              <a href="/photography/waste"><li>Waste</li></a>
-              <a href="/photography/sign"><li>A SIGN OF THE TIMES</li></a>
-              <a href="/photography/vietnam"><li>Vietnam</li></a>
+              <a href="/photography"><li id="icon">Client Work</li></a>
+              <a href="/photography/fading"><li id="icon">Fading Landscape</li></a>
+              <a href="/photography/redline"><li id="icon">Redline</li></a>
+              <a href="/photography/waste"><li id="icon">Waste</li></a>
+              <a href="/photography/sign"><li id="icon">A SIGN OF THE TIMES</li></a>
+              <a href="/photography/vietnam"><li id="icon">Vietnam</li></a>
             </ul>
           </ListContainer>
         </PhotoMenu>
@@ -321,9 +316,9 @@ export function ContactFooter(props) {
           <TitleContainer><h1>Web Design</h1></TitleContainer>
           <ListContainer>
             <ul>
-              <a href="/webDesign"><li>Hug HCG</li></a>
-              <a href="/webDesign"><li>Crypto Dons</li></a>
-              <a href="/webDesign"><li>Chainlinks</li></a>
+              <a href="/webDesign"><li id="icon">Hug HCG</li></a>
+              <a href="/webDesign"><li id="icon">Crypto Dons</li></a>
+              <a href="/webDesign"><li id="icon">Chainlinks</li></a>
             </ul>
           </ListContainer>
         </WebDesignMenu>
@@ -344,9 +339,9 @@ export function ContactFooter(props) {
             <a href="https://ko-fi.com/gabrielhug" target="_blank"><li><h1>Buy me a coffee</h1></li></a>
           </ul>
           <SocialIconContainer>
-            <LinkedInIcon><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
-            <GithubIcon><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
-            <InstagramIcon><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
+            <LinkedInIcon id="icon"><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
+            <GithubIcon id="icon"><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
+            <InstagramIcon id="icon"><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
           </SocialIconContainer>
         </LinkContainer>
       </RightSection>
