@@ -102,6 +102,14 @@ const ImageContainer = styled.div`
   height: 45em;
   margin: 2em;
   display: flex;
+  align-items: center;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+     img {
+      height: 30em;
+     }
+    }
 `;
 
 const FooterContainer = styled.div`
@@ -113,8 +121,8 @@ const BackButton = styled.button`
     width: 10em;
     height: 3em;
     position: relative;
-    top: 25em;
-    right: 15em;
+    top: 30em;
+    right: 16.5em;
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid black;
@@ -133,8 +141,8 @@ const BackButton = styled.button`
 
     {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        top: 18em;
-        right: 14em;
+        top: 21em;
+        right: 16em;
     }
 
 `;

@@ -2,7 +2,7 @@ import React from "react";
 import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
 import { Menu } from "../../components/menu";
-import fadingLandscapes from "../../photos/fadingLandscapes.jpg";
+import temp from "../../assets/temp.webp";
 import { Footer } from "../../components/footer";
 import { Logo } from "../../components/logo";
 import scrollIndi from "../../assets/scrollIndi.png";
@@ -46,66 +46,19 @@ const ContentContainer = styled.div`
   width: auto;
   display: flex;
   align-items: center;
-`;
-
-const InformationContainer = styled.div`
-  width: 600px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  margin: 4em;
-
-  h4 {
-    font-size: 1.1em;
-  }
-
-  {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-      width: 14em; 
-      margin: 2em;
-      h1 {
-        font-size: 1.5em;
-      }
-
-      p {
-        font-size 1.2em;
-      }
-
-      h4 {
-        font-size: 1em;
-      }
-    }
-`;
-
-const ScrollContainer = styled.div`
-  width: 95%;
-  height: auto;
-  display: flex;
-  justify-content: end;
-
-  img {
-    width: 3em;
-    height: 100%;
-  }
-
-  {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-     img {
-      width: 2em;
-     }
-    }
+  margin: 0em 4em
 `;
 
 const ImageContainer = styled.div`
   width: auto;
   height: auto;
-  margin 1em;
+  margin 4em 0em;
   display: flex; 
   flex-direction: column; 
   align-items: start;
 
   img {
-    width: 625em;
+    width: 50em;
     height: auto;
   }
 
@@ -169,16 +122,21 @@ export function Photography(props) {
           <Menu />
         </MenuContainer>
         <ContentContainer>
-          <InformationContainer>
-            <h1>Client work</h1>
-            <p>client work</p>
-            <h4>butt</h4>
-            <ScrollContainer>
-              <img src={scrollIndi}></img>
-            </ScrollContainer>
-          </InformationContainer>
           <ImageContainer>
-            <img src= {fadingLandscapes} alt="logo"/>
+            <h1>Client work</h1>
+            <img src= {temp} alt="logo"/>
+          </ImageContainer>
+          <ImageContainer>
+            <h1>Client work</h1>
+            <img src= {temp} alt="logo"/>
+          </ImageContainer>
+          <ImageContainer>
+            <h1>Client work</h1>
+            <img src= {temp} alt="logo"/>
+          </ImageContainer>
+          <ImageContainer>
+            <h1>Client work</h1>
+            <img src= {temp} alt="logo"/>
           </ImageContainer>
           <BackButton><a href="/photography">Go Back</a></BackButton>
         </ContentContainer>

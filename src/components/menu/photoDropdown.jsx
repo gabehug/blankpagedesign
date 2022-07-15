@@ -60,7 +60,6 @@ export default function PhotoDropdown(props) {
         <DropdownItem>
         <a href="/photography"><li><p>Client Work</p></li></a>
         </DropdownItem>
-        <hr/>
         <DropdownItem>
         <a href="/photography/fading"><li><p>Fading Landscape</p></li></a>
         </DropdownItem>
@@ -71,7 +70,7 @@ export default function PhotoDropdown(props) {
         <a href="/photography/waste"><li><p>Waste</p></li></a>
         </DropdownItem>
         <DropdownItem>
-        <a href="/photography/sign"><li><p>SIGN OF THE TIME</p></li></a>
+        <a href="/photography/sign"><li><p>A SIGN OF THE TIMES</p></li></a>
         </DropdownItem>
         <DropdownItem>
         <a href="/photography/vietnam"><li><p>Vietnam</p></li></a>

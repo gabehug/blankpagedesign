@@ -82,8 +82,6 @@ const ScrollContainer = styled.div`
   height: auto;
   display: flex;
   justify-content: end;
-  
-
   img {
     width: 3em;
     height: 100%;
@@ -102,6 +100,15 @@ const ImageContainer = styled.div`
   height: 45em;
   margin: 2em;
   display: flex;
+  align-items: center;
+
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+     img {
+      height: 30em;
+     }
+    }
 `;
 
 const FooterContainer = styled.div`
@@ -114,7 +121,7 @@ const BackButton = styled.button`
     height: 3em;
     position: relative;
     top: 30em;
-    right: 15em;
+    right: 17em;
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid black;
@@ -133,8 +140,8 @@ const BackButton = styled.button`
 
     {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        top: 25em;
-        right: 14em;
+        top: 21em;
+        right: 15.5em;
     }
 
 `;
