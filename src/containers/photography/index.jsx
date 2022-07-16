@@ -1,17 +1,17 @@
 import React from "react";
-import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
+import HorizontalScroll from "react-scroll-horizontal";
+import { PageContainer } from "../../components/pageContainer";
 import { Menu } from "../../components/menu";
-import seniorPhotos from "../../assets/seniorPhotos.jpg";
-import portraits from "../../assets/portraits.jpg";
-import anemnesisImg from "../../assets/anemnesisImg.jpg";
-import PDL from "../../assets/PDL.jpg";
-import groupShoots from "../../assets/groupShoots.jpg";
-import track from "../../assets/track.jpg";
 import { Footer } from "../../components/footer";
 import { Logo } from "../../components/logo";
-import HorizontalScroll from "react-scroll-horizontal";
 import { deviceSize } from "../../components/responsive";
+import seniorPhotos from "../../assets/photos/seniorPhotos.jpg";
+import portraits from "../../assets/photos/portraits.jpg";
+import anemnesisImg from "../../assets/photos/anemnesisImg.jpg";
+import PDL from "../../assets/photos/PDL.jpg";
+import groupShoots from "../../assets/photos/groupShoots.jpg";
+import track from "../../assets/photos/track.jpg";
 
 const Background = styled.div`
   height: 100vh;

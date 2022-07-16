@@ -1,15 +1,13 @@
 import React, { useState, useEffect} from "react";
-import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
-import webBackground from "../../assets/webBackground.mp4";
 import Products from "../../components/products";
 import Navbar from "../../components/menu/Navbar";
+import Cart from "../../components/cart";
+import Checkout from "../../components/checkoutForm/checkout/checkout";
+import { PageContainer } from "../../components/pageContainer";
 import { commerce } from "../../components/lib/commerce";
 import { ContactFooter } from "../../components/footer/contactFooter";
-import Cart from "../../components/cart";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import Checkout from "../../components/checkoutForm/checkout/checkout";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 

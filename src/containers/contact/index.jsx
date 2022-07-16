@@ -1,12 +1,12 @@
 import React from "react";
-import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
-import webBackground from "../../assets/webBackground.mp4";
+import { PageContainer } from "../../components/pageContainer";
 import { Logo } from "../../components/logo";
 import { InlineWidget } from "react-calendly";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { Marginer } from "../../components/marginer";
 import { deviceSize } from "../../components/responsive";
+import webBackground from "../../assets/webBackground.mp4";
 
 const Background = styled.div`
   width: 100vw;
@@ -198,4 +198,4 @@ export function Contact(props) {
       </Background>
     </PageContainer>
   )
-}
+};

@@ -38,4 +38,4 @@ export function Logo(props) {
       </LogoContainer> 
     </Background>
   )
-}
+};

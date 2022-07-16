@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { PageContainer } from "../pageContainer";
 import PhotoDropdown from "./photoDropdown";
-import WebDesignDropdown from "./webDesignDropdown";
 import { deviceSize } from "../../components/responsive";
 
 
@@ -53,4 +52,4 @@ export function Menu(props) {
       </Background>
     </PageContainer>
   )
-}
+};

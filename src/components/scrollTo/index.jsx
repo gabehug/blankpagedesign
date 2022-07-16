@@ -29,5 +29,5 @@ export function ScrollToButton(props) {
         <BackButton onClick={() => scrollTo(0,0)}>~</BackButton>
       </Background>
     </PageContainer>
-  );
-}
+  )
+};

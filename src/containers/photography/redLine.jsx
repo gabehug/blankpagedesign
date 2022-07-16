@@ -1,14 +1,13 @@
 import React from "react";
-import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
+import HorizontalScroll from "react-scroll-horizontal";
+import { PageContainer } from "../../components/pageContainer";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
-import redlineIMG from "../../photos/redlineIMG.png";
 import { Footer } from "../../components/footer";
-import scrollIndi from "../../assets/scrollIndi.png";
-import HorizontalScroll from "react-scroll-horizontal";
 import { deviceSize } from "../../components/responsive";
-import { useMediaQuery } from "react-responsive";
+import redlineIMG from "../../assets/photos/redlineIMG.png";
+import scrollIndi from "../../assets/scrollIndi.png";
 
 
 const Background = styled.div`

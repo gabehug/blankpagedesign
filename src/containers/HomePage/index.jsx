@@ -1,10 +1,9 @@
 import React from "react";
-import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
-import webBackground from "../../assets/webBackground.mp4";
+import { PageContainer } from "../../components/pageContainer";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
-import { deviceSize } from "../../components/responsive";
+import webBackground from "../../assets/webBackground.mp4";
 
 
 const Background = styled.div`
@@ -52,4 +51,4 @@ export function HomePage(props) {
       </Background>
     </PageContainer>
   )
-}
+};

@@ -1,17 +1,15 @@
 import React from "react";
-import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
+import HorizontalScroll from "react-scroll-horizontal";
+import { PageContainer } from "../../components/pageContainer";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
-import redlineIMG from "../../photos/redlineIMG.png";
 import { Footer } from "../../components/footer";
+import { deviceSize } from "../../components/responsive";
 import scrollIndi from "../../assets/scrollIndi.png";
 import hughcgimg from "../../assets/hughcgimg.jpg";
 import chainlinksimg from "../../assets/chainlinksimg.jpg";
 import cryptodonsimg from "../../assets/cryptodonsimg.jpg";
-import HorizontalScroll from "react-scroll-horizontal";
-import { deviceSize } from "../../components/responsive";
-
 
 const Background = styled.div`
   width: 100%;

@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import footerIMG from "../../assets/footerIMG.png";
-import footerImgHover from "../../assets/footerImgHover.png";
 import linkedInWhite from "../../assets/linkedInWhite.png";
 import linkedInHover from "../../assets/linkedInHover.png";
 import githubWhite from "../../assets/githubWhite.png";
@@ -356,4 +354,4 @@ export function ContactFooter(props) {
   </BotSection>
   </Background>
   )
-}
+};

@@ -1,13 +1,13 @@
 import React from "react";
-import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
+import HorizontalScroll from "react-scroll-horizontal";
+import { PageContainer } from "../../components/pageContainer";
 import { Menu } from "../../components/menu";
-import fadingLandscapes from "../../photos/fadingLandscapes.jpg";
 import { Footer } from "../../components/footer";
 import { Logo } from "../../components/logo";
-import scrollIndi from "../../assets/scrollIndi.png";
-import HorizontalScroll from "react-scroll-horizontal";
 import { deviceSize } from "../../components/responsive";
+import fadingLandscapes from "../../assets/photos/fadingLandscapes.jpg";
+import scrollIndi from "../../assets/scrollIndi.png";
 
 const Background = styled.div`
   height: 100vh;

@@ -78,5 +78,5 @@ export default function PhotoDropdown(props) {
       </DropdownContent>  
       )}
     </Dropdown>
-  );
-}
+  )
+};

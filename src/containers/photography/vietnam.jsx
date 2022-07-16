@@ -1,15 +1,15 @@
 import React from "react";
-import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
+import HorizontalScroll from "react-scroll-horizontal";
+import { PageContainer } from "../../components/pageContainer";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
-import vietnam1 from "../../photos/vietnam1.jpg";
-import vietnam2 from "../../photos/vietnam2.jpg";
-import vietnam3 from "../../photos/vietnam3.jpg";
 import { Footer } from "../../components/footer";
-import scrollIndi from "../../assets/scrollIndi.png";
-import HorizontalScroll from "react-scroll-horizontal";
 import { deviceSize } from "../../components/responsive";
+import vietnam1 from "../../assets/photos/vietnam1.jpg";
+import vietnam2 from "../../assets/photos/vietnam2.jpg";
+import vietnam3 from "../../assets/photos/vietnam3.jpg";
+import scrollIndi from "../../assets/scrollIndi.png";
 
 
 const Background = styled.div`

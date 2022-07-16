@@ -1,13 +1,13 @@
 import React from "react";
-import { PageContainer } from "../../components/pageContainer";
 import styled from "styled-components";
-import webBackground from "../../assets/webBackground.mp4";
+import { PageContainer } from "../../components/pageContainer";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
-import headshot3 from "../../assets/headshot3.jpg";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
 import { useMediaQuery } from "react-responsive";
+import webBackground from "../../assets/webBackground.mp4";
+import headshot3 from "../../assets/headshot3.jpg";
 import scrollIndi from "../../assets/scrollIndi.png";
 
 const Background = styled.div`
@@ -253,4 +253,4 @@ export function About(props) {
       </Background>
     </PageContainer>
   )
-}
+};
