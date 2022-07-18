@@ -10,8 +10,7 @@ const Products = ({ products, onAddToCart}) => {
   return (
     <main classsName={classes.content}>
       <div className={classes.toolbar} />
-      <Marginer direction="vertical" margin={25}/>
-      <Typography className={classes.title} variant='h3' gutterBottom>Prints for sale</Typography>
+      <h1>Prints for Sale</h1>
       <Marginer direction="vertical" margin={25}/>
       <Grid container justify="center" spacing={4}>
         {products.map((product) => (

@@ -116,7 +116,7 @@ const MainContainer = styled.div`
   p {
     font-size: 1.5em;
   }
-  
+
   a {
     color:#A39450;
     text-decoration: none;
@@ -258,9 +258,9 @@ export function About(props) {
               )}
             </TopContainer>
             <InformationContainer>
-              <p>Hey there my name is Gabe Hug and I am freelance Web Designer and Photographer!  This May I graduated with honors from Loyola University of Chicago with a major in Computer Science and minors in Photography and Sustainability Management. I am currently based in Chicago but will be traveling around the U.S. for the rest of 2022 in my self-converted van.</p>
-              <p>I started Blank Page Design this spring to help people design and build webpages that they can be proud of. With the prevalence of the internet, a good website sharing your products or ideas is a vital part of any company. Checkout some of my previous <a href="/webdesign">Web Design</a> work!</p>
-              <p>I have been capturing the world around me for 6 years now, primarily shooting on the streets of Chicago. I am beyond excited to capture photographs around the U.S. as I travel and would love to shoot for you along the way! The <a href="/photography">Photography pages</a> hold collections from the past 4 years and you can follow my travels by following my <a href="https://www.instagram.com/shutter_hug/" target="blank">Instagram!</a></p>
+              <p>Hello! My name is Gabe Hug and I'm a freelance photographer and web designer. I began taking photographs 6 years ago and have primarily captured photos on the streets of Chicago. I have a B.S. in Computer Science and minors in Photography and Sustainability Management from Loyola University of Chicago. My main experience is in frontend design and development, creating functional and beautiful webpages. </p>
+              <p>Blank Page Design is a freelance photography and web design service, open to all photography opportunities and specializing in UI/UX design, specifically for the web. In 2022, I started Blank Page Design with the goals of helping people capture meaningful moments and create visually-pleasing and functional webpages.</p>
+              <p>When I am not on my computer or behind the camera, I spend most of my time making music, biking, and perfecting the cup of coffee. After finishing school in May I knew that I needed a change. I am excited to share that I will soon be traveling around the U.S. in my very own self-converted van! I cant wait to share my travels with you and capture new parts of the U.S. I will be looking for photography and web design opportunities along the way.</p>
             </InformationContainer>
           </MainContainer>
           <ScrollContainer>

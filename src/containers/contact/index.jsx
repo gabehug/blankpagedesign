@@ -126,26 +126,6 @@ const InformationContainer = styled.div`
   }
   `;
 
-const ImgContainer = styled.div`
-  width: 40em;
-  height: auto;
-  margin: 2em 0em;
-
-  box-shadow: rgba(0, 0, 0, 0.45) -10px 25px 40px -20px;  
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
-  {/*Mobile*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    margin: 2em 0em 0em 0em;
-    width: 100%
-  }
-
-`;
-
 const OuterContainer = styled.div`
   width: 100%;
   display: flex;
@@ -189,7 +169,7 @@ const ScrollContainer = styled.div`
 const CalendlyContainer = styled.div`
   width: 45em;
   height: auto;
-  margin: 0em 0em 2em 0em;
+  margin: 0em 0em 4em 0em;
   align-items: center;
 
   {/*Mobile*/} 
