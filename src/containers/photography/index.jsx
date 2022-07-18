@@ -97,6 +97,7 @@ const BackButton = styled.button`
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid black;
+    font-family: futura-pt;
 
     a {
       text-decoration: none;

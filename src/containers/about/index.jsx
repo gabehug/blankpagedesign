@@ -65,7 +65,7 @@ const ContentContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0em 2em;
+  margin: 2em;
   align-items: center;
   justify-content: center;
 
@@ -195,10 +195,10 @@ const InformationContainer = styled.div`
 
 const ScrollContainer = styled.div`
   width: 95%;
-  height: 12em;
+  height: 10em;
   display: flex;
   justify-content: end;
-  align-items: flex-end;
+  align-items: flex-start;
 
 
   img {
