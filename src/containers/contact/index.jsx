@@ -2,22 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
 import { Logo } from "../../components/logo";
+import { Menu } from "../../components/menu";
 import { InlineWidget } from "react-calendly";
 import { ContactFooter } from "../../components/footer/contactFooter";
-import { Marginer } from "../../components/marginer";
 import { deviceSize } from "../../components/responsive";
 import webBackground from "../../assets/webBackground.mp4";
 import scrollIndi from "../../assets/scrollIndi.png";
 
 const Background = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
-  overflow-y: scroll;
-  overflow-y: visible;
   overflow-x: hidden;
 
   video {
@@ -29,14 +27,17 @@ const Background = styled.div`
     z-index: -1;
   }
 `;
-
 const MenuContainer = styled.div`
-  width: 100vw;
-  height: auto;
+  width: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 0em 0em 0em 4em;
+  margin: 0em 2em;
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 0em 0em 0em 1em;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -48,81 +49,57 @@ const LogoContainer = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 0em;
+  }
 `;
 
 const ContentContainer = styled.div`
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0em;
   align-items: center;
   justify-content: start;
+
 `;
 
-
-const MainContainer = styled.div`
-  width: 45em;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0em;
-
-  h1 {
-    line-height: 0em;
-    font-size: 4em;
-    margin: 1em 0em;
-  }
-
-  h2 {
-    margin: 1em 0em 2em 0em;
-  }
+const TitleContainer = styled.div`
+  width: 40em;
+  margin: 2em 0em 0em 0em;
 
   {/*Mobile*/} 
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 80vw;
-    h1 {
-      font-size: 2em;
-      line-height: 1em;
-      margin: 1em 0em;
-    }
-
-    p {
-      font-size 1.2em;
-    }
+    width: 80%;
   }
-
 `;
 
 const InformationContainer = styled.div`
-  width: 100%;
-  height: auto;
+  width: 40em;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: start;
-  align-items: center;
-  margin: 0em;
+  text-align: left;
+  margin: 0em 2em 2em 2em;
 
-  p {
-    margin: 0em;
-  }
-
-  h4{ 
-    margin: 0.5em 0em 1em 0em;
+  h1 {
+    font-size: 1.5em;
   }
 
   h3 {
-    margin: 1em 0em 0em 0em;
+    margin:0;
+  }
+  
+  p {
+    font-size: 1.5em;
+    margin: 0;
   }
 
-  h2 {
-    margin: 2em 0em 0.5em 0em;
-    text-decoration: underline;
-  }
-
-  a{
+  a {
     color:#A39450;
     text-decoration: none;
   }
@@ -133,32 +110,65 @@ const InformationContainer = styled.div`
 
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    h2 {
-      font-size: 1.25em;
-      margin: 1em 0em 0.5em 0em;
+    width: 80%;
+    padding: 2em 0em 0em 0em;
+    h1 {
+      font-size: 1.5em;
     }
+
     p {
-      font-size: 1.45em;
+      font-size 1.2em;
     }
-    h3 {
-      margin: 1em 0em;
-    }
+
     h4 {
       font-size: 1em;
     }
   }
+  `;
+
+const ImgContainer = styled.div`
+  width: 40em;
+  height: auto;
+  margin: 2em 0em;
+
+  box-shadow: rgba(0, 0, 0, 0.45) -10px 25px 40px -20px;  
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 2em 0em 0em 0em;
+    width: 100%
+  }
 
 `;
 
+const OuterContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0em 0em 3em 0em;
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    flex-direction: row;
+    margin: 2em 0em;
+    justify-content: start;
+
+  }
+`;
 
 const ScrollContainer = styled.div`
-  width: 100vw;
+  width: 3em;
   height: 3em;
-  display: flex;
-  justify-content: end;
   position: sticky;
-  top: 62em;
-  margin: 0em 4em 2em 0em;
+  top: 60em;
+  right: 2em;
+  
 
   img {
     transform: rotate(90deg);
@@ -168,34 +178,18 @@ const ScrollContainer = styled.div`
 
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
-      margin: 0em;
       img {
         width: 2em;
         height: 2em;
-        margin: 0em 1em 0em 2em;
+        margin: 0em 2em;
       }
     }
-`;
-
-const OuterContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  {/*Mobile*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    flex-direction: column;
-    margin: 2em 0em;
-    justify-content: center;
-
-  }
 `;
 
 const CalendlyContainer = styled.div`
   width: 45em;
   height: auto;
-  margin: 2em;
+  margin: 0em 0em 2em 0em;
   align-items: center;
 
   {/*Mobile*/} 
@@ -205,53 +199,52 @@ const CalendlyContainer = styled.div`
 
 `;
 
-const FooterContainer = styled.div`
-  width: 100vw;
-  height: auto;
-`;
 
+const FooterContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 export function Contact(props) {
   return (
-    <PageContainer> 
+    <PageContainer>
       <Background>
-        <MenuContainer>
-            <LogoContainer>
-              <Logo/>
-            </LogoContainer>
-          </MenuContainer>
         <video autoPlay muted loop id="backgroundVideo">
           <source src= {webBackground} type="video/mp4"/>
         </video>
-        <ContentContainer>
-          <OuterContainer>
-            <MainContainer>
+        <OuterContainer>
+          <MenuContainer>
+            <LogoContainer>
+              <Logo/>
+            </LogoContainer>
+            <Menu />
+          </MenuContainer>
+          <ContentContainer>
+            <TitleContainer>
               <h1>Lets work together!</h1>
-              <InformationContainer>
-                <p>I am currently looking to work for you! Since graduating in May I have moved my efforts toward working freelance. I have been on multiple event shoots, and weddings, and shot many graduation photos. I have also begun designing sites from wireframing to actual code development. I would love to work with you or your company to create something we are both proud of. Whether it's images for your company or brand, a photoshoot with your team, or a full website overhaul, I am here to get the job done! </p>
-              </InformationContainer>
-            </MainContainer>
+            </TitleContainer>
+            <InformationContainer>
+              <p>I am currently looking to work for you! Since graduating in May I have moved my efforts toward working freelance. I have been on multiple event shoots, and weddings, and shot many graduation photos. I have also begun designing sites from wireframing to actual code development. I would love to work with you or your company to create something we are both proud of. Whether it's images for your company or brand, a photoshoot with your team, or a full website overhaul, I am here to get the job done! </p>
+            </InformationContainer>
             <InformationContainer>
               <h2>Services</h2>
               <p>Photography</p>
               <h4>Family | Events | Portraits | Weddings</h4>
               <p>Web Design</p> 
-              <p>Wire Framming</p>    
-              <h3><a href="mailto: gabrielhug@blankpagedesign.org" target="blank">Email me</a></h3>   
+              <p>Wire Framming</p>  
             </InformationContainer>
-            <ScrollContainer>
-              <img src={scrollIndi}></img>
-            </ScrollContainer>
             <CalendlyContainer>
               <InlineWidget url="https://calendly.com/gaberhug/workwithme?month=2022-06"/>
             </CalendlyContainer>
-            <Marginer direction="vertical" margin={50}/>
-          </OuterContainer>
-          <FooterContainer>
-            <ContactFooter/>
+          </ContentContainer>
+          <ScrollContainer>
+            <img src={scrollIndi}></img>
+          </ScrollContainer>
+        </OuterContainer>
+        <FooterContainer>
+          <ContactFooter />
         </FooterContainer>
-        </ContentContainer>
       </Background>
     </PageContainer>
   )
-};
+}

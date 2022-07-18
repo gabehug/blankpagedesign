@@ -77,20 +77,18 @@ const ContentContainer = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 14em;
+  width: 13em;
   height: 16em;
   
   img {
     width: 100%;
-    height: auto;
-    border-radius: 20%;
+    height: 100%;
+    border-radius: 2%;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   }
 
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
-      width: 12em;
-      height: 12em;
       margin: 0em 0em 1em 0em;
     }
 
@@ -115,6 +113,10 @@ const MainContainer = styled.div`
     margin: 0em 0em 1em 0em;
   }
 
+  p {
+    font-size: 1.5em;
+  }
+  
   a {
     color:#A39450;
     text-decoration: none;
@@ -147,6 +149,7 @@ const MainContainer = styled.div`
 
 const TopContainer = styled.div`
   width: 100%;
+  height: 16em;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -154,6 +157,7 @@ const TopContainer = styled.div`
 
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 20em;
       flex-direction: column;
       margin: 2em 0em;
       justify-content: start;
@@ -163,13 +167,23 @@ const TopContainer = styled.div`
 
 
 const TextContainer = styled.div`
+  height: 16em;
+  display: flex;
   flex-direction: column;
-  margin: 5em 4em 0em 0em;
+  margin: 0em 4em 0em 0em;
 
+  h1 {
+    margin-top: 4em;
+  }
+  
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
-      margin: 3em 0em 0em 0em;
+      margin: 0em 0em 0em 0em;
       width: 100%;
+      
+      h1 {
+        margin-top: 0em;
+      }
     }
 
 `;

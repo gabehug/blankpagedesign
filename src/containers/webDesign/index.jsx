@@ -68,21 +68,39 @@ const ContentContainer = styled.div`
 
 `;
 
+const TitleContainer = styled.div`
+  width: 40em;
+  margin: 2em 0em 0em 0em;
+
+  {/*Mobile*/} 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 80%;
+  }
+`;
+
 const InformationContainer = styled.div`
   width: 40em;
-  height: 42em;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;
   text-align: left;
-  margin: 0em 2em;
-  padding: 2em;
+  margin: 0em 2em 2em 2em;
+
+  h1 {
+    font-size: 1.5em;
+  }
 
   h3 {
     margin:0;
   }
   
+  p {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
   a {
     color:#A39450;
     text-decoration: none;
@@ -94,7 +112,7 @@ const InformationContainer = styled.div`
 
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 16em;
+    width: 80%;
     padding: 2em 0em 0em 0em;
     h1 {
       font-size: 1.5em;
@@ -190,12 +208,14 @@ export function WebDesign(props) {
             <Menu />
           </MenuContainer>
           <ContentContainer>
+            <TitleContainer>
+              <h1>Design Work</h1>
+            </TitleContainer>
             <InformationContainer id="hcg">
               <h1>Hug Human Capital Group</h1>
               <p>I designed and created this site as a home base for Hug Human Capital Group. The site gives information on services provided, the company, and other important information. The built in appointment schedular allows clients to select a date and time to meet with someone from the company. The site is fully responsive using react responsive and flex layouts. This site was built using React. </p>
-              <h3><a href="https://hughcg.org/" target="blank">Hug HCG</a></h3>
-              <h3><a href="https://github.com/gabehug/hug-hcg" target="blank">GitHub</a></h3>
               <h4>HTML | CSS | Javascript</h4>
+              <h3><a href="https://hughcg.org/" target="blank">Visit |</a><a href="https://github.com/gabehug/hug-hcg" target="blank"> Source</a></h3>
               <ImgContainer>
                 <img src={hughcgimg}></img>
               </ImgContainer>
@@ -203,8 +223,8 @@ export function WebDesign(props) {
             <InformationContainer id="dons">
               <h1>Crypto Dons</h1>
               <p>This site was designed as the landing and comunity page for an unreleased NFT created by <a href="https://www.poncedleon.com/" target="blank">Seb</a>. Unfortunately the NFT project was canceled and the site was never fully put into production. The Github link below contains code for the base layouts and styles. The site was designed with the React framework and implements javascript, flex-box, and parallax scrolling effects.</p>
-              <h3><a href="https://github.com/gabehug/crypto-dons-web" target="blank">GitHub</a></h3>
-              <h4>HTML | CSS | Javascript</h4>            
+              <h4>HTML | CSS | Javascript</h4> 
+              <h3><a href="https://github.com/gabehug/crypto-dons-web" target="blank">Source</a></h3>           
               <ImgContainer>
                 <img src={cryptodonsimg}></img>
               </ImgContainer>
@@ -212,8 +232,8 @@ export function WebDesign(props) {
             <InformationContainer id="chain">
               <h1>Chainlinks</h1>
               <p>The Chainlinks site is the homepage for a small student run bike shop located on Loyola Univesity of Chicagos campus. ChainLinks is the nation’s first student-run bicycle shop. Running as a not-for-profit organization since 2011. ChainLinks strives to promote sustainability through clean bicycle transportation while engaging with the community at volunteer events. During my time working at Chainlinks I redesigned and maintained the state of this site. </p>
-              <h3><a href="http://www.chainlinksluc.com/" target="blank">Chainlinks</a></h3>
-              <h4>Squarespace</h4>             
+              <h4>Squarespace</h4>
+              <h3><a href="http://www.chainlinksluc.com/" target="blank">Visit</a></h3>         
               <ImgContainer>
                 <img src={chainlinksimg}></img>
               </ImgContainer>

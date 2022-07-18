@@ -139,7 +139,7 @@ export function Photography(props) {
             <h1>Senior Photos</h1>
             <img src= {seniorPhotos} alt="logo"/>
           </ImageContainer>
-          <ImageContainer>
+          <ImageContainer >
             <h1>Portraits</h1>
             <img src= {portraits} alt="logo"/>
           </ImageContainer>
