@@ -159,7 +159,7 @@ export function SignOfTime(props) {
         </MenuContainer>
         <ContentContainer>
           <InformationContainer>
-            <h1>A Sign of the Times</h1>
+            <h1>A SIGN OF THE TIMES</h1>
             <p>Street signs and graffiti highlighting the political tensions in Decemeber 2020. Shot in black and white around Chicago. </p>
             <h4>Canon 7D mkii | 50mm</h4>
             <ScrollContainer>

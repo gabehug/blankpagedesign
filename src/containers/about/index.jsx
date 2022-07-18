@@ -30,8 +30,10 @@ const Background = styled.div`
 `;
 
 const FirstContainer = styled.div`
+  width: 100vw;
   display: flex;
   flex-direction: row;
+
 `;
 
 const MenuContainer = styled.div`
@@ -60,11 +62,11 @@ const LogoContainer = styled.div`
 
 const ContentContainer = styled.div`
   height: 100vh;
-  width: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0em 2em;
-  align-items: start;
+  align-items: center;
   justify-content: center;
 
   {/*Mobile*/}
@@ -95,12 +97,13 @@ const ImageContainer = styled.div`
 `;
 
 const MainContainer = styled.div`
-  width: 85%;
-  height: 100vh;
+  width: 42em;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  align-items: flex-start;
+  justify-content: start;
+  text-align: left;
   margin: 0em 2em;
 
   h1 {
@@ -110,10 +113,6 @@ const MainContainer = styled.div`
 
   h2 {
     margin: 0em 0em 1em 0em;
-  }
-
-  p {
-    margin: 0.5em 0em;
   }
 
   a {
@@ -150,7 +149,7 @@ const TopContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   margin: 0em 0em 3em 0em;
 
   {/*Mobile*/}
@@ -175,13 +174,18 @@ const TextContainer = styled.div`
 
 `;
 
+const InformationContainer = styled.div`
+    line-height: 1.8em;
+
+`;
+
 const ScrollContainer = styled.div`
-  width: 90%;
-  height: auto;
+  width: 95%;
+  height: 12em;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 0em 0em 4em 0em;
+  justify-content: end;
+  align-items: flex-end;
+
 
   img {
     transform: rotate(90deg);
@@ -190,13 +194,14 @@ const ScrollContainer = styled.div`
   }
 
   {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-      img {
-        width: 2em;
-        height: 2em;
-        margin: 0em 2em;
-      }
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    height: auto;
+    margin: 0em 0em 2em 0em;
+    img {
+      width: 2em;
+      height: 2em;
     }
+  }
 `;
 
 const FooterContainer = styled.div`
@@ -238,9 +243,11 @@ export function About(props) {
               </ImageContainer>
               )}
             </TopContainer>
+            <InformationContainer>
               <p>Hey there my name is Gabe Hug and I am freelance Web Designer and Photographer!  This May I graduated with honors from Loyola University of Chicago with a major in Computer Science and minors in Photography and Sustainability Management. I am currently based in Chicago but will be traveling around the U.S. for the rest of 2022 in my self-converted van.</p>
               <p>I started Blank Page Design this spring to help people design and build webpages that they can be proud of. With the prevalence of the internet, a good website sharing your products or ideas is a vital part of any company. Checkout some of my previous <a href="/webdesign">Web Design</a> work!</p>
               <p>I have been capturing the world around me for 6 years now, primarily shooting on the streets of Chicago. I am beyond excited to capture photographs around the U.S. as I travel and would love to shoot for you along the way! The <a href="/photography">Photography pages</a> hold collections from the past 4 years and you can follow my travels by following my <a href="https://www.instagram.com/shutter_hug/" target="blank">Instagram!</a></p>
+            </InformationContainer>
           </MainContainer>
           <ScrollContainer>
             <img src={scrollIndi}></img>
