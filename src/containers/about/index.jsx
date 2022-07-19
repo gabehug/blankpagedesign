@@ -8,17 +8,17 @@ import { deviceSize } from "../../components/responsive";
 import { useMediaQuery } from "react-responsive";
 import webBackground from "../../assets/webBackground.mp4";
 import headshot3 from "../../assets/headshot3.jpg";
-import tempImage from "../../assets/tempImage.jpg";
+import gabeImage from "../../assets/gabeImage.jpg";
 import scrollIndi from "../../assets/scrollIndi.png";
 
 const Background = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
-  overflow: hidden;
+  overflow-x: hidden;
 
   video {
     width: 100vw;
@@ -74,7 +74,7 @@ const ContentContainer = styled.div`
 
 const ImageContainer = styled.div`
   width: 40em;
-  height: 22.5em;
+  height: 25em;
   margin: 3em 0em;
   
   img {
@@ -225,20 +225,18 @@ export function About(props) {
           <ContentContainer>
             <MainContainer>
               <TopContainer>
-                {/*{isMobile && (<ImageContainer> <img src={headshot3} alt="headshot"></img> </ImageContainer> )}*/}
                 <TextContainer> 
                   <h1>Gabriel Hug</h1>
                   <h2>Photographer and Web Designer</h2>
                 </TextContainer>
-                {/*{!isMobile && (<ImageContainer> <img src={headshot3} alt="headshot"></img></ImageContainer>)}*/}
               </TopContainer>
               <InformationContainer>
-                <p>Hello! My name is Gabriel and I'm a freelance photographer and web designer. I began taking photographs 6 years ago and have primarily captured photos on the streets of Chicago. I have a B.S. in Computer Science and minors in Photography and Sustainability Management from Loyola University of Chicago. My main experience is in frontend design and development, creating functional and beautiful webpages. </p>
-                <p>Blank Page Design is a freelance photography and web design service, open to all photography opportunities and specializing in UI/UX design, specifically for the web. In 2022, I started Blank Page Design with the goals of helping people capture meaningful moments and create visually-pleasing and functional webpages.</p>
-                <p>When I am not on my computer or behind the camera, I spend most of my time making music, biking, and perfecting the cup of coffee. After finishing school in May I knew that I needed a change. I am excited to share that I will soon be traveling around the U.S. in my very own self-converted van! I cant wait to share my travels with you and capture new parts of the U.S. I will be looking for photography and web design opportunities along the way.</p>
+                <p>Hello! My name is Gabe Hug and I'm a freelance photographer and web designer. I began taking photographs 6 years ago, primarily capturing the streets of Chicago. I have a B.S. in Computer Science with minors in Photography and Sustainability Management from Loyola University of Chicago. My main experience and passion is in frontend design and development, creating functional and beautiful webpages for small businesses. </p>
+                <p>Blank Page Design is a freelance web design and photography service. In 2022, I started Blank Page Design to create visually-pleasing, functional webpages and to capture meaningful moments for clients. I pride myself on making interactive designs for sites that showcase clients and their companies. I primarily design in React and have experience using popular website builders such as Squarespace.</p>
+                <p>When I am not on my computer or behind the camera, I spend most of my time making music, biking, and trying to perfect the cup of coffee. After finishing school in May, I knew that I needed a change. My next journey will be traveling around the U.S. in my very own self-converted van! I am excited for this next chapter and cant wait to share my travels with you!</p>
               </InformationContainer>
               <ImageContainer>
-                <img src={tempImage} alt="headshot"></img>
+                <img src={gabeImage} alt="This is an image of me!"></img>
               </ImageContainer>
             </MainContainer>
           </ContentContainer>

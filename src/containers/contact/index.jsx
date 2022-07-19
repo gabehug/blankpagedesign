@@ -90,13 +90,22 @@ const InformationContainer = styled.div`
     font-size: 1.5em;
   }
 
+  h2 {
+    font-size: 1.75em;
+    margin: 0em 0em 0.5em 0em;
+  }
+
   h3 {
-    margin:0;
+    margin: 0.5em 0em;
+  }
+
+  h4 {
+    margin: 0.5em 0em;
   }
   
   p {
     font-size: 1.5em;
-    margin: 0;
+    margin: 0em 0em 1em 0em;
   }
 
   a {
@@ -204,15 +213,17 @@ export function Contact(props) {
               <h1>Lets work together!</h1>
             </TitleContainer>
             <InformationContainer>
-              <p>I am currently looking to work for you! Since graduating in May I have moved my efforts toward working freelance. I have been on multiple event shoots, and weddings, and shot many graduation photos. I have also begun designing sites from wireframing to actual code development. I would love to work with you or your company to create something we are both proud of. Whether it's images for your company or brand, a photoshoot with your team, or a full website overhaul, I am here to get the job done! </p>
+              <p>I am currently looking for web design projects and photo shoots around the Twin Cities area. I have experience designing with React to create functional wepages that solve problems with minimalist user-friendly layouts. I am passionate about creating sites that show off everything you or your business have to offer. </p>
+              <p>Taking photographs, capturing moments, has always been a passion of mine. I draw inspiration from the natural world, human interaction, and architecture to capture scenes from the world around me. Shooting on the streets of Chicago for the past 4 years has given me experience with all types of lighting conditions and shooting environments. I also have 6 years of experience shooting individual portraits and doing group photoshoots. Whether it's images for your company or product, a photoshoot with your team, or a website overhaul, I cant wait to create with you!</p>
             </InformationContainer>
             <InformationContainer>
               <h2>Services</h2>
-              <p>Photography</p>
+              <h3>Photography</h3>
               <h4>Family | Events | Portraits | Weddings</h4>
-              <p>Web Design</p> 
-              <p>Wire Framming</p>  
+              <h3>Web Design</h3> 
+              <h3>Wire Framming</h3>  
             </InformationContainer>
+
             <CalendlyContainer>
               <InlineWidget url="https://calendly.com/gaberhug/workwithme?month=2022-06"/>
             </CalendlyContainer>
