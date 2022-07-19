@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { Marginer } from '../marginer';
 
 import useStyles from './styles';
+import { deviceSize } from '../responsive';
 
 const Background = styled.div`
   width: 100%;
@@ -18,6 +19,11 @@ const Background = styled.div`
 const ContentContainer = styled.div`
   width: 42em;
   height: 100%;
+  margin: 2em 0em;
+
+  @media screen and (max-width: ${deviceSize.tablet}px) {
+    margin: 8em 0em 0em 1em;
+  }
 
 `;
 
@@ -40,7 +46,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
         ))}
       </Grid>
       <div className={classes.cardDetails}>
-          <h1>Subtotal: {cart.subtotal.formatted_with_symbol}</h1>
+          <h2>Subtotal: {cart.subtotal.formatted_with_symbol}</h2>
           <div>
             <Button id="icon" className={classes.emptyButton} size="large" type="button" variant="outlined" color="primary" onClick={handleEmptyCart}>Empty Cart</Button>
             <Button id="icon" component={Link} to="checkout" className={classes.checkoutButton} size="large" type="button" variant="contained" color="secondary">Checkout</Button>

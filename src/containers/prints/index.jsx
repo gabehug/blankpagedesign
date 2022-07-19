@@ -9,6 +9,7 @@ import { commerce } from "../../components/lib/commerce";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { deviceSize } from "../../components/responsive";
 
 
 const Background = styled.div`
@@ -16,18 +17,33 @@ const Background = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: start;
   overflow-y: scroll;
   overflow-y: visible;
   overflow-x: hidden;
 `;
 
+const OuterContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0em 0em 3em 0em;
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    flex-direction: row;
+    margin: 2em 0em;
+    justify-content: start;
+
+  }
+`;
+
 const ProductsContainer = styled.div`
   width: 100%;
-  height: auto;
+  height: 100%;
   justify-content: center;
-  margin: 2em 0em 5em 0em;
+  margin: 0em 0em 5em 0em;
 
 `;
 
@@ -120,6 +136,7 @@ export function Prints(props) {
       <PageContainer> 
         <ThemeProvider theme={theme}>
           <Background>
+            <OuterContainer>
             <Navbar totalItems={cart.total_items}/>
             <ProductsContainer>
               <Routes>
@@ -150,6 +167,7 @@ export function Prints(props) {
                   }/>
               </Routes>
             </ProductsContainer>
+            </OuterContainer>
             <ContactFooter />
           </Background>
         </ThemeProvider>
