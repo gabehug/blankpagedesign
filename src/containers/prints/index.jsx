@@ -24,10 +24,10 @@ const Background = styled.div`
 `;
 
 const ProductsContainer = styled.div`
-  width: 85vw;
+  width: 100%;
   height: auto;
   justify-content: center;
-  margin: 8em 0em 5em 0em;
+  margin: 2em 0em 5em 0em;
 
 `;
 
