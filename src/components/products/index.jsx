@@ -2,22 +2,71 @@ import React from "react";
 import styled from "styled-components";
 import { Grid, Typography } from "@material-ui/core";
 import { Marginer } from "../marginer";
-
 import Product from './product';
 import useStyles from './productStyles';
+import { deviceSize } from "../responsive";
+import webBackground from "../../assets/webBackground.mp4";
+import scrollIndi from "../../assets/scrollIndi.png";
 
 const Background = styled.div`
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  @media screen and (max-width: ${deviceSize.tablet}px) {
+    margin: 5em 0em 0em 1em;
+  }
+`;
+
+const ContentContainer = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  margin: 0em 0em 3em 0em;
+
+{/*Mobile*/}
+@media screen and (max-width: ${deviceSize.mobile}px) {
+  flex-direction: row;
+  margin: 2em 0em;
+  justify-content: start;
+
+}
 `;
 
 const Container = styled.div`
   width: 40em;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
+  @media screen and (max-width: ${deviceSize.desktop}px) {
+    padding: 2em;
+  }
+`;
+
+const ScrollContainer = styled.div`
+  width: 3em;
+  height: 3em;
+  position: sticky;
+  top: 55em;
+  right: 5em;
+  img {
+    transform: rotate(90deg);
+    width: 3em;
+    height: 3em;
+  }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      right: 0;
+      img {
+        width: 2em;
+        height: 2em;
+      }
+    }
 `;
 
 const Products = ({ products, onAddToCart}) => {
@@ -25,9 +74,9 @@ const Products = ({ products, onAddToCart}) => {
   return (
     <main classsName={classes.content}>
       <Background>
+        <ContentContainer>
         <Container>
           <h1>Prints for Sale</h1>
-          <Marginer direction="vertical" margin={25}/>
           <Grid container justify="center" spacing={4}>
             {products.map((product) => (
               <Grid item key={product.id} xs={12} sm={6} md={6}>
@@ -36,6 +85,10 @@ const Products = ({ products, onAddToCart}) => {
             ))}
           </Grid>
         </Container>
+        </ContentContainer>
+        <ScrollContainer>
+            <img src={scrollIndi}></img>
+          </ScrollContainer>
       </Background>
     </main>
   )

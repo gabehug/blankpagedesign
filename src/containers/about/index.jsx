@@ -31,14 +31,22 @@ const Background = styled.div`
 `;
 
 const FirstContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin: 0em 0em 3em 0em;
 
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    flex-direction: row;
+    margin: 2em 0em;
+    justify-content: start;
+  }
 `;
 
 const MenuContainer = styled.div`
-  width: 5.4em;
+  width: auto;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -58,6 +66,11 @@ const LogoContainer = styled.div`
   image {
     width: 100%;
     height: 100%;
+  }
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 0em;
   }
 `;
 
@@ -183,12 +196,12 @@ const ScrollContainer = styled.div`
   position: sticky;
   top: 55em;
   right: 2em;
-
-
+  
   img {
     transform: rotate(90deg);
     width: 3em;
     height: 3em;
+
   }
 
   {/*Mobile*/}

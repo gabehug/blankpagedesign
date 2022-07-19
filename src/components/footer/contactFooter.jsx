@@ -138,8 +138,8 @@ const LinkContainer= styled.div`
 `;
 
 const SocialIconContainer = styled.div`
-  width: 13em;
-  height: 3.2em;
+width: 10em;
+height: 2.5em;
   display: flex;
   margin: 3em 2em 0em 2em;
 
