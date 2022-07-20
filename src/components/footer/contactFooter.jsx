@@ -6,6 +6,8 @@ import githubWhite from "../../assets/githubWhite.png";
 import githubHover from "../../assets/githubHover.png";
 import instagramWhite from "../../assets/instagramWhite.png";
 import instagramHover from "../../assets/instagramHover.png";
+import kofi from "../../assets/kofi.png";
+import kofiHover from "../../assets/kofiHover.png";
 import { deviceSize } from "../../components/responsive";
 import { useMediaQuery } from "react-responsive";
 
@@ -138,14 +140,14 @@ const LinkContainer= styled.div`
 `;
 
 const SocialIconContainer = styled.div`
-width: 10em;
+width: 13em;
 height: 2.5em;
   display: flex;
   margin: 3em 2em 0em 2em;
 
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
-      width: 12em;
+      width: 13em;
       margin: 1em 0em 0em 2em;
     }
 `;
@@ -238,6 +240,38 @@ const GithubIcon = styled.div`
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       height: 2.5em;
+    }
+  `;
+
+  const KofiIcon = styled.div`
+    height: 125%;
+    width: 100%;
+    margin: 0.25em 0em 0em 0.4em;
+    background-image: url(${kofi});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    :hover{
+      background-image: url(${kofiHover});
+      background-size: contain;
+    }
+
+    a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+  }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 2.75em;
+      margin: 0.4em 0em 0em 0.2em;
     }
   `;
 
@@ -334,12 +368,12 @@ export function ContactFooter(props) {
             <a href="/prints"><li><h1>Prints</h1></li></a>
             <a href="/gabehug"><li><h1>About</h1></li></a>
             <a href="/contact"><li><h1>Connect</h1></li></a>
-            <a href="https://ko-fi.com/gabrielhug" target="_blank"><li><h1>Buy me a coffee</h1></li></a>
           </ul>
           <SocialIconContainer>
             <LinkedInIcon id="icon"><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
             <GithubIcon id="icon"><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
             <InstagramIcon id="icon"><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
+            <KofiIcon><a href="https://ko-fi.com/gabrielhug" target="_blank"></a></KofiIcon>
           </SocialIconContainer>
         </LinkContainer>
       </RightSection>

@@ -8,6 +8,8 @@ import githubWhite from "../../assets/githubWhite.png";
 import githubHover from "../../assets/githubHover.png";
 import instagramWhite from "../../assets/instagramWhite.png";
 import instagramHover from "../../assets/instagramHover.png";
+import kofi from "../../assets/kofi.png";
+import kofiHover from "../../assets/kofiHover.png";
 import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
 
@@ -19,7 +21,7 @@ const Background= styled.div`
   background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
@@ -111,15 +113,15 @@ const LinkContainer= styled.div`
 `;
 
 const SocialIconContainer = styled.div`
-  width: 10em;
+  width: 14em;
   height: 2.5em;
   display: flex;
   justify-content: flex-end;
-  margin: 0em 0em 2em 4em;
+  margin: 0em 0em 2em 12em;
 
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 12em;
+    width: 13em;
     margin: 0em 0em 0em 4em;
   }
 `;
@@ -217,6 +219,38 @@ const GithubIcon = styled.div`
     }
   `;
 
+  const KofiIcon = styled.div`
+  height: 125%;
+  width: 100%;
+  margin: 0.25em 0em 0em 0.4em;
+  background-image: url(${kofi});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  :hover{
+    background-image: url(${kofiHover});
+    background-size: contain;
+  }
+
+  a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+  }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 2.75em;
+      margin: 0.4em 0em 0em 0.2em;
+    }
+  `;
+
 const BottomSection= styled.div`
   width: 100%;
   height: auto;
@@ -224,7 +258,6 @@ const BottomSection= styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 4em;
 
 `;
 
@@ -237,6 +270,7 @@ const ImageContainer= styled.div`
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  margin-top: 11em;
 
   :hover{
     background-image: url(${footerImgHover});
@@ -262,7 +296,7 @@ const BotTitleContainer= styled.div`
 
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    margin-top: 12em;
+    margin-top: 25em;
   }
 `;
 
@@ -316,13 +350,13 @@ export function Footer(props) {
           <a href="/prints"><li><h1>Prints</h1></li></a>
           <a href="/gabehug"><li><h1>About</h1></li></a>
           <a href="/contact"><li><h1>Connect</h1></li></a>
-          <a href="https://ko-fi.com/gabrielhug" target="_blank"><li><h1>Buy me a coffee</h1></li></a>
         </ul>
       </LinkContainer>
       <SocialIconContainer>
         <LinkedInIcon id="icon"><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
         <GithubIcon><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
         <InstagramIcon><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
+        <KofiIcon><a href="https://ko-fi.com/gabrielhug" target="_blank"></a></KofiIcon>
       </SocialIconContainer>
     </MidSection>
     <BottomSection>

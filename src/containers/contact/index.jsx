@@ -8,6 +8,8 @@ import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
 import webBackground from "../../assets/webBackground.mp4";
 import scrollIndi from "../../assets/scrollIndi.png";
+import upwork from "../../assets/upwork.png";
+import fiverr from "../../assets/fiverr.png";
 
 const Background = styled.div`
   width: 100%;
@@ -188,6 +190,55 @@ const CalendlyContainer = styled.div`
 
 `;
 
+const ButtonContainer = styled.div`
+  width: 42em;
+  height: auto;
+  display: flex;
+  justify-content: start;
+
+  {/*Mobile*/} 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 80%;
+  }
+
+`;
+
+const Button = styled.button`
+  width: 8em;
+  height: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: -1em 1em 2em 1em;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: futura-pt;
+  font-size: 1em;
+  font-weight: 700;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 25%;
+    height: auto;
+  }
+
+  :hover {
+    background-color: #A39450;
+    border: 0px;
+  }
+
+  {/*Mobile*/} 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: -1em 1em 2em 0em;
+  }
+
+`;
+
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -215,15 +266,12 @@ export function Contact(props) {
             <InformationContainer>
               <p>I am currently looking for web design projects and photo shoots around the Twin Cities area. I have experience designing with React to create functional wepages that solve problems with minimalist user-friendly layouts. I am passionate about creating sites that show off everything you or your business have to offer. </p>
               <p>Taking photographs, capturing moments, has always been a passion of mine. I draw inspiration from the natural world, human interaction, and architecture to capture scenes from the world around me. Shooting on the streets of Chicago for the past 4 years has given me experience with all types of lighting conditions and shooting environments. I also have 6 years of experience shooting individual portraits and doing group photoshoots. Whether it's images for your company or product, a photoshoot with your team, or a website overhaul, I cant wait to create with you!</p>
+              <h3>Connect with me on Upwork and Fiverr or select a time to meet below.</h3>
             </InformationContainer>
-            <InformationContainer>
-              <h2>Services</h2>
-              <h3>Photography</h3>
-              <h4>Family | Events | Portraits | Weddings</h4>
-              <h3>Web Design</h3> 
-              <h3>Wire Framming</h3>  
-            </InformationContainer>
-
+            <ButtonContainer>
+              <Button><a href="https://www.upwork.com/freelancers/~0165e8bf5636859fb3" target="_blank"><img src={upwork} alt="Upwork Icon"></img></a></Button>
+              <Button><a href="https://www.fiverr.com/gabehug?public_mode=true" target="_blank"><img src={fiverr} alt="Fiverr Icon"></img></a></Button>
+            </ButtonContainer>
             <CalendlyContainer>
               <InlineWidget url="https://calendly.com/gaberhug/workwithme?month=2022-06"/>
             </CalendlyContainer>
