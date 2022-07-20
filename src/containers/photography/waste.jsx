@@ -159,8 +159,7 @@ export function Waste(props) {
         <ContentContainer>
           <InformationContainer>
             <h1>Waste</h1>
-            <p>The following images are a small piece of evidence in a much larger case against how we treat our planet. This trash is a visible reminder that surrounds us, reminding us of the waste that we create. </p>
-            <p>The following were taken in the Wrigleyville neighborhood of Chicago. </p>
+            <p>Plastics are often seen as an aesthetic problem as we see more and more single-use plastics and waste in our streets. This excess waste is just a small part of the plastics issue. Today plastics are chock-full of chemicals meant to improve people's lives and create convenience. These chemicals are often toxic and have health side effects even at extremely low concentrations. The chemicals are spread into our soil, water supply, and even the air as plastics are discarded and broken down. These images are a small reminder of how plastics and chemicals permeate our everyday lives. </p>
             <h4>Fuji x100t | Canon EOS R</h4>
             <ScrollContainer>
               <img src={scrollIndi}></img>

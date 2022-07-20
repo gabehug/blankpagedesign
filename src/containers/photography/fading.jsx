@@ -171,7 +171,7 @@ export function Fading(props) {
         <ContentContainer>
           <InformationContainer>
             <h1>The Fading Landscape</h1>
-            <p>This collection looks at the encroaching presence of humans in nature. There is little of the natural world left untouched by humans. These images aim to capture the natural beauty of the landscape in which we build our world. </p>
+            <p>This collection looks at the encroaching presence of humans in the natural world. Taking inspiration from the muted fall colors, cloudy skies, and running water; These images capture the natural beauty of the landscape in which we build our world. </p>
             <h4>Cadet 4x5 Film | Yashica Mat-124G 120mm Film</h4>
             <ScrollContainer>
               <img src={scrollIndi}></img>

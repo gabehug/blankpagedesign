@@ -161,7 +161,7 @@ export function Vietnam(props) {
         <ContentContainer>
           <InformationContainer>
             <h1>Vietnam</h1>
-            <p>The following is a selection of images from my time traveling in South East Asia. The kindest, most welcoming culture and people. I hope to be back soon! </p>
+            <p>The following is a selection of images from my time traveling in Vietnam and South East Asia. The kindest, most welcoming culture and people. I hope to be back soon!. </p>
             <h4>Canon 7D mkii</h4>
             <ScrollContainer>
               <img src={scrollIndi}></img>

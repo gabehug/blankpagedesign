@@ -59,6 +59,10 @@ const InformationContainer = styled.div`
   flex-direction: column;
   margin: 4em;
 
+  p {
+    margin-bottom: 0em;
+  }
+
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       width: 14em; 
@@ -162,8 +166,8 @@ export function Redline(props) {
         <ContentContainer>
           <InformationContainer>
             <h1>Red Line</h1>
-            <p>These images were taken on the CTA Redline. Starting from the north at Howard to the furthest south at 95th/Dan Ryan, the sequence captures the 33 stops of the beloved Redline. Transporting over 200,000 people everyday, the redline runs 24hrs/day 365 days a year making it a truely interesting way to travel the city.</p>
-            <h5>*this is NOT sponsored by the CTA</h5>
+            <p>These images were taken on the CTA Redline. Starting at Howard and traveling south to 95th/Dan Ryan, this sequence captures all 33 stops of the beloved Redline. Transporting over 200,000 people every day, the redline runs 24hrs/day 365days/year, creating a truly unique way to see the city.</p>
+            <h5>*this collection is NOT sponsored by the CTA</h5>
             <h4>Canon 7D mkii | 50mm</h4>
             <ScrollContainer>
               <img src={scrollIndi}></img>
