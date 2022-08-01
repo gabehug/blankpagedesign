@@ -178,7 +178,7 @@ export function Fading(props) {
             </ScrollContainer>
           </InformationContainer>
           <ImageContainer>
-            <img src= {fadingLandscapes} alt="logo"/>
+            <img src= {fadingLandscapes} alt="Fading Landscapes main content"/>
           </ImageContainer>
           <BackButton><a href="/photography/fading">Go Back</a></BackButton>
         </ContentContainer>

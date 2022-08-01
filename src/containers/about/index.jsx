@@ -5,9 +5,7 @@ import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
-import { useMediaQuery } from "react-responsive";
 import webBackground from "../../assets/webBackground.mp4";
-import headshot3 from "../../assets/headshot3.jpg";
 import gabeImage from "../../assets/gabeImage.jpg";
 import scrollIndi from "../../assets/scrollIndi.png";
 
@@ -249,7 +247,7 @@ export function About(props) {
                 <p>When I am not on my computer or behind the camera, I spend most of my time making music, biking, and trying to perfect the cup of coffee. After finishing school in May, I knew that I needed a change. My next journey will be traveling around the U.S. in my very own self-converted van! I am excited for this next chapter and cant wait to share my travels with you!</p>
               </InformationContainer>
               <ImageContainer>
-                <img src={gabeImage} alt="This is an image of me!"></img>
+                <img src={gabeImage} alt="Gabe Hug"></img>
               </ImageContainer>
             </MainContainer>
           </ContentContainer>

@@ -178,14 +178,14 @@ const ScrollContainer = styled.div`
 `;
 
 const CalendlyContainer = styled.div`
-  width: 45em;
   height: auto;
+  width: 100%;
   margin: 0em 0em 4em 0em;
   align-items: center;
 
   {/*Mobile*/} 
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 80%;
+    justify-content: center;
   }
 
 `;
@@ -269,15 +269,15 @@ export function Contact(props) {
               <h3>Connect with me on Upwork and Fiverr or select a time to meet below.</h3>
             </InformationContainer>
             <ButtonContainer>
-              <Button><a href="https://www.upwork.com/freelancers/~0165e8bf5636859fb3" target="_blank"><img src={upwork} alt="Upwork Icon"></img></a></Button>
-              <Button><a href="https://www.fiverr.com/gabehug?public_mode=true" target="_blank"><img src={fiverr} alt="Fiverr Icon"></img></a></Button>
+              <Button><a href="https://www.upwork.com/freelancers/~0165e8bf5636859fb3" target="_blank" rel="noreferrer"><img src={upwork} alt="Upwork Icon"></img></a></Button>
+              <Button><a href="https://www.fiverr.com/gabehug?public_mode=true" target="_blank" rel="noreferrer"><img src={fiverr} alt="Fiverr Icon"></img></a></Button>
             </ButtonContainer>
             <CalendlyContainer>
               <InlineWidget url="https://calendly.com/gaberhug/workwithme?month=2022-06"/>
             </CalendlyContainer>
           </ContentContainer>
           <ScrollContainer>
-            <img src={scrollIndi}></img>
+            <img src={scrollIndi} alt="Scroll indicator"></img>
           </ScrollContainer>
         </OuterContainer>
         <FooterContainer>

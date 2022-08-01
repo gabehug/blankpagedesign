@@ -370,10 +370,10 @@ export function ContactFooter(props) {
             <a href="/contact"><li><h1>Connect</h1></li></a>
           </ul>
           <SocialIconContainer>
-            <LinkedInIcon id="icon"><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
-            <GithubIcon id="icon"><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
-            <InstagramIcon id="icon"><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
-            <KofiIcon><a href="https://ko-fi.com/gabrielhug" target="_blank"></a></KofiIcon>
+            <LinkedInIcon id="icon"><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank" rel="noreferrer"></a></LinkedInIcon>
+            <GithubIcon id="icon"><a href="https://github.com/gabehug" target="_blank" rel="noreferrer"></a></GithubIcon>
+            <InstagramIcon id="icon"><a href="https://www.instagram.com/shutter_hug/" target="_blank" rel="noreferrer"></a></InstagramIcon>
+            <KofiIcon><a href="https://ko-fi.com/gabrielhug" target="_blank" rel="noreferrer"></a></KofiIcon>
           </SocialIconContainer>
         </LinkContainer>
       </RightSection>

@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Grid, Typography } from "@material-ui/core";
-import { Marginer } from "../marginer";
+import { Grid } from "@material-ui/core";
 import Product from './product';
 import useStyles from './productStyles';
 import { deviceSize } from "../responsive";
-import webBackground from "../../assets/webBackground.mp4";
 import scrollIndi from "../../assets/scrollIndi.png";
 
 const Background = styled.div`
@@ -87,7 +85,7 @@ const Products = ({ products, onAddToCart}) => {
         </Container>
         </ContentContainer>
         <ScrollContainer>
-            <img src={scrollIndi}></img>
+            <img src={scrollIndi} alt="Scroll Indicator"></img>
           </ScrollContainer>
       </Background>
     </main>
