@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import footerIMG from "../../assets/footerIMG.png";
 import footerImgHover from "../../assets/footerImgHover.png";
-import linkedInWhite from "../../assets/linkedInWhite.png";
-import linkedInHover from "../../assets/linkedInHover.png";
-import githubWhite from "../../assets/githubWhite.png";
-import githubHover from "../../assets/githubHover.png";
-import instagramWhite from "../../assets/instagramWhite.png";
-import instagramHover from "../../assets/instagramHover.png";
+import altLinkedIn from "../../assets/altLinkedIn.png";
+import altLinkedInHover from "../../assets/altLinkedInHover.png";
+import altGithub from "../../assets/altGithub.png";
+import altGithubHover from "../../assets/altGithubHover.png";
+import altInstagram from "../../assets/altInstagram.png";
+import altInstagramHover from "../../assets/altInstagramHover.png";
 import kofi from "../../assets/kofi.png";
 import kofiHover from "../../assets/kofiHover.png";
 import { deviceSize } from "../responsive";
@@ -130,14 +130,14 @@ const LinkedInIcon = styled.div`
   height: 100%;
   width: 100%;
   margin: 0.5em 0em 0em 0em;
-  background-image: url(${linkedInWhite});
+  background-image: url(${altLinkedIn});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
 
   :hover{
-    background-image: url(${linkedInHover});
+    background-image: url(${altLinkedInHover});
     background-size: contain;
     cursor: url('assets/bigCursor.png'), none;
   }
@@ -161,14 +161,14 @@ const InstagramIcon = styled.div`
   height: 100%;
   width: 100%;
   margin: 0.5em 0em 0em 0em;
-  background-image: url(${instagramWhite});
+  background-image: url(${altInstagram});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
 
   :hover{
-    background-image: url(${instagramHover});
+    background-image: url(${altInstagramHover});
     background-size: contain;
     
   }
@@ -192,14 +192,14 @@ const GithubIcon = styled.div`
   height: 100%;
   width: 100%;
   margin: 0.5em 0em 0em 0em;
-  background-image: url(${githubWhite});
+  background-image: url(${altGithub});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
 
   :hover{
-    background-image: url(${githubHover});
+    background-image: url(${altGithubHover});
     background-size: contain;
     
   }
@@ -231,7 +231,7 @@ const GithubIcon = styled.div`
 
   :hover{
     background-image: url(${kofiHover});
-    background-size: contain;
+    background-size: 75%;
   }
 
   a {
