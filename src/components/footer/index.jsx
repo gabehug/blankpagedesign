@@ -294,6 +294,7 @@ const BotTitleContainer= styled.div`
   margin: 1em 0em 0em 0em;
   line-height: 2em;
 
+
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     margin-top: 25em;
@@ -310,7 +311,7 @@ const CopywriteContainer = styled.div`
 export function Footer(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
   return (
-  <Background className="whiteCursor" id="test">
+  <Background id="icon">
     {!isMobile && (
     <TopSection>
       <PhotoMenu>

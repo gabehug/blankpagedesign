@@ -152,8 +152,7 @@ const BotTitleContainer= styled.div`
     color: #fff;
   }
 
-  hover{
-    cursor: pointer;
+  h1: hover{
     color: #A39450;
   }
 
@@ -183,7 +182,7 @@ export function ContactFooter(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
   
   return (
-  <Background className="whiteCursor" id="test">
+  <Background id="icon">
     <TopSection>
       {!isMobile && (
       <LeftSection>
