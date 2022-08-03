@@ -3,20 +3,25 @@ import { AppBar, Toolbar, IconButton, Badge, Typography } from "@material-ui/cor
 import { ShoppingCart } from '@material-ui/icons';
 import Rectangle from "../../assets/Rectangle.png";
 import { Link, useLocation } from 'react-router-dom';
+import { deviceSize } from '../../components/responsive';
+import { useMediaQuery } from "react-responsive";
 
 import useStyles from './navbarStyles';
 
 const Navbar = ({ totalItems }) => {
   const classes = useStyles();
   const location = useLocation();
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
   return (
     <div>
       <AppBar position="fixed" className={classes.appBar} color="inherit">
         <Toolbar>
-          <Typography component={Link} to="/" variant="h6" className={classes.title} color="inherit">
-            <img src={Rectangle} alt="Blank Page Design" height="100em" className={classes.image}/>
+        {!isMobile && (
+        <Typography component={Link} to="/" variant="h6" className={classes.title} color="inherit">
+          <img src={Rectangle} alt="Blank Page Design" height="100em" className={classes.image}/>
           </Typography>
+        )}
           <div className={classes.grow} />
           {location.pathname === '/prints' && (
           <div className={classes.button}>

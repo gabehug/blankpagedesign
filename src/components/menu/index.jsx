@@ -7,10 +7,11 @@ import { deviceSize } from "../../components/responsive";
 
 const Background = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: sticky;
 
   ul {
     list-style-type: none;

@@ -5,6 +5,8 @@ import Product from './product';
 import useStyles from './productStyles';
 import { deviceSize } from "../responsive";
 import scrollIndi from "../../assets/scrollIndi.png";
+import { useMediaQuery } from "react-responsive";
+
 
 const Background = styled.div`
   width: 100%;
@@ -27,9 +29,8 @@ const ContentContainer = styled.div`
 {/*Mobile*/}
 @media screen and (max-width: ${deviceSize.mobile}px) {
   flex-direction: row;
-  margin: 2em 0em;
+  margin: 0em 0em 2em 0em;
   justify-content: start;
-
 }
 `;
 
@@ -38,11 +39,19 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: start;
 
+  {/*Desktop*/}
   @media screen and (max-width: ${deviceSize.desktop}px) {
     padding: 2em;
   }
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      h1 {
+        margin-top: -2em;
+      }
+    }
 `;
 
 const ScrollContainer = styled.div`
@@ -68,6 +77,7 @@ const ScrollContainer = styled.div`
 `;
 
 const Products = ({ products, onAddToCart}) => {
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
   const classes = useStyles();
   return (
     <main classsName={classes.content}>
@@ -84,9 +94,11 @@ const Products = ({ products, onAddToCart}) => {
           </Grid>
         </Container>
         </ContentContainer>
+        {!isMobile &&(
         <ScrollContainer>
             <img src={scrollIndi} alt="Scroll Indicator"></img>
           </ScrollContainer>
+          )}
       </Background>
     </main>
   )

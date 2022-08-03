@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
 import { Logo } from "../../components/logo";
-import { Menu } from "../../components/menu";
 import { InlineWidget } from "react-calendly";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
+import { SocialIcons } from "../../components/socialIcons";
+import { useMediaQuery } from "react-responsive";
 import webBackground from "../../assets/webBackground.mp4";
 import scrollIndi from "../../assets/scrollIndi.png";
 import upwork from "../../assets/upwork.png";
@@ -30,16 +31,11 @@ const Background = styled.div`
   }
 `;
 const MenuContainer = styled.div`
-  width: auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  width: 5em;
+  height: 5em;
+  position: sticky;
+  top: 0em;
   margin: 0em 2em;
-
-  {/*Mobile*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    margin: 0em 0em 0em 1em;
-  }
 `;
 
 const LogoContainer = styled.div`
@@ -69,21 +65,21 @@ const ContentContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  width: 40em;
+  width: 38em;
   margin: 2em 0em 0em 0em;
 
   {/*Mobile*/} 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 80%;
+    margin: 0em;
   }
 `;
 
 const InformationContainer = styled.div`
-  width: 40em;
+  width: 38em;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: start;
   text-align: left;
   margin: 0em 2em 2em 2em;
@@ -122,7 +118,7 @@ const InformationContainer = styled.div`
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 80%;
-    padding: 2em 0em 0em 0em;
+    padding: 0em;
     h1 {
       font-size: 1.5em;
     }
@@ -185,7 +181,7 @@ const CalendlyContainer = styled.div`
 
   {/*Mobile*/} 
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    justify-content: center;
+    width: 80%;
   }
 
 `;
@@ -246,6 +242,8 @@ const FooterContainer = styled.div`
 `;
 
 export function Contact(props) {
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+
   return (
     <PageContainer>
       <Background>
@@ -253,12 +251,13 @@ export function Contact(props) {
           <source src= {webBackground} type="video/mp4"/>
         </video>
         <OuterContainer>
+          {!isMobile && (
           <MenuContainer>
             <LogoContainer>
               <Logo/>
             </LogoContainer>
-            <Menu />
           </MenuContainer>
+          )}
           <ContentContainer>
             <TitleContainer>
               <h1>Lets work together!</h1>
@@ -266,7 +265,7 @@ export function Contact(props) {
             <InformationContainer>
               <p>I am currently looking for web design projects and photo shoots around the Twin Cities area. I have experience designing with React to create functional wepages that solve problems with minimalist user-friendly layouts. I am passionate about creating sites that show off everything you or your business have to offer. </p>
               <p>Taking photographs, capturing moments, has always been a passion of mine. I draw inspiration from the natural world, human interaction, and architecture to capture scenes from the world around me. Shooting on the streets of Chicago for the past 4 years has given me experience with all types of lighting conditions and shooting environments. I also have 6 years of experience shooting individual portraits and doing group photoshoots. Whether it's images for your company or product, a photoshoot with your team, or a website overhaul, I cant wait to create with you!</p>
-              <h3>Connect with me on Upwork and Fiverr or select a time to meet below.</h3>
+              <h3>Connect with me on Upwork, Fiverr, or select a time to meet below.</h3>
             </InformationContainer>
             <ButtonContainer>
               <Button><a href="https://www.upwork.com/freelancers/~0165e8bf5636859fb3" target="_blank" rel="noreferrer"><img src={upwork} alt="Upwork Icon"></img></a></Button>
@@ -279,6 +278,7 @@ export function Contact(props) {
           <ScrollContainer>
             <img src={scrollIndi} alt="Scroll indicator"></img>
           </ScrollContainer>
+          <SocialIcons />
         </OuterContainer>
         <FooterContainer>
           <ContactFooter />

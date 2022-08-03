@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
-import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
@@ -14,6 +13,7 @@ import dons2 from "../../assets/dons2.jpg";
 import chainlinks1 from "../../assets/chainlinks1.jpg";
 import emperor1 from "../../assets/emperor1.jpg";
 import emperor2 from "../../assets/emperor2.jpg";
+import { SocialIcons } from "../../components/socialIcons";
 
 const Background = styled.div`
   width: 100%;
@@ -34,15 +34,16 @@ const Background = styled.div`
   }
 `;
 const MenuContainer = styled.div`
-  width: auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  width: 5em;
+  height: 5em;
+  position: sticky;
+  top: 0em;
   margin: 0em 2em;
 
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     margin: 0em 0em 0em 1em;
+    top: 2em;
   }
 `;
 
@@ -73,17 +74,18 @@ const ContentContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  width: 40em;
+  width: 38em;
   margin: 2em 0em 0em 0em;
 
   {/*Mobile*/} 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 80%;
+    margin: 0em;
   }
 `;
 
 const InformationContainer = styled.div`
-  width: 40em;
+  width: 38em;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -134,7 +136,7 @@ const InformationContainer = styled.div`
   `;
 
 const ImgContainer = styled.div`
-  width: 40em;
+  width: 38em;
   height: auto;
   margin: 2em 0em;
   box-shadow: rgba(0, 0, 0, 0.45) -10px 25px 40px -20px;  
@@ -210,7 +212,6 @@ export function WebDesign(props) {
             <LogoContainer>
               <Logo/>
             </LogoContainer>
-            <Menu />
           </MenuContainer>
           <ContentContainer>
             <TitleContainer>
@@ -261,6 +262,7 @@ export function WebDesign(props) {
           <ScrollContainer>
             <img src={scrollIndi} alt="Scroll indicator"></img>
           </ScrollContainer>
+          <SocialIcons />
         </OuterContainer>
         <FooterContainer>
           <ContactFooter />

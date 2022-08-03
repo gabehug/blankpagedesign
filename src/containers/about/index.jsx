@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
-import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
+import { SocialIcons } from "../../components/socialIcons";
 import webBackground from "../../assets/webBackground.mp4";
 import gabeImage from "../../assets/gabeImage.jpg";
 import scrollIndi from "../../assets/scrollIndi.png";
+
 
 const Background = styled.div`
   width: 100%;
@@ -44,15 +45,16 @@ const FirstContainer = styled.div`
 `;
 
 const MenuContainer = styled.div`
-  width: auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  width: 5em;
+  height: 5em;
+  position: sticky;
+  top: 0em;
   margin: 0em 2em;
 
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       margin: 0em 0em 0em 1em;
+      top: 2em;
     }
 `;
 
@@ -79,12 +81,11 @@ const ContentContainer = styled.div`
   flex-direction: column;
   margin: 2em;
   align-items: center;
-  justify-content: flex-start;
-
+  justify-content: start;
 `;
 
 const ImageContainer = styled.div`
-  width: 40em;
+  width: 38em;
   height: 25em;
   margin: 3em 0em;
   
@@ -98,14 +99,14 @@ const ImageContainer = styled.div`
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       margin: 3em 0em;
-      width: 65vw;
+      width: 100%;
       height: auto;
     }
 
 `;
 
 const MainContainer = styled.div`
-  width: 40em;
+  width: 38em;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -138,7 +139,7 @@ const MainContainer = styled.div`
 
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
-      width: 65vw;
+      width: 100%;
       height: auto;
       margin: 0em 0em 2em 0em;
 
@@ -165,6 +166,12 @@ const TopContainer = styled.div`
   flex-direction: row;
   justify-content: start;
   margin: 2em 0em 1em 0em;
+
+  {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      margin: 0em;
+    }
+
 `;
 
 
@@ -179,6 +186,7 @@ const TextContainer = styled.div`
     @media screen and (max-width: ${deviceSize.mobile}px) {
       margin: 0em;
       width: 100%;
+
     }
 
 `;
@@ -194,6 +202,7 @@ const ScrollContainer = styled.div`
   position: sticky;
   top: 55em;
   right: 2em;
+  justify-content: center;
   
   img {
     transform: rotate(90deg);
@@ -231,7 +240,6 @@ export function About(props) {
               <LogoContainer>
                 <Logo/>
               </LogoContainer>
-              <Menu />
             </MenuContainer>
           <ContentContainer>
             <MainContainer>
@@ -252,8 +260,9 @@ export function About(props) {
             </MainContainer>
           </ContentContainer>
           <ScrollContainer>
-            <img src={scrollIndi}></img>
+            <img src={scrollIndi} alt="Scroll Indicator"></img>
           </ScrollContainer>
+          <SocialIcons />
         </FirstContainer>
         <FooterContainer>
           <ContactFooter />
