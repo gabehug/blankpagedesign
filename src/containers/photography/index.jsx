@@ -123,8 +123,8 @@ export function Photography(props) {
 
   const scroll = {
     overflowX: 'visible',
-    
   }
+
   return (
     <PageContainer>
       <Background>
@@ -135,33 +135,33 @@ export function Photography(props) {
           </LogoContainer>
           <Menu />
         </MenuContainer>
-        <ContentContainer>
-          <ImageContainer>
-            <h1>Senior Photos</h1>
-            <img src= {seniorPhotos} alt="Senior photos main content"/>
-          </ImageContainer>
-          <ImageContainer >
-            <h1>Portraits</h1>
-            <img src= {portraits} alt="Portraits main content"/>
-          </ImageContainer>
-          <ImageContainer>
-            <h1><a href="https://www.poncedleon.com/" target="blank" rel="noreferrer">PDL</a> by Seb</h1>
-            <img src= {PDL} alt="PDL main content"/>
-          </ImageContainer>
-          <ImageContainer>
-            <h1>Anemnesis</h1>
-            <img src= {anemnesisImg} alt="Anemnesis main content"/>
-          </ImageContainer>
-          <ImageContainer>
-            <h1>Group Shoots</h1>
-            <img src= {groupShoots} alt="Group shoots main content"/>
-          </ImageContainer>
-          <ImageContainer>
-            <h1>Track</h1>
-            <img src= {track} alt="Track Main Content"/>
-          </ImageContainer>
-          <BackButton><a href="/photography">Go Back</a></BackButton>
-        </ContentContainer>
+          <ContentContainer>
+            <ImageContainer>
+              <h1>Senior Photos</h1>
+              <img src= {seniorPhotos} alt="Senior photos main content"/>
+            </ImageContainer>
+            <ImageContainer >
+              <h1>Portraits</h1>
+              <img src= {portraits} alt="Portraits main content"/>
+            </ImageContainer>
+            <ImageContainer>
+              <h1><a href="https://www.poncedleon.com/" target="blank" rel="noreferrer">PDL</a> by Seb</h1>
+              <img src= {PDL} alt="PDL main content"/>
+            </ImageContainer>
+            <ImageContainer>
+              <h1>Anemnesis</h1>
+              <img src= {anemnesisImg} alt="Anemnesis main content"/>
+            </ImageContainer>
+            <ImageContainer>
+              <h1>Group Shoots</h1>
+              <img src= {groupShoots} alt="Group shoots main content"/>
+            </ImageContainer>
+            <ImageContainer>
+              <h1>Track</h1>
+              <img src= {track} alt="Track Main Content"/>
+            </ImageContainer>
+            <BackButton><a href="/photography">Go Back</a></BackButton>
+          </ContentContainer>
         <FooterContainer>
           <Footer />
         </FooterContainer>

@@ -146,10 +146,13 @@ const BackButton = styled.button`
 `;
 
 export function Waste(props) {
+  const scroll = {
+    overflowX: 'visible',
+  }
   return (
     <PageContainer>
       <Background>
-      <HorizontalScroll reverseScroll>
+      <HorizontalScroll reverseScroll style="scroll">
         <MenuContainer>
           <LogoContainer>
             <Logo/>

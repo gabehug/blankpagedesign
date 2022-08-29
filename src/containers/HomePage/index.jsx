@@ -4,6 +4,8 @@ import { PageContainer } from "../../components/pageContainer";
 import { Menu } from "../../components/menu";
 import { Logo } from "../../components/logo";
 import webBackground from "../../assets/webBackground.mp4";
+import { deviceSize } from "../../components/responsive";
+import { useMediaQuery } from "react-responsive";
 
 
 const Background = styled.div`
@@ -22,6 +24,7 @@ const Background = styled.div`
     left: 0;
     z-index: -1;
   }
+
 `;
 
 const LogoContainer = styled.div`

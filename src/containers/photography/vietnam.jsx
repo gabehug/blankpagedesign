@@ -148,10 +148,13 @@ const BackButton = styled.button`
 `;
 
 export function Vietnam(props) {
+  const scroll = {
+    overflowX: 'visible',
+  }
   return (
     <PageContainer>
       <Background>
-      <HorizontalScroll reverseScroll>
+      <HorizontalScroll reverseScroll style="scroll">
         <MenuContainer>
           <LogoContainer>
             <Logo/>

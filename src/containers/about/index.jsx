@@ -36,6 +36,7 @@ const FirstContainer = styled.div`
   justify-content: center;
   margin: 0em 0em 3em 0em;
 
+
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     flex-direction: row;

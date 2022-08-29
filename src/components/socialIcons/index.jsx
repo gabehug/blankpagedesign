@@ -43,7 +43,7 @@ const LinkedInIcon = styled.div`
   }
 
   a {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -143,9 +143,9 @@ const GithubIcon = styled.div`
 export function SocialIcons() {
   return (
     <SocialIconContainer>
-      <LinkedInIcon id="icon"><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
         <GithubIcon id="icon"><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
         <InstagramIcon id="icon"><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
+        <LinkedInIcon id="icon"><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
         <KofiIcon id="icon"><a href="https://ko-fi.com/gabrielhug" target="_blank"></a></KofiIcon>
     </SocialIconContainer>
   )
