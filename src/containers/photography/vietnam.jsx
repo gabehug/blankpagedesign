@@ -16,9 +16,8 @@ const Background = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
 `;
 
 const MenuContainer = styled.div`
