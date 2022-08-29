@@ -152,7 +152,7 @@ export function Waste(props) {
   return (
     <PageContainer>
       <Background>
-      <HorizontalScroll reverseScroll style="scroll">
+      <HorizontalScroll reverseScroll style={scroll}>
         <MenuContainer>
           <LogoContainer>
             <Logo/>
