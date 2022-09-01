@@ -245,11 +245,13 @@ export function Contact(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
   return (
-    <PageContainer>
+    <PageContainer> 
       <Background>
-        <video autoPlay muted loop id="backgroundVideo">
-          <source src= {webBackground} type="video/mp4"/>
-        </video>
+        {!isMobile && (
+          <video autoPlay="autoPlay" muted="muted" loop="loop" id="backgroundVideo">
+            <source src= {webBackground} type="video/mp4"/>
+          </video>
+        )}
         <OuterContainer>
           {!isMobile && (
           <MenuContainer>

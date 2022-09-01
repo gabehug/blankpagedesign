@@ -17,8 +17,8 @@ const Background = styled.div`
   align-items: center;
 
   video {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -39,12 +39,16 @@ const MenuContainer = styled.div`
 `;
 
 export function HomePage(props) {
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+
   return (
     <PageContainer> 
       <Background>
-        <video autoPlay muted loop id="backgroundVideo">
-          <source src= {webBackground} type="video/mp4"/>
-        </video>
+        {!isMobile && (
+          <video autoPlay="autoPlay" muted="muted" loop="loop" id="backgroundVideo">
+            <source src= {webBackground} type="video/mp4"/>
+          </video>
+        )}
         <LogoContainer>
           <Logo/>
         </LogoContainer>

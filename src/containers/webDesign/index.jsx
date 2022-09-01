@@ -14,6 +14,7 @@ import chainlinks1 from "../../assets/chainlinks1.jpg";
 import emperor1 from "../../assets/emperor1.jpg";
 import emperor2 from "../../assets/emperor2.jpg";
 import { SocialIcons } from "../../components/socialIcons";
+import { useMediaQuery } from "react-responsive";
 
 const Background = styled.div`
   width: 100%;
@@ -201,12 +202,16 @@ const FooterContainer = styled.div`
 `;
 
 export function WebDesign(props) {
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+
   return (
-    <PageContainer>
+    <PageContainer> 
       <Background>
-        <video autoPlay muted loop id="backgroundVideo">
-          <source src= {webBackground} type="video/mp4"/>
-        </video>
+        {!isMobile && (
+          <video autoPlay="autoPlay" muted="muted" loop="loop" id="backgroundVideo">
+            <source src= {webBackground} type="video/mp4"/>
+          </video>
+        )}
         <OuterContainer>
           <MenuContainer>
             <LogoContainer>
