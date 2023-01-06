@@ -4,54 +4,30 @@ const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
   appBar: {
+    position: 'relative',
+    top: '50px',
     boxShadow: 'none',
     background: 'rgba(0,0,0,0)',
+    display: 'flex',
+    alignItems: 'center',
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
   },
-  title: {
-    flexGrow: 1,
-    alignItems: 'center',
-    display: 'flex',
-    textDecoration: 'none',
-  },
   image: {
-    marginRight: '10px',
+    alignItems: 'end',
     marginTop: '1em',
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
+  button: {
+    position: 'absolute',
+    right: '-65px',
+    [theme.breakpoints.up('md')]: {
+      right: '-235px',
     },
   },
   grow: {
     flexGrow: 1,
-  },
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: 'auto',
-    },
-  },
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   inputRoot: {
     color: 'inherit',

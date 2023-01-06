@@ -26,17 +26,10 @@ const Background = styled.div`
 const OuterContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin: 0em 0em 3em 0em;
 
-  {/*Mobile*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    flex-direction: row;
-    margin: 2em 0em;
-    justify-content: start;
-
-  }
 `;
 
 const ProductsContainer = styled.div`
@@ -142,8 +135,7 @@ export function Prints(props) {
               <Routes>
                 <Route 
                   path="/" 
-                  element={
-                    <Products products={products} onAddToCart={handleAddToCart} />
+                  element={<Products products={products} onAddToCart={handleAddToCart} />
                   }/>
                 <Route 
                   path="cart"

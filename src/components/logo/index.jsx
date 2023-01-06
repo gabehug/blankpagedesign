@@ -5,16 +5,17 @@ import { deviceSize } from "../../components/responsive";
 
 
 const Background = styled.div`
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
 `;
 
 const LogoContainer = styled.div`
   width: auto;
-  height: auto;
+  height: 100%;
   display: flex; 
   justify-content: center;
-
+  padding: 1.5em;
+  padding-bottom: 0em;
 
   img {
     height: 7em;
@@ -24,7 +25,7 @@ const LogoContainer = styled.div`
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       img {
-        height: 5em;
+        height: 8em;
       }
     }
 `;

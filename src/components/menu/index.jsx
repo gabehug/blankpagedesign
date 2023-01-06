@@ -7,11 +7,11 @@ import { deviceSize } from "../../components/responsive";
 
 const Background = styled.div`
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
-  position: sticky;
+  
 
   ul {
     list-style-type: none;
@@ -34,7 +34,7 @@ const Background = styled.div`
 
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        font-size: 0.8em;
+        font-size: 1.15em;
     }
 
 `;

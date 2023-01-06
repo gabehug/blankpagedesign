@@ -18,11 +18,13 @@ const Background = styled.div`
 
 const ContentContainer = styled.div`
   width: 42em;
-  height: 100%;
-  margin: 2em 0em;
+  height: auto;
+  margin: 6em 0em 0em 0em;
+  padding: 2em;
+  border: 3px solid black;
 
   @media screen and (max-width: ${deviceSize.tablet}px) {
-    margin: 8em 0em 0em 1em;
+    margin: 6em 2em 0em 2em;
   }
 
 `;

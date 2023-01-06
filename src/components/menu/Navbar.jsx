@@ -7,6 +7,7 @@ import { deviceSize } from '../../components/responsive';
 import { useMediaQuery } from "react-responsive";
 
 import useStyles from './navbarStyles';
+import { SocialIcons } from '../socialIcons';
 
 const Navbar = ({ totalItems }) => {
   const classes = useStyles();
@@ -15,13 +16,9 @@ const Navbar = ({ totalItems }) => {
 
   return (
     <div>
-      <AppBar position="fixed" className={classes.appBar} color="inherit">
+      <AppBar className={classes.appBar} color="inherit">
         <Toolbar>
-        {!isMobile && (
-        <Typography component={Link} to="/" variant="h6" className={classes.title} color="inherit">
-          <img src={Rectangle} alt="Blank Page Design" height="100em" className={classes.image}/>
-          </Typography>
-        )}
+        <SocialIcons className={classes.image}/>
           <div className={classes.grow} />
           {location.pathname === '/prints' && (
           <div className={classes.button}>

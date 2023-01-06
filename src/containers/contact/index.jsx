@@ -14,12 +14,13 @@ import fiverr from "../../assets/fiverr.png";
 
 const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  margin-top: 4em;
 
   video {
     width: 100vw;
@@ -30,38 +31,23 @@ const Background = styled.div`
     z-index: -1;
   }
 `;
-const MenuContainer = styled.div`
-  width: 5em;
-  height: 5em;
-  position: sticky;
-  top: 0em;
-  margin: 0em 2em;
-`;
-
-const LogoContainer = styled.div`
-  width: auto;
-  height: auto;
-  margin-top: 2em;
-
-  image {
-    width: 100%;
-    height: 100%;
-  }
-
-  {/*Mobile*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    margin: 0em;
-  }
-`;
 
 const ContentContainer = styled.div`
   height: 100%;
-  width: 100%;
+  width: 38em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+  padding: 0em 6em;
+  margin-top: 4em;
+  border: 3px solid black;
 
+  {/*Mobile*/} 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 2em 2em 0em 2em;
+    padding: 1em 0em;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -139,39 +125,8 @@ const OuterContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   margin: 0em 0em 3em 0em;
-
-  {/*Mobile*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    flex-direction: row;
-    margin: 2em 0em;
-    justify-content: start;
-
-  }
 `;
 
-const ScrollContainer = styled.div`
-  width: 3em;
-  height: 3em;
-  position: sticky;
-  top: 55em;
-  right: 2em;
-  
-
-  img {
-    transform: rotate(90deg);
-    width: 3em;
-    height: 3em;
-  }
-
-  {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-      img {
-        width: 2em;
-        height: 2em;
-        margin: 0em 2em;
-      }
-    }
-`;
 
 const CalendlyContainer = styled.div`
   height: auto;
@@ -252,14 +207,8 @@ export function Contact(props) {
             <source src= {webBackground} type="video/mp4"/>
           </video>
         )}
+        <SocialIcons/>
         <OuterContainer>
-          {!isMobile && (
-          <MenuContainer>
-            <LogoContainer>
-              <Logo/>
-            </LogoContainer>
-          </MenuContainer>
-          )}
           <ContentContainer>
             <TitleContainer>
               <h1>Lets work together!</h1>
@@ -277,10 +226,6 @@ export function Contact(props) {
               <InlineWidget url="https://calendly.com/gaberhug/workwithme?month=2022-06"/>
             </CalendlyContainer>
           </ContentContainer>
-          <ScrollContainer>
-            <img src={scrollIndi} alt="Scroll indicator"></img>
-          </ScrollContainer>
-          <SocialIcons />
         </OuterContainer>
         <FooterContainer>
           <ContactFooter />

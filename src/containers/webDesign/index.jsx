@@ -18,12 +18,13 @@ import { useMediaQuery } from "react-responsive";
 
 const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  margin-top: 4em;
 
   video {
     width: 100vw;
@@ -33,44 +34,29 @@ const Background = styled.div`
     left: 0;
     z-index: -1;
   }
-`;
-const MenuContainer = styled.div`
-  width: 5em;
-  height: 5em;
-  position: sticky;
-  top: 0em;
-  margin: 0em 2em;
 
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    margin: 0em 0em 0em 1em;
-    top: 2em;
-  }
-`;
-
-const LogoContainer = styled.div`
-  width: auto;
-  height: auto;
-  margin-top: 2em;
-
-  image {
-    width: 100%;
-    height: 100%;
-  }
-
-  {/*Mobile*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    margin: 0em;
+    margin-top: 2em;
   }
 `;
 
 const ContentContainer = styled.div`
   height: 100%;
-  width: 100%;
+  width: 38em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  padding: 0em 6em;
+  margin: 2em 0em;
+  border: 3px solid black;
+
+  {/*Mobile*/} 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 0em 2em;
+    padding: 1em 0em;
+  }
 
 `;
 
@@ -161,7 +147,7 @@ const OuterContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0em 0em 3em 0em;
+  margin: 2em 0em 6em 0em;
 
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
@@ -170,30 +156,6 @@ const OuterContainer = styled.div`
     justify-content: start;
 
   }
-`;
-
-const ScrollContainer = styled.div`
-  width: 3em;
-  height: 3em;
-  position: sticky;
-  top: 55em;
-  right: 2em;
-  
-
-  img {
-    transform: rotate(90deg);
-    width: 3em;
-    height: 3em;
-  }
-
-  {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-      img {
-        width: 2em;
-        height: 2em;
-        margin: 0em 2em;
-      }
-    }
 `;
 
 const FooterContainer = styled.div`
@@ -212,12 +174,8 @@ export function WebDesign(props) {
             <source src= {webBackground} type="video/mp4"/>
           </video>
         )}
+        <SocialIcons/>
         <OuterContainer>
-          <MenuContainer>
-            <LogoContainer>
-              <Logo/>
-            </LogoContainer>
-          </MenuContainer>
           <ContentContainer>
             <TitleContainer>
               <h1>Design Work</h1>
@@ -264,10 +222,6 @@ export function WebDesign(props) {
               </ImgContainer>
             </InformationContainer>
           </ContentContainer>
-          <ScrollContainer>
-            <img src={scrollIndi} alt="Scroll indicator"></img>
-          </ScrollContainer>
-          <SocialIcons />
         </OuterContainer>
         <FooterContainer>
           <ContactFooter />
