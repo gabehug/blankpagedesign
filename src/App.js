@@ -10,28 +10,31 @@ import { Prints } from './containers/prints';
 import { WebDesign } from './containers/webDesign';
 import { Waste } from './containers/photography/waste';
 import { SignOfTime } from './containers/photography/signOfTime';
-import { Vietnam } from './containers/photography/vietnam';
+import Vietnam  from './containers/photography/vietnam';
 import { Fading } from './containers/photography/fading';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 
 function App() {
   return (
     <div className="Blank Page Design">
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<HomePage/>}/>
-          <Route path="/gabehug" element={<About/>}/>
-          <Route path="/photography" element={<Photography/>}/>
-          <Route path="/photography/fading" element={<Fading/>}/>
-          <Route path="/photography/redline" element={<Redline/>}/>
-          <Route path ="/photography/waste" element={<Waste />}/>
-          <Route path ="/photography/sign" element={<SignOfTime />}/>
-          <Route path="/photography/vietnam" element={<Vietnam />}/>
-          <Route path="/webDesign" element= {<WebDesign/>}/>
-          <Route path="/prints/*" element= {<Prints/>} />
-          <Route path="/contact" element= {<Contact/>} />
-        </Routes>
-      </Router>
+      <ParallaxProvider>
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<HomePage/>}/>
+            <Route path="/gabehug" element={<About/>}/>
+            <Route path="/photography" element={<Photography/>}/>
+            <Route path="/photography/fading" element={<Fading/>}/>
+            <Route path="/photography/redline" element={<Redline/>}/>
+            <Route path ="/photography/waste" element={<Waste />}/>
+            <Route path ="/photography/sign" element={<SignOfTime />}/>
+            <Route path="/photography/vietnam" element={<Vietnam />}/>
+            <Route path="/webDesign" element= {<WebDesign/>}/>
+            <Route path="/prints/*" element= {<Prints/>} />
+            <Route path="/contact" element= {<Contact/>} />
+          </Routes>
+        </Router>
+      </ParallaxProvider>
     </div>
   );
 }

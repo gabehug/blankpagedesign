@@ -1,68 +1,58 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
-import HorizontalScroll from "react-scroll-horizontal";
 import { PageContainer } from "../../components/pageContainer";
-import { Menu } from "../../components/menu";
-import { Logo } from "../../components/logo";
-import { Footer } from "../../components/footer";
+import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
-import vietnam1 from "../../assets/photos/vietnam1.jpg";
-import vietnam2 from "../../assets/photos/vietnam2.jpg";
-import vietnam3 from "../../assets/photos/vietnam3.jpg";
-import scrollIndi from "../../assets/scrollIndi.png";
+import { SocialIcons } from "../../components/socialIcons";
+import axios from "axios";
+import { CloudinaryContext, Image, Placeholder} from "cloudinary-react";
+import {AdvancedImage, lazyload, accessibility, responsive, placeholder} from '@cloudinary/react';
+import { Parallax } from "react-scroll-parallax";
+import { Grid } from "@material-ui/core";
+
+
 
 
 const Background = styled.div`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-`;
-
-const MenuContainer = styled.div`
-  width: auto;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin: 0em 2em;
-
-  {/*Mobile*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    margin: 0em 0em 0em 1em;
-  }
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
 `;
 
-const LogoContainer = styled.div`
-  width: auto;
-  height: auto;
-  margin-top: 2em;
-
-  image {
-    width: 100%;
-    height: 100%;
-  }
-`;
 
 const ContentContainer = styled.div`
-  height: 100vh;
-  width: auto;
+  height: 100%;
+  width: 90vw;
   display: flex;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
+  margin: 2em 0em 4em 0em;
+  padding: 2em;
+
+  {/*Mobile*/} 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 90vw;
+    margin: 2em 2em 0em 2em;
+    padding: 1em 0em;
+  }
 
 `;
 
 const InformationContainer = styled.div`
-  width: 600px;
+  width: 38em;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  margin: 4em;
+  padding: 2em;
+  
 
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 14em; 
-    margin: 2em;
+    width: 80vw;
     h1 {
       font-size: 1.5em;
     }
@@ -77,38 +67,30 @@ const InformationContainer = styled.div`
   }
 `;
 
-const ScrollContainer = styled.div`
-  width: 95%;
+const ResponsiveGrid = styled.div`
+  width: auto;
   height: auto;
+  padding: 2em;
   display: flex;
-  justify-content: end;
-  
+  flex-direction: column;
 
-  img {
-    width: 3em;
-    height: 100%;
-  }
-
-{/*Mobile*/}
-@media screen and (max-width: ${deviceSize.mobile}px) {
- img {
-  width: 2em;
- }
-}
 `;
 
-const ImageContainer = styled.div`
+const ImageGrid = styled.div`
   width: auto;
-  height: 45em;
-  margin: 2em;
+  max-width: 42em;
+  height: auto;
+  padding: 6em 0em;
   display: flex;
+
+  a {
+    display: inline-block;
+    pointer-events: none;
+  }
 
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    align-items: center;
-    img {
-      height: 40em;
-    }
+    padding: 4em 0em;
   }
 `;
 
@@ -117,70 +99,65 @@ const FooterContainer = styled.div`
   height: 100%;
 `;
 
-const BackButton = styled.button`
-    width: 10em;
-    height: 3em;
-    position: relative;
-    top: 30em;
-    right: 13em;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid black;
-
-    a {
-      text-decoration: none;
-      font-family: futura;
-      font-size: 1.25em;
-      color: black;
-    }
-
-    :hover {
-      background-color: #A39450;
-      border: 0px;
-    }
-
-    {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-        top: 27em;
-    }
-
-`;
-
-export function Vietnam(props) {
-  const scroll = {
-    overflowX: 'visible',
+class Vietnam extends Component {
+  constructor(props) {
+    super(props);
+      this.state = {
+        gallery: []
+      }
   }
-  return (
-    <PageContainer>
-      <Background>
-      <HorizontalScroll reverseScroll style={scroll}>
-        <MenuContainer>
-          <LogoContainer>
-            <Logo/>
-          </LogoContainer>
-          <Menu />
-        </MenuContainer>
-        <ContentContainer>
-          <InformationContainer>
-            <h1>Vietnam</h1>
-            <p>The following is a selection of images from my time traveling in Vietnam and South East Asia. The kindest, most welcoming culture and people. I hope to be back soon!. </p>
-            <h4>Canon 7D mkii</h4>
-            <ScrollContainer>
-              <img src={scrollIndi}></img>
-            </ScrollContainer>
-          </InformationContainer>
-          <ImageContainer>
-            <img src= {vietnam1} alt="logo"/>
-            <img src= {vietnam2} alt="logo"/>
-            <img src= {vietnam3} alt="logo"/>
-          </ImageContainer>
-          <BackButton><a href="/photography/vietnam">Go Back</a></BackButton>
-        </ContentContainer>
-        <FooterContainer>
-          <Footer />
-        </FooterContainer>
-        </HorizontalScroll>
-      </Background>
-    </PageContainer>
-  )
+  //https://res.cloudinary.com/blankpagedesign/image/upload/v1673021931/bpd/vietnam/Shutter_hugEdits-9690_b07lsv.jpg
+  componentDidMount(){
+    axios.get('https://res.cloudinary.com/blankpagedesign/image/list/vietnam.json')
+    .then(res => {
+      console.log(res.data.resources);
+      this.setState({gallery: res.data.resources});
+    });
+  }
+
+  render() {
+    return (
+      <PageContainer>
+        <Background>
+          <SocialIcons />
+            <ContentContainer>
+              <InformationContainer>
+                <h1>Vietnam</h1>
+                <p>The following is a selection of images from my time traveling in Vietnam and South East Asia. The kindest, most welcoming culture and people. I hope to be back soon! </p>
+                <h4>Canon 7D mkii</h4>
+              </InformationContainer>
+              
+                <CloudinaryContext cloudName="blankpagedesign">
+                  {
+                    this.state.gallery.map(data => {
+                      return (
+                        <ResponsiveGrid key={data.public_id}>
+                          <ImageGrid>
+                            <a target="_blank" href={`http://res.cloudinary.com/blankpagedesign/image/upload/${data.public_id}.jpg`}>
+                              <Parallax speed={-15}>
+                                <Image 
+                                  publicID={data.public_id}
+                                  loading="lazy"
+                                  width="100%"
+                                  height="100%"
+                                > 
+                                  <Placeholder type="predominant"/>
+                                </Image>
+                              </Parallax>
+                            </a>
+                          </ImageGrid>
+                        </ResponsiveGrid>
+                    )
+                    })
+                  }
+                </CloudinaryContext>
+            </ContentContainer>
+          <FooterContainer>
+            <ContactFooter />
+          </FooterContainer>
+        </Background>
+      </PageContainer>
+    );
+  }
 }
+export default Vietnam;

@@ -138,8 +138,7 @@ export function Photography(props) {
           <ContentContainer>
             <ImageContainer>
               <h1>Senior Photos</h1>
-              
-              <img publicId="https://collection.cloudinary.com/blankpagedesign/771bfb57b5c2c4f18780ad708ffc99a0"></img>
+              <img src= {seniorPhotos} alt="Senior photos main content"/>
             </ImageContainer>
             <ImageContainer >
               <h1>Portraits</h1>
