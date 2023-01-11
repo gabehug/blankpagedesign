@@ -6,9 +6,7 @@ import { deviceSize } from "../../components/responsive";
 import { SocialIcons } from "../../components/socialIcons";
 import axios from "axios";
 import { CloudinaryContext, Image, Placeholder} from "cloudinary-react";
-import {AdvancedImage, lazyload, accessibility, responsive, placeholder} from '@cloudinary/react';
 import { Parallax } from "react-scroll-parallax";
-import { Grid } from "@material-ui/core";
 
 
 
@@ -126,7 +124,6 @@ class Vietnam extends Component {
                 <p>The following is a selection of images from my time traveling in Vietnam and South East Asia. The kindest, most welcoming culture and people. I hope to be back soon! </p>
                 <h4>Canon 7D mkii</h4>
               </InformationContainer>
-              
                 <CloudinaryContext cloudName="blankpagedesign">
                   {
                     this.state.gallery.map(data => {
