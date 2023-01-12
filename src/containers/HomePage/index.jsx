@@ -10,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 
 const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +32,7 @@ const ContentContainer = styled.div`
   width: auto;
   height: auto;
   position: fixed;
-  top:25%;
+  top: 25%;
   border-radius: 5px;
   padding: 2em;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;

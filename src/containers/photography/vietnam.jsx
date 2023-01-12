@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
-import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
-import { SocialIcons } from "../../components/socialLinks";
 import axios from "axios";
 import { CloudinaryContext, Image, Placeholder} from "cloudinary-react";
 import { Parallax } from "react-scroll-parallax";
 import DropdownMenu from "../../components/menu/dropdownMenu";
+import { Footer } from "../../components/footer";
 
 
 
@@ -94,7 +93,7 @@ const ImageGrid = styled.div`
 `;
 
 const FooterContainer = styled.div`
-  width: 100%;
+  width: auto;
   height: 100%;
 `;
 
@@ -151,7 +150,7 @@ class Vietnam extends Component {
                 </CloudinaryContext>
             </ContentContainer>
           <FooterContainer>
-            <ContactFooter />
+            <Footer/>
           </FooterContainer>
         </Background>
       </PageContainer>

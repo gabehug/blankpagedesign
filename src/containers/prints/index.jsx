@@ -6,15 +6,15 @@ import Cart from "../../components/cart";
 import Checkout from "../../components/checkoutForm/checkout/checkout";
 import { PageContainer } from "../../components/pageContainer";
 import { commerce } from "../../components/lib/commerce";
-import { ContactFooter } from "../../components/footer/contactFooter";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { deviceSize } from "../../components/responsive";
+import { Footer } from "../../components/footer";
 
 
 const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -37,6 +37,15 @@ const ProductsContainer = styled.div`
   height: 100%;
   justify-content: center;
   margin: 0em 0em 5em 0em;
+
+`;
+
+const FooterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100%;
 
 `;
 
@@ -160,7 +169,9 @@ export function Prints(props) {
               </Routes>
             </ProductsContainer>
             </OuterContainer>
-            <ContactFooter />
+            <FooterContainer>
+              <Footer/>
+            </FooterContainer>
           </Background>
         </ThemeProvider>
       </PageContainer>

@@ -1,15 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
-import { Logo } from "../../components/logo";
-import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
-import { SocialIcons } from "../../components/socialLinks";
 import webBackground from "../../assets/webBackground.mp4";
 import gabeImage from "../../assets/gabeImage.jpg";
 import { useMediaQuery } from "react-responsive";
-import Rectangle from "../../assets/Rectangle.png";
 import DropdownMenu from "../../components/menu/dropdownMenu";
+import { Footer } from "../../components/footer";
 
 
 const Background = styled.div`
@@ -168,7 +165,7 @@ const InformationContainer = styled.div`
 
 
 const FooterContainer = styled.div`
-  width: 100%;
+  width: auto;
   height: 100%;
 `;
 
@@ -205,7 +202,7 @@ export function About(props) {
           </ContentContainer>
         </FirstContainer>
         <FooterContainer>
-          <ContactFooter />
+          <Footer />
         </FooterContainer>
       </Background>
     </PageContainer>

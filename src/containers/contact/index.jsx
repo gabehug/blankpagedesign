@@ -3,15 +3,14 @@ import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
 import { Logo } from "../../components/logo";
 import { InlineWidget } from "react-calendly";
-import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
-import { SocialIcons } from "../../components/socialLinks";
 import { useMediaQuery } from "react-responsive";
 import webBackground from "../../assets/webBackground.mp4";
 import scrollIndi from "../../assets/scrollIndi.png";
 import upwork from "../../assets/upwork.png";
 import fiverr from "../../assets/fiverr.png";
 import DropdownMenu from "../../components/menu/dropdownMenu";
+import { Footer } from "../../components/footer";
 
 const Background = styled.div`
   width: 100%;
@@ -193,7 +192,7 @@ const Button = styled.button`
 
 
 const FooterContainer = styled.div`
-  width: 100%;
+  width: auto;
   height: 100%;
 `;
 
@@ -229,7 +228,7 @@ export function Contact(props) {
           </ContentContainer>
         </OuterContainer>
         <FooterContainer>
-          <ContactFooter />
+          <Footer/>
         </FooterContainer>
       </Background>
     </PageContainer>

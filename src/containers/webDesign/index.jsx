@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
-import { Logo } from "../../components/logo";
-import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
-import scrollIndi from "../../assets/scrollIndi.png";
 import webBackground from "../../assets/webBackground.mp4";
 import hughcg2 from "../../assets/hughcg2.jpg";
 import hughcg1 from "../../assets/hughcg1.jpg";
@@ -13,9 +10,9 @@ import dons2 from "../../assets/dons2.jpg";
 import chainlinks1 from "../../assets/chainlinks1.jpg";
 import emperor1 from "../../assets/emperor1.jpg";
 import emperor2 from "../../assets/emperor2.jpg";
-import { SocialIcons } from "../../components/socialLinks";
 import { useMediaQuery } from "react-responsive";
 import DropdownMenu from "../../components/menu/dropdownMenu";
+import { Footer } from "../../components/footer";
 
 const Background = styled.div`
   width: 100%;
@@ -127,7 +124,7 @@ const ImgContainer = styled.div`
   width: 38em;
   height: auto;
   margin: 2em 0em;
-  box-shadow: rgba(0, 0, 0, 0.45) -10px 25px 40px -20px;  
+
 
   img {
     width: 100%;
@@ -160,7 +157,7 @@ const OuterContainer = styled.div`
 `;
 
 const FooterContainer = styled.div`
-  width: 100%;
+  width: auto;
   height: 100%;
 `;
 
@@ -225,7 +222,7 @@ export function WebDesign(props) {
           </ContentContainer>
         </OuterContainer>
         <FooterContainer>
-          <ContactFooter />
+          <Footer/>
         </FooterContainer>
       </Background>
     </PageContainer>

@@ -1,0 +1,7 @@
+.navIcon{
+  cursor: url('/src/assets/bigCursor.png'), none;
+}
+
+.navIcon :hover {
+  color: #A39450;
+}
