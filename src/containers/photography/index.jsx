@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import HorizontalScroll from "react-scroll-horizontal";
 import { PageContainer } from "../../components/pageContainer";
 import { Menu } from "../../components/menu";
 import { Footer } from "../../components/footer";
@@ -121,20 +120,9 @@ const BackButton = styled.button`
 
 export function Photography(props) {
 
-  const scroll = {
-    overflowX: 'visible',
-  }
-
   return (
     <PageContainer>
       <Background>
-      <HorizontalScroll reverseScroll style={scroll} >
-        <MenuContainer>
-          <LogoContainer>
-            <Logo/>
-          </LogoContainer>
-          <Menu />
-        </MenuContainer>
           <ContentContainer>
             <ImageContainer>
               <h1>Senior Photos</h1>
@@ -165,7 +153,6 @@ export function Photography(props) {
         <FooterContainer>
           <Footer />
         </FooterContainer>
-        </HorizontalScroll>
       </Background>
     </PageContainer>
   )

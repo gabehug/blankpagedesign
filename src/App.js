@@ -5,13 +5,13 @@ import { HomePage } from './containers/HomePage';
 import { About } from './containers/about';
 import { Contact } from './containers/contact';
 import { Photography } from './containers/photography';
-import { Redline } from './containers/photography/redLine';
+import  Redline  from './containers/photography/redLine';
 import { Prints } from './containers/prints';
 import { WebDesign } from './containers/webDesign';
-import { Waste } from './containers/photography/waste';
-import { SignOfTime } from './containers/photography/signOfTime';
+import Waste  from './containers/photography/waste';
+import SignOfTime  from './containers/photography/signOfTime';
 import Vietnam  from './containers/photography/vietnam';
-import { Fading } from './containers/photography/fading';
+import  Fading  from './containers/photography/fading';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 

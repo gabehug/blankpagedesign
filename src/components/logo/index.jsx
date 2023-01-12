@@ -11,11 +11,12 @@ const Background = styled.div`
 
 const LogoContainer = styled.div`
   width: auto;
-  height: 100%;
+  height: auto;
   display: flex; 
   justify-content: center;
   padding: 1.5em;
   padding-bottom: 0em;
+
 
   img {
     height: 7em;

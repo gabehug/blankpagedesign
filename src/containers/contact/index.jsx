@@ -5,12 +5,13 @@ import { Logo } from "../../components/logo";
 import { InlineWidget } from "react-calendly";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
-import { SocialIcons } from "../../components/socialIcons";
+import { SocialIcons } from "../../components/socialLinks";
 import { useMediaQuery } from "react-responsive";
 import webBackground from "../../assets/webBackground.mp4";
 import scrollIndi from "../../assets/scrollIndi.png";
 import upwork from "../../assets/upwork.png";
 import fiverr from "../../assets/fiverr.png";
+import DropdownMenu from "../../components/menu/dropdownMenu";
 
 const Background = styled.div`
   width: 100%;
@@ -207,7 +208,7 @@ export function Contact(props) {
             <source src= {webBackground} type="video/mp4"/>
           </video>
         )}
-        <SocialIcons/>
+        <DropdownMenu/>
         <OuterContainer>
           <ContentContainer>
             <TitleContainer>

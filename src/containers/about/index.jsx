@@ -4,21 +4,23 @@ import { PageContainer } from "../../components/pageContainer";
 import { Logo } from "../../components/logo";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
-import { SocialIcons } from "../../components/socialIcons";
+import { SocialIcons } from "../../components/socialLinks";
 import webBackground from "../../assets/webBackground.mp4";
 import gabeImage from "../../assets/gabeImage.jpg";
 import { useMediaQuery } from "react-responsive";
 import Rectangle from "../../assets/Rectangle.png";
+import DropdownMenu from "../../components/menu/dropdownMenu";
 
 
 const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   overflow-x: hidden;
+  margin-top: 4em;
 
   video {
     width: 100vw;
@@ -174,16 +176,16 @@ export function About(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
   return (
-    <PageContainer> 
+    <PageContainer>
       <Background>
         {!isMobile && (
           <video autoPlay="autoPlay" muted="muted" loop="loop" id="backgroundVideo">
             <source src= {webBackground} type="video/mp4"/>
           </video>
         )}
+        <DropdownMenu />
         <FirstContainer>
           <ContentContainer>
-            <SocialIcons />
             <MainContainer>
               <TopContainer>
                 <TextContainer> 

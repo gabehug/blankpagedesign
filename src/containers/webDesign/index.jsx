@@ -13,8 +13,9 @@ import dons2 from "../../assets/dons2.jpg";
 import chainlinks1 from "../../assets/chainlinks1.jpg";
 import emperor1 from "../../assets/emperor1.jpg";
 import emperor2 from "../../assets/emperor2.jpg";
-import { SocialIcons } from "../../components/socialIcons";
+import { SocialIcons } from "../../components/socialLinks";
 import { useMediaQuery } from "react-responsive";
+import DropdownMenu from "../../components/menu/dropdownMenu";
 
 const Background = styled.div`
   width: 100%;
@@ -174,7 +175,7 @@ export function WebDesign(props) {
             <source src= {webBackground} type="video/mp4"/>
           </video>
         )}
-        <SocialIcons/>
+        <DropdownMenu/>
         <OuterContainer>
           <ContentContainer>
             <TitleContainer>

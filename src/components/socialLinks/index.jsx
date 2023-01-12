@@ -11,6 +11,7 @@ import kofiHover from "../../assets/kofiHover.png";
 import RectangleFat from "../../assets/RectangleFat.png";
 import RectangleFatHover from "../../assets/RectangleFatHover.png";
 import { deviceSize } from "../responsive";
+import DropdownMenu from "../menu/dropdownMenu";
 
 const SocialIconContainer = styled.div`
   height: 4.5em;
@@ -174,11 +175,9 @@ const GithubIcon = styled.div`
 export function SocialIcons() {
   return (
     <SocialIconContainer>
-        <GithubIcon id="icon"><a href="https://github.com/gabehug" target="_blank"></a></GithubIcon>
-        <InstagramIcon id="icon"><a href="https://www.instagram.com/shutter_hug/" target="_blank"></a></InstagramIcon>
+        <li><DropdownMenu/></li>
         <HomeIcon id="icon"><a href="/"></a></HomeIcon>
-        <LinkedInIcon id="icon"><a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank"></a></LinkedInIcon>
-        <KofiIcon id="icon"><a href="https://ko-fi.com/gabrielhug" target="_blank"></a></KofiIcon>
+
     </SocialIconContainer>
   )
 };

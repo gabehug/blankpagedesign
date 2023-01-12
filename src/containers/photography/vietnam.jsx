@@ -3,10 +3,11 @@ import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
 import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
-import { SocialIcons } from "../../components/socialIcons";
+import { SocialIcons } from "../../components/socialLinks";
 import axios from "axios";
 import { CloudinaryContext, Image, Placeholder} from "cloudinary-react";
 import { Parallax } from "react-scroll-parallax";
+import DropdownMenu from "../../components/menu/dropdownMenu";
 
 
 
@@ -117,7 +118,7 @@ class Vietnam extends Component {
     return (
       <PageContainer>
         <Background>
-          <SocialIcons />
+          <DropdownMenu/>
             <ContentContainer>
               <InformationContainer>
                 <h1>Vietnam</h1>

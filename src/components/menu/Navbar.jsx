@@ -7,7 +7,7 @@ import { deviceSize } from '../../components/responsive';
 import { useMediaQuery } from "react-responsive";
 
 import useStyles from './navbarStyles';
-import { SocialIcons } from '../socialIcons';
+import DropdownMenu from './dropdownMenu';
 
 const Navbar = ({ totalItems }) => {
   const classes = useStyles();
@@ -18,7 +18,7 @@ const Navbar = ({ totalItems }) => {
     <div>
       <AppBar className={classes.appBar} color="inherit">
         <Toolbar>
-        <SocialIcons className={classes.image}/>
+        <DropdownMenu className={classes.image}/>
           <div className={classes.grow} />
           {location.pathname === '/prints' && (
           <div className={classes.button}>

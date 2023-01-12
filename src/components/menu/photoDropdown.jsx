@@ -7,7 +7,7 @@ const Dropdown = styled.div`
   align-items: center;
   justify-content: center;
   margin: -1em;
-  padding: 0;
+  
 `;
 
 const DropdownButton = styled.div`
@@ -29,13 +29,14 @@ const DropdownButton = styled.div`
 
 const DropdownContent = styled.div`
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: -1em 0em -0.5em 0em;
     padding: 0.5em 1.5em;
   `;
 
 const DropdownItem = styled.div`
     transition: all 0.2s;
+
     p {
       font-size: 1.25em;
       color: #343B33;
@@ -57,9 +58,9 @@ export default function PhotoDropdown(props) {
       </DropdownButton>
       {isActive && (
       <DropdownContent>
-        <DropdownItem>
+        {/* <DropdownItem>
         <a href="/photography"><li><p>Client Work</p></li></a>
-        </DropdownItem>
+        </DropdownItem> */}
         <DropdownItem>
         <a href="/photography/fading"><li><p>Fading Landscape</p></li></a>
         </DropdownItem>

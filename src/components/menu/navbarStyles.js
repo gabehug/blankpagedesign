@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     position: 'relative',
     top: '50px',
     boxShadow: 'none',
-    background: 'rgba(0,0,0,0)',
+    background: 'none',
     display: 'flex',
     alignItems: 'center',
     [theme.breakpoints.up('sm')]: {

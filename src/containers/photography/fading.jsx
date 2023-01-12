@@ -1,192 +1,159 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
-import HorizontalScroll from "react-scroll-horizontal";
 import { PageContainer } from "../../components/pageContainer";
-import { Menu } from "../../components/menu";
-import { Footer } from "../../components/footer";
-import { Logo } from "../../components/logo";
+import { ContactFooter } from "../../components/footer/contactFooter";
 import { deviceSize } from "../../components/responsive";
-import fadingLandscapes from "../../assets/photos/fadingLandscapes.jpg";
-import scrollIndi from "../../assets/scrollIndi.png";
+import axios from "axios";
+import { CloudinaryContext, Image, Placeholder} from "cloudinary-react";
+import { Parallax } from "react-scroll-parallax";
+import DropdownMenu from "../../components/menu/dropdownMenu";
+
 
 const Background = styled.div`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-`;
-
-const MenuContainer = styled.div`
-  width: auto;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin: 0em 2em;
-
-  {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-      margin: 0em 0em 0em 1em;
-    }
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
 `;
 
-const LogoContainer = styled.div`
-  width: auto;
-  height: auto;
-  margin-top: 2em;
-
-  image {
-    width: 100%;
-    height: 100%;
-  }
-`;
 
 const ContentContainer = styled.div`
-  height: 100vh;
-  width: auto;
+  height: 100%;
+  width: 90vw;
   display: flex;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
+  margin: 2em 0em 4em 0em;
+  padding: 2em;
+
+  {/*Mobile*/} 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 90vw;
+    margin: 2em 2em 0em 2em;
+    padding: 1em 0em;
+  }
+
 `;
 
 const InformationContainer = styled.div`
-  width: 600px;
+  width: 38em;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  margin: 4em;
-
-  h4 {
-    font-size: 1.1em;
-  }
+  padding: 2em;
 
   {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-      width: 14em; 
-      margin: 2em;
-      h1 {
-        font-size: 1.5em;
-      }
-
-      p {
-        font-size 1.2em;
-      }
-
-      h4 {
-        font-size: 1em;
-      }
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 80vw;
+    h1 {
+      font-size: 1.5em;
     }
-`;
 
-const ScrollContainer = styled.div`
-  width: 95%;
-  height: auto;
-  display: flex;
-  justify-content: end;
+    p {
+      font-size 1.2em;
+    }
 
-  img {
-    width: 3em;
-    height: 100%;
+    h4 {
+      font-size: 1em;
+    }
   }
-
-  {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-     img {
-      width: 2em;
-     }
-    }
 `;
 
-const ImageContainer = styled.div`
+const ResponsiveGrid = styled.div`
   width: auto;
   height: auto;
-  margin 1em;
-  display: flex; 
-  flex-direction: column; 
-  align-items: start;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
 
-  img {
-    width: 625em;
-    height: auto;
+`;
+
+const ImageGrid = styled.div`
+  width: auto;
+  max-width: 42em;
+  height: auto;
+  padding: 6em 0em;
+  display: flex;
+
+  a {
+    display: inline-block;
+    pointer-events: none;
   }
 
   {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-      img {
-        width: 300em;
-      }
-    }
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    padding: 4em 0em;
+  }
 `;
 
 const FooterContainer = styled.div`
-  width: auto;
+  width: 100%;
   height: 100%;
 `;
 
-const BackButton = styled.button`
-    width: 10em;
-    height: 3em;
-    position: relative;
-    top: 30em;
-    right: 20em;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid black;
-
-    a {
-      text-decoration: none;
-      font-family: futura;
-      font-size: 1.25em;
-      color: black;
-    }
-
-    :hover {
-      background-color: #A39450;
-      border: 0px;
-    }
-
-    {/*Mobile*/}
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-        top: 15em;
-        right: 16em;
-    }
-`;
 
 
-export function Fading(props) {
-
-  const scroll = {
-    overflowX: 'visible',
-    
+class Fading extends Component {
+  constructor(props) {
+    super(props);
+      this.state = {
+        gallery: []
+      }
   }
-  return (
+
+  componentDidMount() {
+    axios.get('https://res.cloudinary.com/blankpagedesign/image/list/fading.json')
+      .then(res => {
+        console.log(res.data.resources);
+        this.setState({gallery: res.data.resources});
+      });
+  }
+
+  render () {
+    return (
     <PageContainer>
       <Background>
-      <HorizontalScroll reverseScroll style={scroll} >
-        <MenuContainer>
-          <LogoContainer>
-            <Logo/>
-          </LogoContainer>
-          <Menu />
-        </MenuContainer>
-        <ContentContainer>
-          <InformationContainer>
-            <h1>The Fading Landscape</h1>
-            <p>This collection looks at the encroaching presence of humans in the natural world. Taking inspiration from the muted fall colors, cloudy skies, and running water; These images capture the natural beauty of the landscape in which we build our world. </p>
-            <h4>Cadet 4x5 Film | Yashica Mat-124G 120mm Film</h4>
-            <ScrollContainer>
-              <img src={scrollIndi}></img>
-            </ScrollContainer>
-          </InformationContainer>
-          <ImageContainer>
-            <img src= {fadingLandscapes} alt="Fading Landscapes main content"/>
-          </ImageContainer>
-          <BackButton><a href="/photography/fading">Go Back</a></BackButton>
-        </ContentContainer>
+        <DropdownMenu/>
+          <ContentContainer>
+            <InformationContainer>
+              <h1>The Fading Landscape</h1>
+              <p>This collection looks at the encroaching presence of humans in the natural world. Taking inspiration from the muted fall colors, cloudy skies, and running water; These images capture the natural beauty of the landscape in which we build our world. </p>
+              <h4>Cadet 4x5 Film | Yashica Mat-124G 120mm Film</h4>
+            </InformationContainer>
+            <CloudinaryContext cloudName="blankpagedesign">
+              {
+                this.state.gallery.map(data => {
+                  return (
+                    <ResponsiveGrid key={data.public_id}>
+                      <ImageGrid>
+                        <a target="_blank" href={'http://res.cloudinary.com/blankpagedesign/image/upload/${data.public_id}.jpg'} >
+                          <Parallax speed={-15}>
+                            <Image
+                              publicID={data.public_id}
+                              loading="lazy"
+                              width="100%"
+                              height="100%"
+                            >
+                              <Placeholder type="predominant"/>
+                            </Image>
+                          </Parallax>
+                        </a>
+                      </ImageGrid>
+                    </ResponsiveGrid>
+                  )
+                })
+              }
+            </CloudinaryContext>
+          </ContentContainer>
         <FooterContainer>
-          <Footer />
+          <ContactFooter />
         </FooterContainer>
-        </HorizontalScroll>
       </Background>
     </PageContainer>
-  )
+  );
+  }
 }
+export default Fading;
