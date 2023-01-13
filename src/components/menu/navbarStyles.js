@@ -6,10 +6,12 @@ export default makeStyles((theme) => ({
   appBar: {
     position: 'relative',
     top: '50px',
+    right: '0px',
     boxShadow: 'none',
     background: 'none',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
@@ -21,19 +23,22 @@ export default makeStyles((theme) => ({
   },
   button: {
     position: 'absolute',
-    right: '0',
     top: '185px',
+    right: '40px',
+    [theme.breakpoints.up('xs')]: {
+      right: '30px',
+      top: '185px',
+    },
     [theme.breakpoints.up('sm')]: {
-      right: '-80px',
-      top: '40px',
+      right: '-20px',
+      top: '185px',
     },
     [theme.breakpoints.up('md')]: {
-      right: '-300px',
+      right: '-200px',
     },
     [theme.breakpoints.up('lg')]: {
       right: '-450px',
     },
-    
   },
   grow: {
     flexGrow: 1,

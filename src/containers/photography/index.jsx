@@ -48,6 +48,13 @@ const InformationContainer = styled.div`
     justify-content: center;
     margin-top: 2em;
 
+    {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      h3{
+        font-size: 1em;
+      }
+    }
+
 `;
 
 const ContentContainer = styled.div`
@@ -57,7 +64,6 @@ const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 2em 0em 4em 0em;
-
 `;
 
 const MenuGrid = styled.div`
@@ -71,7 +77,7 @@ const MenuGrid = styled.div`
 
 const Text = styled.div`
   color: black;
-  font-size: 1.1em;
+  font-size: 1em;
   letter-spacing: 0.25em;
   line-height: 0em;
   margin: 0em;
@@ -87,7 +93,7 @@ const Text = styled.div`
     color: #A39450;
   }
   
-  {/*Mobile*/}
+  {/*Tablet*/}
     @media screen and (min-width: ${deviceSize.tablet}px) {
       font-size: 2em;
     }

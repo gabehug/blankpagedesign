@@ -29,7 +29,7 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 6em 0em;
+  margin: 5em 0em;
 
 `;
 
@@ -69,7 +69,7 @@ const CopyriteContainer = styled.div`
   color: #fff;
   font-size: 0.6em;
   line-height: 0em;
-  margin: 6em 0em -3em 0em;
+  margin: 6em 0em -6em 0em;
 `;
 
 
@@ -110,7 +110,7 @@ export function Footer(props) {
           <Line>
             <a
               className="word fancy"
-              href="/photography/prints"
+              href="/prints"
             >
               <h2>Prints</h2>
             </a>

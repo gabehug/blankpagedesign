@@ -35,6 +35,8 @@ const ContentContainer = styled.div`
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       height: auto;
+      width: 75vw;
+      max-width: 19em;
     }
 
 `;
@@ -42,7 +44,6 @@ const ContentContainer = styled.div`
 const HomeIcon = styled.div`
   height: 3em;
   width: 3em;
-  top:0;
   margin: 0em 1em;
   background-image: url(${RectangleFat});
   background-size: 80%;
@@ -61,6 +62,20 @@ const HomeIcon = styled.div`
     height: 3em;
     z-index: 1;
   }  
+
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 150px;
+    background-size: 45%;
+    margin: 0;
+
+    :hover{
+      background-size: 45%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
 `;
 
 const navIcon = {

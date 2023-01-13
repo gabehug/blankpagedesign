@@ -45,6 +45,7 @@ const InformationContainer = styled.div`
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 80vw;
+    margin-bottom: 8em;
     h1 {
       font-size: 1.5em;
     }

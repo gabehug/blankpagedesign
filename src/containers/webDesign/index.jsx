@@ -103,7 +103,6 @@ const InformationContainer = styled.div`
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 80%;
-    padding: 2em 0em 0em 0em;
     h1 {
       font-size: 1.5em;
     }
@@ -148,7 +147,7 @@ const OuterContainer = styled.div`
   {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     flex-direction: row;
-    margin: 2em 0em;
+    margin-top: 2em;
     justify-content: start;
 
   }
