@@ -29,15 +29,6 @@ const Background = styled.div`
   }
 `;
 
-const FirstContainer = styled.div`
-  height: auto; 
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 3em;
-  
-`;
 
 const ContentContainer = styled.div`
   height: 100%;
@@ -46,6 +37,7 @@ const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  margin-top: 3em;
   border: 3px solid black;
 
 
@@ -57,13 +49,15 @@ const ContentContainer = styled.div`
 `;
 
 const MainContainer = styled.div`
-  width: 38em;
+  width: auto;
+  max-width: 38em;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;
   text-align: left;
+  padding: 0em 2em;
 
   h1 {
     line-height: 0em;
@@ -183,7 +177,6 @@ export function About(props) {
           </video>
         )}
         <DropdownMenu />
-        <FirstContainer>
           <ContentContainer>
             <MainContainer>
               <TopContainer>
@@ -202,7 +195,6 @@ export function About(props) {
               </ImageContainer>
             </MainContainer>
           </ContentContainer>
-        </FirstContainer>
         <FooterContainer>
           <Footer />
         </FooterContainer>

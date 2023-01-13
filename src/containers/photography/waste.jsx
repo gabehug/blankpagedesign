@@ -28,16 +28,13 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  margin: 2em 0em 2em 0em;
-  padding: 2em;
+  border: 3px solid black;
+  margin-top: 3em;
 
-  {/*Mobile*/} 
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 90vw;
-    margin: 2em 2em 0em 2em;
-    padding: 1em 0em;
+  {/*Tablet*/} 
+  @media screen and (min-width: ${deviceSize.tablet}px) {
+    width: 85vw;
   }
-
 `;
 
 const InformationContainer = styled.div`

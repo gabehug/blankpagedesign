@@ -21,10 +21,16 @@ export default makeStyles((theme) => ({
   },
   button: {
     position: 'absolute',
-    right: '-65px',
-    [theme.breakpoints.up('md')]: {
-      right: '-235px',
+    right: '-30px',
+    top: '185px',
+    [theme.breakpoints.up('sm')]: {
+      right: '-80px',
+      top: '40px',
     },
+    [theme.breakpoints.up('md')]: {
+      right: '-300px',
+    },
+    
   },
   grow: {
     flexGrow: 1,

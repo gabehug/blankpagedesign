@@ -87,7 +87,7 @@ const Text = styled.div`
     color: #A39450;
   }
   {/*Mobile*/}
-    @media screen and (min-width: ${deviceSize.mobile}px) {
+    @media screen and (min-width: ${deviceSize.tablet}px) {
       font-size: 2em;
     }
 
