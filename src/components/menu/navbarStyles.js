@@ -21,7 +21,7 @@ export default makeStyles((theme) => ({
   },
   button: {
     position: 'absolute',
-    right: '-30px',
+    right: '0',
     top: '185px',
     [theme.breakpoints.up('sm')]: {
       right: '-80px',
@@ -29,6 +29,9 @@ export default makeStyles((theme) => ({
     },
     [theme.breakpoints.up('md')]: {
       right: '-300px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      right: '-450px',
     },
     
   },

@@ -71,7 +71,7 @@ const MenuGrid = styled.div`
 
 const Text = styled.div`
   color: black;
-  font-size: 1.4em;
+  font-size: 1.1em;
   letter-spacing: 0.25em;
   line-height: 0em;
   margin: 0em;
@@ -86,6 +86,7 @@ const Text = styled.div`
   a:hover {
     color: #A39450;
   }
+  
   {/*Mobile*/}
     @media screen and (min-width: ${deviceSize.tablet}px) {
       font-size: 2em;
