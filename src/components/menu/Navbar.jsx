@@ -1,7 +1,6 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Badge, Typography } from "@material-ui/core";
+import { AppBar, Toolbar, IconButton, Badge } from "@material-ui/core";
 import { ShoppingCart } from '@material-ui/icons';
-import Rectangle from "../../assets/Rectangle.png";
 import { Link, useLocation } from 'react-router-dom';
 import { deviceSize } from '../../components/responsive';
 import { useMediaQuery } from "react-responsive";
@@ -12,7 +11,6 @@ import DropdownMenu from './dropdownMenu';
 const Navbar = ({ totalItems }) => {
   const classes = useStyles();
   const location = useLocation();
-  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
   return (
     <div>

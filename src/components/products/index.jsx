@@ -4,7 +4,6 @@ import { Grid } from "@material-ui/core";
 import Product from './product';
 import useStyles from './productStyles';
 import { deviceSize } from "../responsive";
-import { useMediaQuery } from "react-responsive";
 
 
 const Background = styled.div`

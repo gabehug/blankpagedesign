@@ -1,12 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
-import { Logo } from "../../components/logo";
 import { InlineWidget } from "react-calendly";
 import { deviceSize } from "../../components/responsive";
 import { useMediaQuery } from "react-responsive";
 import webBackground from "../../assets/webBackground.mp4";
-import scrollIndi from "../../assets/scrollIndi.png";
 import upwork from "../../assets/upwork.png";
 import fiverr from "../../assets/fiverr.png";
 import DropdownMenu from "../../components/menu/dropdownMenu";

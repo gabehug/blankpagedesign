@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { deviceSize } from "../responsive";
-import { useMediaQuery } from "react-responsive";
 import "./footerStyles.css";
 
 
@@ -103,7 +102,7 @@ export function Footer(props) {
           <Line>
             <a
               className="word fancy"
-              href="/photography/fading"
+              href="/photography"
             >
               <h2>Photography</h2>
             </a>

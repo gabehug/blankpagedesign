@@ -100,7 +100,7 @@ export default function DropdownMenu(props) {
               <a href="/"></a>
           </HomeIcon>
             
-          <a href="/photography/fading">
+          <a href="/photography">
             <Tooltip content="Photos" direction="down">
             <FontAwesomeIcon 
               icon={faCamera}

@@ -8,7 +8,6 @@ import { PageContainer } from "../../components/pageContainer";
 import { commerce } from "../../components/lib/commerce";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { deviceSize } from "../../components/responsive";
 import { Footer } from "../../components/footer";
 
 
