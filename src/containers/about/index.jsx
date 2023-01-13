@@ -30,22 +30,29 @@ const Background = styled.div`
 `;
 
 const FirstContainer = styled.div`
+  height: auto; 
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0em 0em 3em 0em;
+  margin-top: 3em;
   
 `;
 
 const ContentContainer = styled.div`
   height: 100%;
-  width: 100%;
+  width: 90vw;
   display: flex;
   flex-direction: column;
-  margin: 2em 2em 2em 2em;
   align-items: center;
   justify-content: start;
+  border: 3px solid black;
+
+
+  {/*Tablet*/} 
+  @media screen and (min-width: ${deviceSize.tablet}px) {
+    width: 85vw;
+  }
 
 `;
 
@@ -57,9 +64,6 @@ const MainContainer = styled.div`
   align-items: flex-start;
   justify-content: start;
   text-align: left;
-  margin: 4em 2em;
-  padding: 0 4rem;
-  border: 3px solid black;
 
   h1 {
     line-height: 0em;
@@ -83,11 +87,9 @@ const MainContainer = styled.div`
     color: #909E85;
   }
 
+
   {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
-      width: 80%;
-      height: auto;
-      margin: 2em 0em;
 
       h1 {
         font-size: 2em;

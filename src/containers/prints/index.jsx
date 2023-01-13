@@ -28,7 +28,7 @@ const OuterContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0em 0em 3em 0em;
+  margin: 0em;
 
 `;
 
@@ -36,7 +36,7 @@ const ProductsContainer = styled.div`
   width: 100%;
   height: 100%;
   justify-content: center;
-  margin: 0em 0em 5em 0em;
+  margin: 0em;
 
 `;
 

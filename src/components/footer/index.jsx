@@ -6,7 +6,7 @@ import "./footerStyles.css";
 
 
 const Background= styled.div`
-  width: 95vw;
+  width: 90vw;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -14,11 +14,11 @@ const Background= styled.div`
   justify-content: center;
   background-color: black;
   margin-bottom: 1em;
-  border-radius: 8px;
+  border: 3px solid black;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 
-  {/*Mobile*/}
+  {/*Tablet*/}
     @media screen and (min-width: ${deviceSize.tablet}px) {
       width: 85vw;
     }

@@ -4,7 +4,6 @@ import { Grid } from "@material-ui/core";
 import Product from './product';
 import useStyles from './productStyles';
 import { deviceSize } from "../responsive";
-import scrollIndi from "../../assets/scrollIndi.png";
 import { useMediaQuery } from "react-responsive";
 
 
@@ -14,22 +13,27 @@ const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 `;
 
 const ContentContainer = styled.div`
-  width: 40em;
+  width: 90vw;
   height: 100%;
   display: flex;
   justify-content: center;
-  margin: 3em 0em;
-  padding: 2em 4em;
+  align-items: center;
+  margin: 3em 0em -1.5em 0em;
   border: 3px solid black;
 
-  {/*Desktop*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 75vw;
-  }
+  {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) {
+      width: 85vw;
+    }
+
 `;
 
 const Container = styled.div`
@@ -38,6 +42,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 2em;
 `;
 
 
@@ -51,7 +56,7 @@ const Products = ({ products, onAddToCart}) => {
             <h1>Prints for Sale</h1>
             <Grid container justify="center" spacing={4}>
               {products.map((product) => (
-                <Grid item key={product.id} xs={12} sm={6} md={6}>
+                <Grid item key={product.id} xs={12} sm={6} md={6} lg={4}>
                   <Product product={product} onAddToCart={onAddToCart} />
                 </Grid>
               ))}

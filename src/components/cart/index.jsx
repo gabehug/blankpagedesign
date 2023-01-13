@@ -17,14 +17,14 @@ const Background = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  width: 42em;
-  height: auto;
+  width: 90vw;
+  height: 100%;
+  min-height: 13em;
   margin: 6em 0em 0em 0em;
-  padding: 2em;
   border: 3px solid black;
 
-  @media screen and (max-width: ${deviceSize.tablet}px) {
-    margin: 6em 2em 0em 2em;
+  @media screen and (min-width: ${deviceSize.tablet}px) {
+    width: 85vw;
   }
 
 `;

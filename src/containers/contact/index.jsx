@@ -34,19 +34,17 @@ const Background = styled.div`
 
 const ContentContainer = styled.div`
   height: 100%;
-  width: 38em;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0em 6em;
   margin-top: 4em;
   border: 3px solid black;
 
-  {/*Mobile*/} 
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    margin: 2em 2em 0em 2em;
-    padding: 1em 0em;
+  {/*Tablet*/} 
+  @media screen and (min-width: ${deviceSize.tablet}px) {
+    width: 85vw;
   }
 `;
 
@@ -124,7 +122,7 @@ const OuterContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0em 0em 3em 0em;
+  margin: 0em;
 `;
 
 
