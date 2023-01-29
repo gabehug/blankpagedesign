@@ -165,8 +165,10 @@ const Button = styled.button`
   font-size: 1em;
   font-weight: 700;
 
+  
   a {
     text-decoration: none;
+    color: black;
   }
 
   img {
@@ -207,20 +209,13 @@ export function Contact(props) {
         <OuterContainer>
           <ContentContainer>
             <TitleContainer>
-              <h1>Lets work together!</h1>
+              <h1>Get in touch!</h1>
             </TitleContainer>
             <InformationContainer>
-              <p>I am currently looking for web design projects and photo shoots around the Twin Cities area. I have experience designing with React to create functional wepages that solve problems with minimalist user-friendly layouts. I am passionate about creating sites that show off everything you or your business have to offer. </p>
-              <p>Taking photographs, capturing moments, has always been a passion of mine. I draw inspiration from the natural world, human interaction, and architecture to capture scenes from the world around me. Shooting on the streets of Chicago for the past 4 years has given me experience with all types of lighting conditions and shooting environments. I also have 6 years of experience shooting individual portraits and doing group photoshoots. Whether it's images for your company or product, a photoshoot with your team, or a website overhaul, I cant wait to create with you!</p>
-              <h3>Connect with me on Upwork, Fiverr, or select a time to meet below.</h3>
+              <p>I am currently looking for  a full time position in Web Development. I have experience designing with React to create functional wepages that solve user problems with minimalist user-friendly layouts. I am passionate about creating sites that show off everything you or your business have to offer.</p>
+              <p>Taking photographs has always been a passion of mine. I draw inspiration from the natural world, human interaction, and architecture to capture scenes from the world around me. Shooting on the streets of Chicago for the past 4 years has given me experience with all types of lighting conditions and shooting environments. I also have 6 years of experience shooting individual portraits and doing group photoshoots. Whether it's images for your company or product, a photoshoot with your team, or just headshots, I am open to all photo opportunities!</p>
+              <h3><a href="mailto: gabrielhug@blankpagedesign.org" target="_blank">Send me an Email</a></h3> 
             </InformationContainer>
-            <ButtonContainer>
-              <Button><a href="https://www.upwork.com/freelancers/~0165e8bf5636859fb3" target="_blank" rel="noreferrer"><img src={upwork} alt="Upwork Icon"></img></a></Button>
-              <Button><a href="https://www.fiverr.com/gabehug?public_mode=true" target="_blank" rel="noreferrer"><img src={fiverr} alt="Fiverr Icon"></img></a></Button>
-            </ButtonContainer>
-            <CalendlyContainer>
-              <InlineWidget url="https://calendly.com/gaberhug/workwithme?month=2022-06"/>
-            </CalendlyContainer>
           </ContentContainer>
         </OuterContainer>
         <FooterContainer>
