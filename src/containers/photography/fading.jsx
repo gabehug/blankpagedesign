@@ -4,7 +4,6 @@ import { PageContainer } from "../../components/pageContainer";
 import { deviceSize } from "../../components/responsive";
 import axios from "axios";
 import { CloudinaryContext, Image, Placeholder} from "cloudinary-react";
-import { Parallax } from "react-scroll-parallax";
 import DropdownMenu from "../../components/menu/dropdownMenu";
 import { Footer } from "../../components/footer";
 
@@ -72,17 +71,12 @@ const ImageGrid = styled.div`
   width: auto;
   max-width: 42em;
   height: auto;
-  padding: 6em 0em;
+  padding: 1em 0em;
   display: flex;
 
   a {
     display: inline-block;
     pointer-events: none;
-  }
-
-  {/*Mobile*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    padding: 4em 0em;
   }
 `;
 
@@ -126,8 +120,7 @@ class Fading extends Component {
                   return (
                     <ResponsiveGrid key={data.public_id}>
                       <ImageGrid>
-                        <a target="_blank" href={'http://res.cloudinary.com/blankpagedesign/image/upload/${data.public_id}.jpg'} >
-                          <Parallax speed={-15}>
+                        <a target="_blank" href={"http://res.cloudinary.com/blankpagedesign/image/upload/${data.public_id}.jpg"}>
                             <Image
                               publicID={data.public_id}
                               loading="lazy"
@@ -136,7 +129,6 @@ class Fading extends Component {
                             >
                               <Placeholder type="predominant"/>
                             </Image>
-                          </Parallax>
                         </a>
                       </ImageGrid>
                     </ResponsiveGrid>
