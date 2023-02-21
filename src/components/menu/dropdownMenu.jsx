@@ -109,7 +109,7 @@ export default function DropdownMenu(props) {
             />
             </Tooltip>
           </a>
-          <a href="/prints">
+          <a href="/contact">
             <Tooltip content="Contact" direction="down">
             <FontAwesomeIcon 
               icon={faEnvelope}

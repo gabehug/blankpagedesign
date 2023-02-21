@@ -212,7 +212,7 @@ export function WebDesign(props) {
         <OuterContainer>
           <ContentContainer>
             <TitleContainer>
-              <h1>Skills</h1>
+              <h1>Design Tech Stack</h1>
             </TitleContainer>
             <SkillsContainer>
               <IconContainer>

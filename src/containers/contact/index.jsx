@@ -5,7 +5,12 @@ import { deviceSize } from "../../components/responsive";
 import { useMediaQuery } from "react-responsive";
 import webBackground from "../../assets/webBackground.mp4";
 import DropdownMenu from "../../components/menu/dropdownMenu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faMugSaucer } from "@fortawesome/free-solid-svg-icons";
+import { faGitAlt } from "@fortawesome/free-brands-svg-icons";
 import { Footer } from "../../components/footer";
+import Tooltip  from "../../components/tooltip/tooltip";
 
 const Background = styled.div`
   width: 100%;
@@ -120,70 +125,22 @@ const OuterContainer = styled.div`
   margin: 0em;
 `;
 
-
-const CalendlyContainer = styled.div`
-  height: auto;
-  width: 100%;
-  margin: 0em 0em 4em 0em;
-  align-items: center;
-
-  {/*Mobile*/} 
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 80%;
-  }
-
+const IconLinks = styled.div`
+  width: auto;
+  max-width: 38em;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  padding: 0em 0em 2em 0em;
 `;
 
-const ButtonContainer = styled.div`
-  width: 42em;
-  height: auto;
-  display: flex;
-  justify-content: start;
-
-  {/*Mobile*/} 
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 80%;
-  }
-
-`;
-
-const Button = styled.button`
-  width: 8em;
-  height: 3em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: -1em 1em 2em 1em;
-  background-color: #fff;
-  border-radius: 5px;
-  border: 1px solid black;
-  font-family: futura-pt;
-  font-size: 1em;
-  font-weight: 700;
-
+const Icon = {
+  width: '40px',
+  height: 'auto',
+  padding: '0em 2em',
+  color: 'black'
   
-  a {
-    text-decoration: none;
-    color: black;
-  }
-
-  img {
-    width: 25%;
-    height: auto;
-  }
-
-  :hover {
-    background-color: #A39450;
-    border: 0px;
-  }
-
-  {/*Mobile*/} 
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    margin: -1em 1em 2em 0em;
-  }
-
-`;
+};
 
 
 const FooterContainer = styled.div`
@@ -209,10 +166,40 @@ export function Contact(props) {
               <h1>Get in touch!</h1>
             </TitleContainer>
             <InformationContainer>
-              <p>I am currently looking for  a full time position in Web Development. I have experience using React to create functional webpages that solve user problems with intuitive layouts. I am passionate about creating and love to design unique and eye catching sites.</p>
-              <h3>Send me an <a href="mailto: gabrielhug@blankpagedesign.org" target="_blank">Email</a></h3> 
-              <h3>Lets connect on <a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank">LinkedIn</a></h3>
+              <p>I am currently looking for  a full time position in Web Development. I have experience using React to create functional websites that solve user problems with intuitive layouts. I am passionate about creating and love to design unique and eye catching sites.</p>
+              <h3>I want to talk with you!</h3>
+              <h3><a href="mailto: gabrielhug@blankpagedesign.org" target="_blank">gaberhug@gmail.com &#8594;</a></h3>
             </InformationContainer>
+            <IconLinks>
+              <a href="https://www.linkedin.com/in/gabriel-hug-75946796/">
+                <Tooltip content="LinkedIn" direction="down">
+                  <FontAwesomeIcon 
+                    icon={faLinkedin}
+                    className="navIcon"
+                    style={Icon}
+                  />
+                </Tooltip>
+              </a>
+              <a href="https://ko-fi.com/gabrielhug">
+                <Tooltip content="Kofi" direction="down">
+                  <FontAwesomeIcon 
+                    icon={faMugSaucer}
+                    className="navIcon"
+                    style={Icon}
+                  />
+                </Tooltip>
+              </a>
+              <a href="https://github.com/gabehug">
+                <Tooltip content="GitHub" direction="down">
+                  <FontAwesomeIcon 
+                    icon={faGitAlt}
+                    className="navIcon"
+                    style={Icon}
+                  />
+                </Tooltip>
+              </a>
+              
+            </IconLinks>
           </ContentContainer>
         </OuterContainer>
         <FooterContainer>
