@@ -45,10 +45,11 @@ export function Menu(props) {
       <Background>
         <ul>
           <a href="/gabehug"><li><p>Gabe Hug</p></li></a>
-          <li><PhotoDropdown/></li>
-          <a href="/prints"><li><p>Prints</p></li></a>
           <a href="/webDesign"><li><p>Web Design</p></li></a>
-          <a href="/contact"><li><p>Connect</p></li></a>
+          <a href="/photography"><li><p>Photography</p></li></a>
+          <a href="https://blankpageblog.org" target="_blank"><li><p>Blog</p></li></a>
+          <a href="/contact"><li><p>Contact</p></li></a>
+          
         </ul>
       </Background>
     </PageContainer>

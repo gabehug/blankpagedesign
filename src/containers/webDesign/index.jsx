@@ -5,8 +5,6 @@ import { deviceSize } from "../../components/responsive";
 import webBackground from "../../assets/webBackground.mp4";
 import hughcg2 from "../../assets/hughcg2.jpg";
 import hughcg1 from "../../assets/hughcg1.jpg";
-import dons1 from "../../assets/dons1.jpg";
-import dons2 from "../../assets/dons2.jpg";
 import chainlinks1 from "../../assets/chainlinks1.jpg";
 import emperor1 from "../../assets/emperor1.jpg";
 import emperor2 from "../../assets/emperor2.jpg";
@@ -15,6 +13,12 @@ import blog2 from "../../assets/blog2.jpg";
 import { useMediaQuery } from "react-responsive";
 import DropdownMenu from "../../components/menu/dropdownMenu";
 import { Footer } from "../../components/footer";
+import IconHtml from  "../../assets/skillIcons/htmlLogo.png";
+import IconCss from "../../assets/skillIcons/cssLogo.png"
+import IconJs from "../../assets/skillIcons/jsLogo.png";
+import IconReact from "../../assets/skillIcons/reactLogo.webp";
+import IconGit from "../../assets/skillIcons/gitLogoi.png";
+import IconAdobe from "../../assets/skillIcons/adobeLogo.png";
 
 const Background = styled.div`
   width: 100%;
@@ -155,6 +159,39 @@ const OuterContainer = styled.div`
   }
 `;
 
+const SkillsContainer = styled.div`
+    height: 100%;
+    width: 80%;
+    max-width: 38em;
+    padding: 2em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+`;
+
+const IconContainer = styled.div`
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+
+    img {
+      width: 4em;
+      height: auto;
+    }
+
+    {/*Mobile*/}
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      img {
+        width: 2em;
+      }
+  }
+`;
+
 const FooterContainer = styled.div`
   width: auto;
   height: 100%;
@@ -174,6 +211,19 @@ export function WebDesign(props) {
         <DropdownMenu/>
         <OuterContainer>
           <ContentContainer>
+            <TitleContainer>
+              <h1>Skills</h1>
+            </TitleContainer>
+            <SkillsContainer>
+              <IconContainer>
+                <img src={IconHtml} alt=""></img>
+                <img src={IconCss} alt=""></img>
+                <img src={IconJs} alt=""></img>
+                <img src={IconGit} alt=""></img>
+                <img src={IconReact} alt=""></img>
+                <img src={IconAdobe} alt=""></img>
+              </IconContainer>
+            </SkillsContainer>
             <TitleContainer>
               <h1>Projects</h1>
             </TitleContainer>
@@ -197,17 +247,6 @@ export function WebDesign(props) {
               </ImgContainer>
               <ImgContainer>
                 <img src={hughcg1} alt="HUG HCG asset 2"></img>
-              </ImgContainer>
-            </InformationContainer>
-            <InformationContainer id="dons">
-              <h3>Crypto Dons</h3>
-              <p>This site was designed as the landing and community page for an unreleased NFT created by <a href="https://www.poncedleon.com/" target="blank">Seb</a>. The NFT project was ultimately canceled and the site was never fully put into production. The Github link below contains code for the base layouts and styles. The site was designed with the React framework and implements javascript, flex-box, and parallax scrolling effects.</p>
-              <h4><a href="https://github.com/gabehug/crypto-dons-web" target="blank" rel="noreferrer">Source</a></h4>           
-              <ImgContainer>
-                <img src={dons1} alt="Crypto Dons asset 1"></img>
-              </ImgContainer>
-              <ImgContainer>
-                <img src={dons2} alt="Crypto Dons asset 2"></img>
               </ImgContainer>
             </InformationContainer>
             <InformationContainer id="emperor">

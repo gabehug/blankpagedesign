@@ -4,6 +4,8 @@ import { deviceSize } from "../../components/responsive";
 import "../../components/footer/footerStyles.css";
 import { PageContainer } from "../../components/pageContainer";
 import DropdownMenu from "../../components/menu/dropdownMenu";
+import { faPrint } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Footer } from "../../components/footer";
 
 
@@ -107,11 +109,42 @@ const Line = styled.div`
 
 `;
 
+const ButtonContainer = styled.div`
+    width: auto;
+    height: 100%;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const PrintsButton = styled.button`
+    width: auto;
+    height: auto;
+    padding: 0.5em 1em;
+    display: flex;
+    align-items: center;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: #F4F5EF;
+    font-family: futura-pt, sans-serif;
+    font-size: 1em;
+
+    a {
+      color: black;
+    }
+
+    :hover {
+      background-color: #A39450;
+    }
+`;
+
 const ImageContainer= styled.div`
     width: 90%;
-    max-width: 75em;
+    max-width: 38em;
     height: auto;
-    margin-top: 3em;
+    margin-top: 2em;
 
     img {
       width: 100%;
@@ -124,7 +157,13 @@ const FooterContainer = styled.div`
   height: 100%;
 `;
 
+const navIcon = {
+  width: '25px',
+  height: 'auto',
+  margin: '0em 1em',
+  color: 'black'
 
+};
 
 export function Photography(props) {
   return (
@@ -178,14 +217,24 @@ export function Photography(props) {
                   </a>
                   <a
                     className="word fancy"
-                    href=""
+                    href="https://www.blankpageblog.org"
                     target="_blank"
                   >
-                    <h2>Client</h2>
+                    <h2>BPD Blog</h2>
                   </a>
                 </Line>
               </Text>
             </MenuGrid>
+            <ButtonContainer>
+              <h3>Interested in supporting my photography?</h3>
+              <PrintsButton>
+                <a href="/prints"><h4>Buy a Print</h4></a>
+                <FontAwesomeIcon 
+                  icon={faPrint}
+                  style={navIcon}
+                />
+                </PrintsButton>
+            </ButtonContainer>
             <ImageContainer>
               <img src="https://res.cloudinary.com/blankpagedesign/image/upload/v1673021849/bpd/vietnam/Shutter_hugEdits-6448_gflhdz.jpg"/>
             </ImageContainer>

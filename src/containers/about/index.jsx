@@ -9,6 +9,7 @@ import DropdownMenu from "../../components/menu/dropdownMenu";
 import { Footer } from "../../components/footer";
 
 
+
 const Background = styled.div`
   width: 100%;
   height: 100%;
@@ -60,12 +61,11 @@ const MainContainer = styled.div`
   padding: 0em 2em;
 
   h1 {
-    line-height: 0em;
-    font-size: 3em;
+    line-height: 0;
   }
 
-  h2 {
-    margin: 0em 0em 1em 0em;
+  h4 {
+    font-size: 1.1em;
   }
 
   p {
@@ -86,7 +86,6 @@ const MainContainer = styled.div`
     @media screen and (max-width: ${deviceSize.mobile}px) {
 
       h1 {
-        font-size: 2em;
         line-height: 1em;
         margin: 0em;
       }
@@ -159,7 +158,6 @@ const InformationContainer = styled.div`
 
 `;
 
-
 const FooterContainer = styled.div`
   width: auto;
   height: 100%;
@@ -182,13 +180,13 @@ export function About(props) {
               <TopContainer>
                 <TextContainer> 
                   <h1>Gabriel Hug</h1>
-                  <h2>Photographer and Web Designer</h2>
+                  <h4>Web Developer and Photographer</h4>
                 </TextContainer>
               </TopContainer>
               <InformationContainer>
-                <p>Hello! My name is Gabe Hug and I'm a freelance photographer and web designer. I began taking photographs 6 years ago, primarily capturing the streets of Chicago. I have a B.S. in Computer Science with minors in Photography and Sustainability Management from Loyola University of Chicago. My main experience and passion is in frontend design and development, creating functional and beautiful webpages for small businesses. </p>
-                <p>Blank Page Design is a freelance web design and photography service. In 2022, I started Blank Page Design to create visually-pleasing, functional webpages and to capture meaningful moments for clients. I pride myself on making interactive designs for sites that showcase clients and their companies. I primarily design in React and have experience using popular website builders such as Squarespace.</p>
-                <p>When I am not on my computer or behind the camera, I spend most of my time making music, biking, and trying to perfect the cup of coffee. After finishing school in May, I knew that I needed a change. My next journey will be traveling around the U.S. in my very own self-converted van! I am excited for this next chapter and cant wait to share my travels with you!</p>
+                <p>I am a web designer with a B.S. in Computer Science from Loyola University of Chicago. I specialize in front-end design and development, creating functional and beautiful webpages for users.</p>
+                <p>Taking photographs has always been a passion of mine. I draw inspiration from the natural world, human interaction, and architecture to capture the world around me. When I am not on my computer or behind the camera, I spend most of my time making music, biking, and trying to make the perfect cup of coffee.</p>
+                <p>After finishing school in May, I knew that I wanted a little break from the city life. I am currently traveling around the U.S. in my very own self-converted van! I am excited for this new journey and all the learning it will bring.</p>
               </InformationContainer>
               <ImageContainer>
                 <img src={gabeImage} alt="Gabe Hug"></img>

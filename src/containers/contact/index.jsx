@@ -209,9 +209,9 @@ export function Contact(props) {
               <h1>Get in touch!</h1>
             </TitleContainer>
             <InformationContainer>
-              <p>I am currently looking for  a full time position in Web Development. I have experience designing with React to create functional wepages that solve user problems with minimalist user-friendly layouts. I am passionate about creating sites that show off everything you or your business have to offer.</p>
-              <p>Taking photographs has always been a passion of mine. I draw inspiration from the natural world, human interaction, and architecture to capture scenes from the world around me. Shooting on the streets of Chicago for the past 4 years has given me experience with all types of lighting conditions and shooting environments. I also have 6 years of experience shooting individual portraits and doing group photoshoots. Whether it's images for your company or product, a photoshoot with your team, or just headshots, I am open to all photo opportunities!</p>
-              <h3><a href="mailto: gabrielhug@blankpagedesign.org" target="_blank">Send me an Email</a></h3>
+              <p>I am currently looking for  a full time position in Web Development. I have experience using React to create functional webpages that solve user problems with intuitive layouts. I am passionate about creating and love to design unique and eye catching sites.</p>
+              <h3>Send me an <a href="mailto: gabrielhug@blankpagedesign.org" target="_blank">Email</a></h3> 
+              <h3>Lets connect on <a href="https://www.linkedin.com/in/gabriel-hug-75946796/" target="_blank">LinkedIn</a></h3>
             </InformationContainer>
           </ContentContainer>
         </OuterContainer>

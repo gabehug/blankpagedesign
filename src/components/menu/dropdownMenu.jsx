@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
-import { faPrint } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Tooltip  from "../../components/tooltip/tooltip";
 import "./dropdownStyles.css";
 
@@ -61,19 +61,6 @@ const HomeIcon = styled.div`
     width: 3em;
     height: 3em;
     z-index: 1;
-  }  
-
-  {/*Mobile*/}
-  @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 150px;
-    background-size: 45%;
-    margin: 0;
-
-    :hover{
-      background-size: 45%;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
   }
 
 `;
@@ -110,11 +97,9 @@ export default function DropdownMenu(props) {
             />
             </Tooltip>
           </a>
-          
-          <HomeIcon id="icon">
-              <a href="/"></a>
-          </HomeIcon>
-            
+          <a href="/">
+            <HomeIcon/>
+          </a>
           <a href="/photography">
             <Tooltip content="Photos" direction="down">
             <FontAwesomeIcon 
@@ -125,9 +110,9 @@ export default function DropdownMenu(props) {
             </Tooltip>
           </a>
           <a href="/prints">
-            <Tooltip content="Prints" direction="down">
+            <Tooltip content="Contact" direction="down">
             <FontAwesomeIcon 
-              icon={faPrint}
+              icon={faEnvelope}
               className="navIcon"
               style={navIcon}
             />
