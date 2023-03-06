@@ -240,7 +240,12 @@ export function WebDesign(props) {
             </InformationContainer>
             <InformationContainer id="hcg">
               <h3>Hug Human Capital Group</h3>
-              <p>This website is the home page for Hug Human Capital Group which offers guidence and leadership for upcoming transitions in your business. Specializing in interim senior level Human Resource leadership, Hug HCG will guide your organization through their next leadership transition. The site was designed using the React framework and gave me experience with the entire design workflow from ideation to creation. </p>
+              <p>This website is the home page for Hug HCG, a business that offers guidance and leadership for transitioning business. The site was designed using the React framework and gave me experience with the entire design workflow from ideation to creation. I used React Router to navigate between different components, each assigned a route with a specific address. This makes the single page site feel more dynamic as the page rendered is entirely different based on the route. I learned how to setup and handle input into a form with Formik and Yup verification. EmailJS then takes the form data and sends a formatted email to the clients inbox. I used Media queries for the first time to create a fully responsive site.
+              </p>
+
+
+
+
               <h4><a href="https://hughcg.org/" target="blank" rel="noreferrer">Visit |</a><a href="https://github.com/gabehug/hug-hcg" target="blank"> Source</a></h4>
               <ImgContainer>
                 <img src={hughcg2} alt="HUG HCG asset 1"></img>
@@ -252,20 +257,12 @@ export function WebDesign(props) {
             <InformationContainer id="emperor">
               <h3>Emperor Card Game</h3>
               <p>This is a java implementation of the card game Emperor created for my design and algorithms class at Loyola University Chicago. The Unity build contains numerous game scenes that allow a user to play the game, observe the rules, and submit scores to a local leaderboard. Through this project I gained intimate knowledge of Unity and C# development workflows, version control software best practices for remote development, and 2D UI/UX application design paradigms. Overall this project taught me how to use the Fisher-Yates shuffling algorithm for better performance and randomization, as well as how to implement a custom scoring algorithm.</p>
-              <h4><a href="https://github.com/gabehug/Emperor-Card-Game" target="blank">Source</a></h4>           
+              <h4><a href="https://github.com/gabehug/Emperor-Card-Game" target="blank">Source |</a><a href="https://youtu.be/_w1sv6c-jaQ?t=476" target="blank"> Demo</a></h4>           
               <ImgContainer>
                 <img src={emperor1} alt="Emperor asset 1"></img>
               </ImgContainer>
               <ImgContainer>
                 <img src={emperor2} alt="Emperor asset 2"></img>
-              </ImgContainer>
-            </InformationContainer>
-            <InformationContainer id="chain">
-              <h3>Chainlinks</h3>
-              <p>The Chainlinks site is the homepage for a small student run bike shop located on Loyola Univesity of Chicagos campus. ChainLinks is the nation’s first student-run bicycle shop. Running as a not-for-profit organization since 2011. ChainLinks strives to promote sustainability through clean bicycle transportation while engaging with the community at volunteer events. During my time working at Chainlinks I redesigned and maintained the state of this Squarespace site. </p>
-              <h4><a href="http://www.chainlinksluc.com/" target="blank">Visit</a></h4>         
-              <ImgContainer>
-                <img src={chainlinks1} alt="Chainlinks asset 1"></img>
               </ImgContainer>
             </InformationContainer>
           </ContentContainer>
