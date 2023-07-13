@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { PageContainer } from "../../components/pageContainer";
 import { deviceSize } from "../../components/responsive";
 import webBackground from "../../assets/webBackground.mp4";
-import hughcg2 from "../../assets/hughcg2.jpg";
-import hughcg1 from "../../assets/hughcg1.jpg";
+import hughcg2 from "../../assets/hughcg2.png";
+import hughcg1 from "../../assets/hughcg1.png";
 import chainlinks1 from "../../assets/chainlinks1.jpg";
 import emperor1 from "../../assets/emperor1.jpg";
 import emperor2 from "../../assets/emperor2.jpg";
@@ -227,6 +227,18 @@ export function WebDesign(props) {
             <TitleContainer>
               <h1>Projects</h1>
             </TitleContainer>
+            <InformationContainer id="hcg">
+              <h3>Hug Human Capital Group</h3>
+              <p>This website is the home page for Hug HCG, a business that offers guidance and leadership for transitioning business. The site was designed using the React framework and gave me experience with the entire design workflow from ideation to creation. I used React Router to navigate between different components, each assigned a route with a specific address. This makes the single page site feel more dynamic as the page rendered is entirely different based on the route. I learned how to setup and handle input into a form with Formik and Yup verification. EmailJS then takes the form data and sends a formatted email to the clients inbox. I used Media queries for the first time to create a fully responsive site.
+              </p>
+              <h4><a href="https://hughcg.org/" target="blank" rel="noreferrer">Visit |</a><a href="https://github.com/gabehug/hug-hcg" target="blank"> Source</a></h4>
+              <ImgContainer>
+                <img src={hughcg1} alt="HUG HCG asset 1"></img>
+              </ImgContainer>
+              <ImgContainer>
+                <img src={hughcg2} alt="HUG HCG asset 2"></img>
+              </ImgContainer>
+            </InformationContainer>
             <InformationContainer id="blog">
               <h3>NOTES FROM THE ROAD</h3>
               <p>This Blog was created using REMIX and was my first time using the framework. The quick page load times, nested routes, and built in error handling built in with REMIX made this site extremely fun to build. The site pulls from a Azure mySQL database where all of the posts are stored in markdown. This project gave me lots of practice pulling data from an outside source and formatting it on the front-end. It also gave me a great look at the benefits of using a framework like REMIX and encouraged me to try out other frameworks! If you are interested in reading about my trip to the American West click on the Visit option below! </p>
@@ -236,22 +248,6 @@ export function WebDesign(props) {
               </ImgContainer>
               <ImgContainer>
                 <img src={blog2} alt="Blog asset 2"></img>
-              </ImgContainer>
-            </InformationContainer>
-            <InformationContainer id="hcg">
-              <h3>Hug Human Capital Group</h3>
-              <p>This website is the home page for Hug HCG, a business that offers guidance and leadership for transitioning business. The site was designed using the React framework and gave me experience with the entire design workflow from ideation to creation. I used React Router to navigate between different components, each assigned a route with a specific address. This makes the single page site feel more dynamic as the page rendered is entirely different based on the route. I learned how to setup and handle input into a form with Formik and Yup verification. EmailJS then takes the form data and sends a formatted email to the clients inbox. I used Media queries for the first time to create a fully responsive site.
-              </p>
-
-
-
-
-              <h4><a href="https://hughcg.org/" target="blank" rel="noreferrer">Visit |</a><a href="https://github.com/gabehug/hug-hcg" target="blank"> Source</a></h4>
-              <ImgContainer>
-                <img src={hughcg2} alt="HUG HCG asset 1"></img>
-              </ImgContainer>
-              <ImgContainer>
-                <img src={hughcg1} alt="HUG HCG asset 2"></img>
               </ImgContainer>
             </InformationContainer>
             <InformationContainer id="emperor">

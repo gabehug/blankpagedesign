@@ -96,7 +96,7 @@ class Fading extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://res.cloudinary.com/blankpagedesign/image/list/fading.json')
+    axios.get('https://res.cloudinary.com/blankpagedesign/raw/upload/v1689273310/fading_zrdpyp.json')
       .then(res => {
         console.log(res.data.resources);
         this.setState({gallery: res.data.resources});

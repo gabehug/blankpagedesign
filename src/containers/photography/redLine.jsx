@@ -95,7 +95,7 @@ class Redline extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://res.cloudinary.com/blankpagedesign/image/list/redline.json')
+    axios.get('https://res.cloudinary.com/blankpagedesign/raw/upload/v1689274407/redline_hivslb.json')
       .then(res => {
         console.log(res.data.resources);
         this.setState({gallery: res.data.resources});

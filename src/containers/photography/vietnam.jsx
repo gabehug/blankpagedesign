@@ -98,7 +98,7 @@ class Vietnam extends Component {
   }
   //https://res.cloudinary.com/blankpagedesign/image/upload/v1673021931/bpd/vietnam/Shutter_hugEdits-9690_b07lsv.jpg
   componentDidMount(){
-    axios.get('https://res.cloudinary.com/blankpagedesign/image/list/vietnam.json')
+    axios.get('https://res.cloudinary.com/blankpagedesign/raw/upload/v1689277757/vietnam_rur6py.json')
     .then(res => {
       console.log(res.data.resources);
       this.setState({gallery: res.data.resources});

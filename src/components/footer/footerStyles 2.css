@@ -1,0 +1,17 @@
+.word {
+  transition: opacity 250ms ease;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  line-height: 0;
+}
+
+a:hover{
+  color: #A39450;
+}
+
+#text:has(.fancy:hover) .word:not(.fancy:hover) {
+  opacity: 0.3;
+}

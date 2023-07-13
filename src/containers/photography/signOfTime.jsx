@@ -94,7 +94,7 @@ class SignOfTime extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://res.cloudinary.com/blankpagedesign/image/list/sign.json')
+    axios.get('https://res.cloudinary.com/blankpagedesign/raw/upload/v1689278201/sign_tuezqc.json')
       .then(res => {
         console.log(res.data.resources);
         this.setState({gallery: res.data.resources});
