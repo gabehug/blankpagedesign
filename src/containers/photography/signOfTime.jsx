@@ -109,8 +109,8 @@ class SignOfTime extends Component {
           <ContentContainer>
             <InformationContainer>
               <h1>A SIGN OF THE TIMES</h1>
-              <p>Street signs and graffiti highlighting the political tensions in Decemeber 2020. Shot in black and white around Chicago. </p>
-              <h4>Canon 7D mkii | 50mm</h4>
+              <p>Street signs and graffiti highlighting the political landscape in December 2020. Shot in black and white around Chicago. </p>
+              <h4>Canon 5D mkiv | 50mm</h4>
             </InformationContainer>
             <CloudinaryContext cloudName="blankpagedesign">
               {
