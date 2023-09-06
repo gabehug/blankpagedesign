@@ -13,6 +13,7 @@ import SignOfTime  from './containers/photography/signOfTime';
 import Vietnam  from './containers/photography/vietnam';
 import  Fading  from './containers/photography/fading';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { Analytics } from '@vercel/analytics/react';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           </Routes>
         </Router>
       </ParallaxProvider>
+      <Analytics />
     </div>
   );
 }
