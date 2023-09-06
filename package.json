@@ -21,6 +21,7 @@
     "@stripe/stripe-js": "^2.1.1",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.4.3",
+    "@vercel/analytics": "^1.0.2",
     "axios": "^1.5.0",
     "cloudinary-react": "^1.8.1",
     "install": "^0.13.0",
@@ -61,8 +62,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "@svgr/webpack": "^8.1.0",
-    "react-scripts": "^5.0.1",
-    "@babel/plugin-proposal-private-property-in-object":"7.21.11"
+    "react-scripts": "^5.0.1"
   }
 }
