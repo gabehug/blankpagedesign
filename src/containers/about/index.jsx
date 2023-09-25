@@ -183,10 +183,11 @@ export function About(props) {
                   <h4>Web Developer and Photographer</h4>
                 </TextContainer>
               </TopContainer>
+              // TODO Add new information about me and where/what I am currently doing!
               <InformationContainer>
-                <p>I am a web designer with a B.S. in Computer Science from Loyola University of Chicago. I specialize in front-end design and development, creating functional and beautiful webpages for users.</p>
+                <p>I am a web developer currently working at Loyola University of Chicago in the Graduate & Professional Enrollment office. I specialize in front-end design and development, creating functional and beautiful webpages for users.</p>
                 <p>Taking photographs has always been a passion of mine. I draw inspiration from the natural world, human interaction, and architecture to capture the world around me. When I am not on my computer or behind the camera, I spend most of my time making music, biking, and trying to make the perfect cup of coffee.</p>
-                <p>After finishing school in May, I knew that I wanted a little break from the city life. I am currently traveling around the U.S. in my very own self-converted van! I am excited for this new journey and all the learning it will bring.</p>
+                <p>I am currently learning the Ruby coding language and Rails framework to expand my understanding of full stack web applications. In my current role I am using the Slate CRM and the .liquid templating language to create custom forms, mailings, and student portals.</p>
               </InformationContainer>
               <ImageContainer>
                 <img src={gabeImage} alt="Gabe Hug"></img>

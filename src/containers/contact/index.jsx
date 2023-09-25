@@ -166,8 +166,9 @@ export function Contact(props) {
               <h1>Get in touch!</h1>
             </TitleContainer>
             <InformationContainer>
-              <p>I am currently looking for  a full time position in Web Development. I have experience using React to create functional websites that solve user problems with intuitive layouts. I am passionate about creating and love to design unique and eye catching sites.</p>
+              <p>I am currently working for Loyola University as the Web Designer for Graduate & Professional Enrollment. I have experience creating functional websites that solve user problems with intuitive layouts and I am passionate about creating unique webpages.</p>
               <h3>I want to talk with you!</h3>
+              <p>If you are interested in hiring me for your next web development project or photoshoot please reach out at the email below:</p>
               <h3><a href="mailto: gabrielhug@blankpagedesign.org" target="_blank">gaberhug@gmail.com &#8594;</a></h3>
             </InformationContainer>
             <IconLinks>
