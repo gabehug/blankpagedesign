@@ -183,7 +183,6 @@ export function About(props) {
                   <h4>Web Developer and Photographer</h4>
                 </TextContainer>
               </TopContainer>
-              // TODO Add new information about me and where/what I am currently doing!
               <InformationContainer>
                 <p>I am a web developer currently working at Loyola University of Chicago in the Graduate & Professional Enrollment office. I specialize in front-end design and development, creating functional and beautiful webpages for users.</p>
                 <p>Taking photographs has always been a passion of mine. I draw inspiration from the natural world, human interaction, and architecture to capture the world around me. When I am not on my computer or behind the camera, I spend most of my time making music, biking, and trying to make the perfect cup of coffee.</p>
