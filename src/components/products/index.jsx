@@ -53,13 +53,14 @@ const Products = ({ products, onAddToCart}) => {
         <ContentContainer>
           <Container>
             <h1>Prints for Sale</h1>
-            <Grid container justify="center" spacing={4}>
+            <p>I am working on creating a new page to sell updated prints. Check back soon if you are interested in supporting me and thank you for getting here!</p>
+            {/*<Grid container justify="center" spacing={4}>
               {products.map((product) => (
                 <Grid item key={product.id} xs={12} sm={6} md={6} lg={4}>
                   <Product product={product} onAddToCart={onAddToCart} />
                 </Grid>
               ))}
-            </Grid>
+            </Grid>*/}
           </Container>
         </ContentContainer>
       </Background>
