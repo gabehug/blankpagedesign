@@ -184,7 +184,7 @@ export function About(props) {
                 </TextContainer>
               </TopContainer>
               <InformationContainer>
-                <p>I am a web developer currently working at Baker Tilly US building Anvil web applications in Python.</p>
+                <p>I am a Web Developer currently working for Baker Tilly US as a consultant, building full stack Python applications with Anvil.</p>
                 <p>Taking photographs has always been a passion of mine. I draw inspiration from the natural world, human interaction, and architecture to capture the world around me. When I am not on my computer or behind the camera, I spend most of my time making music, biking, and trying to make the perfect cup of coffee.</p>
                 <p>I am currently learning the Ruby coding language and Rails framework to expand my understanding of full stack web applications.</p>
               </InformationContainer>
